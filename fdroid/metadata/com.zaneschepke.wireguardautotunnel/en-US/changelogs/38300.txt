@@ -1,0 +1,37 @@
+What's new:
+- Fix DNS resolution issues
+- Improve Android TV restore on sleep
+- Fix split tunnel search bug
+- Localization updates
+- Update docs links for new app website
+
+SHA-256 fingerprint for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`5d9a534`](https://github.com/wgtunnel/wgtunnel/commit/5d9a534e1cfd6735e2fc0996c75288134ef7931b) - add missing monochrome app icon *(PR #689 by @tobocode)*
+- [`a09501a`](https://github.com/wgtunnel/wgtunnel/commit/a09501aaf52d776772f0a8c18b66f0e70ad2e887) - **lang**: weblate langauge updates *(PR #701 by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`72722a0`](https://github.com/wgtunnel/wgtunnel/commit/72722a0be54f205a6d3b8df1e464a29a23127ebf) - android dns issue *(commit by @zaneschepke)*
+- [`c520fa5`](https://github.com/wgtunnel/wgtunnel/commit/c520fa5ed2676747fe8cb281b13270bcc19e79ae) - ci *(commit by @zaneschepke)*
+- [`a1c6632`](https://github.com/wgtunnel/wgtunnel/commit/a1c663233dc1f291e3cf27082aac48b6804ab0d0) - space *(commit by @zaneschepke)*
+- [`fb97adc`](https://github.com/wgtunnel/wgtunnel/commit/fb97adca4f052fd0aaab01080fa4f61e8549cdac) - latest tagging *(commit by @zaneschepke)*
+- [`4b2d2d2`](https://github.com/wgtunnel/wgtunnel/commit/4b2d2d20dbad94d4df3ed84de7d59fe1529d2c4e) - split tunnel search and select *(commit by @zaneschepke)*
+- [`6046e41`](https://github.com/wgtunnel/wgtunnel/commit/6046e4131f4bceebacf1fefd0482cfd4bd09a152) - android tv sleep restore *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`dfcc022`](https://github.com/wgtunnel/wgtunnel/commit/dfcc02225797467f4bf08805a6d2c5c9fd09cfad) - minor change *(commit by @zaneschepke)*
+- [`49ee243`](https://github.com/wgtunnel/wgtunnel/commit/49ee2431c25c92808c32ff35fedbed9ba9976248) - revert banner for the google monopoly *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`d7741c3`](https://github.com/wgtunnel/wgtunnel/commit/d7741c37c599565dea8830e96cb5062785006b13) - bump version, release notes *(commit by @zaneschepke)*
+

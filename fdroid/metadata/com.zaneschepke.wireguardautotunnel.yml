@@ -1,9 +1,9 @@
-AuthorName: zaneschepke
+AuthorName: wgtunnel
 Categories:
     - Connectivity
     - Security
-CurrentVersion: 3.8.2
-CurrentVersionCode: 38200
+CurrentVersion: 3.8.3
+CurrentVersionCode: 38300
 Description: |
     An alternative VPN client app for WireGuard with additional features
 
@@ -24,5 +24,5 @@ IssueTracker: https://github.com/wgtunnel/wgtunnel/issues
 License: MIT
 Name: WG Tunnel
 SourceCode: https://github.com/wgtunnel/wgtunnel
-Summary: An alternative Android client app for WireGuard and AmneziaWG
-WebSite: "https://wgtunnel.com"
+Summary: A FOSS Android client for WireGuard and AmneziaWG with auto-tunneling.
+WebSite: https://wgtunnel.com

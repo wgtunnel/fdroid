@@ -1,10 +1,10 @@
 {
   "repo": {
-    "timestamp": 1744421778000,
+    "timestamp": 1745169837000,
     "version": 20002,
-    "name": "Apps by Zane Schepke",
+    "name": "WG Tunnel Repository",
     "icon": "icon.png",
-    "address": "https://raw.githubusercontent.com/zaneschepke/fdroid/main/fdroid/repo",
+    "address": "https://raw.githubusercontent.com/wgtunnel/fdroid/main/fdroid/repo",
     "description": "This is a repository of apps to be used with F-Droid. Applications in this repository are official binaries built by the original application developer Zane Schepke."
   },
   "requests": {
@@ -13,26 +13,27 @@
   },
   "apps": [
     {
-      "authorName": "zaneschepke",
+      "authorName": "wgtunnel",
       "categories": [
         "Connectivity",
         "Security"
       ],
-      "suggestedVersionName": "3.8.2",
-      "suggestedVersionCode": "38200",
+      "suggestedVersionName": "3.8.3",
+      "suggestedVersionCode": "38300",
       "description": "An alternative VPN client app for WireGuard with additional features\n\n<b>Features</b>\n\n- Add tunnels via .conf file, zip, manual entry, or QR code\n- Auto connect to VPN based on Wi-Fi SSID, ethernet, or mobile data\n- Split tunneling by application with search\n- WireGuard support for kernel and userspace modes\n- Always-On VPN support\n- Export tunnels to zip\n- Quick tile support for VPN toggling\n- Static shortcuts support for primary tunnel for automation integration\n- Intent automation support for all tunnels\n- Automatic service restart after reboot\n- Battery preservation measures\n",
-      "issueTracker": "https://github.com/zaneschepke/wgtunnel/issues",
+      "issueTracker": "https://github.com/wgtunnel/wgtunnel/issues",
       "license": "MIT",
       "name": "WG Tunnel",
-      "sourceCode": "https://github.com/zaneschepke/wgtunnel",
-      "summary": "An alternative Android client app for WireGuard and AmneziaWG",
+      "sourceCode": "https://github.com/wgtunnel/wgtunnel",
+      "summary": "A FOSS Android client for WireGuard and AmneziaWG with auto-tunneling.",
+      "webSite": "https://wgtunnel.com",
       "added": 1732076822000,
       "packageName": "com.zaneschepke.wireguardautotunnel",
-      "lastUpdated": 1744421773000,
+      "lastUpdated": 1745169831000,
       "localized": {
         "en-US": {
-          "featureGraphic": "featureGraphic_W9LLqCt1lV0Enzj3eRjvzYvxUazplOnLy2gkNmzT4mQ=.png",
-          "icon": "icon_TVmhsD9QI2aJgHQmX-SH439P59_t6ZraNHXDB62-JKY=.png",
+          "featureGraphic": "featureGraphic_w_IthR1DGfyUJHyeJS7P3Q1U9ySK3bumittdxKqWfyw=.png",
+          "icon": "icon_f6PHSQFUB8NFW6FVBkZ1rGNemHb5pL-D554TCvFrsf8=.png",
           "phoneScreenshots": [
             "1.png",
             "2.png",
@@ -41,13 +42,104 @@
             "5.png",
             "6.png"
           ],
-          "whatsNew": "What's new:\n- New app icon and minor UI improvements\n- Fix for local logger toggle bug\n- Fix for AndroidTV restart on reboot\n- Fix for AndroidTV language selection\n- Fix for ping feature running by default\n- Fix for kernel mode shutdown bug\n- Fix for kill switch auto tunneling bug\n\nSHA-256 fingerprint for the 4096-bit signing certificate:\n```sh\n5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80\n```\n\nTo verify fingerprint:\n```sh\napksigner verify --print-certs [path to APK file] | gr"
+          "tvBanner": "tvBanner_01Hvws855Q_SRPcny7hf1Qzb74jBUe4c0wEmBb5GoCg=.png",
+          "whatsNew": "What's new:\n- Fix DNS resolution issues\n- Improve Android TV restore on sleep\n- Fix split tunnel search bug\n- Localization updates\n- Update docs links for new app website\n\nSHA-256 fingerprint for the 4096-bit signing certificate:\n```sh\n5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80\n```\n\nTo verify fingerprint:\n```sh\napksigner verify --print-certs [path to APK file] | grep SHA-256\n```\n\n### Changelog\n### :sparkles: New Features\n- [`5d9a534`](https://github.com/wgtunnel/wgtunnel/co"
         }
       }
     }
   ],
   "packages": {
     "com.zaneschepke.wireguardautotunnel": [
+      {
+        "added": 1745169831000,
+        "apkName": "wgtunnel_3.8.3.apk",
+        "hash": "4309f574e23e70e7eaa95883b99a46e6c04d03f8ccf9f6ec41790a465e419a90",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.zaneschepke.wireguardautotunnel",
+        "sig": "21dad82894453bd1db3f09179d247e3c",
+        "signer": "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80",
+        "size": 28748005,
+        "targetSdkVersion": 35,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+            null
+          ],
+          [
+            "android.permission.SCHEDULE_EXACT_ALARM",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_BACKGROUND_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.USE_BIOMETRIC",
+            null
+          ],
+          [
+            "android.permission.USE_FINGERPRINT",
+            null
+          ],
+          [
+            "com.zaneschepke.wireguardautotunnel.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ]
+        ],
+        "versionCode": 38300,
+        "versionName": "3.8.3"
+      },
       {
         "added": 1744421773000,
         "apkName": "wgtunnel_3.8.2.apk",
