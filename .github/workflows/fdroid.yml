@@ -54,4 +54,4 @@ jobs:
       - name: Run update script
         run: bash update.sh 2>&1
         env:
-          GH_ACCESS_TOKEN: ${{ secrets.PAT }}
+          GH_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}

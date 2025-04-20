@@ -19,18 +19,17 @@ if [ $EXIT_CODE -eq 2 ]; then
     exit 0
 elif [ $EXIT_CODE -eq 0 ]; then
     # Exit code 0 means that we can commit everything & push
+
     echo "This means that we now have changes we should push"
 
     git config --global user.name 'github-actions'
-    git config --global user.email 'dev@zaneschepke.com'
-
-    # Configure the remote to use the PAT
-    git remote set-url origin https://x-access-token:$GH_ACCESS_TOKEN@github.com/wgtunnel/fdroid.git
+    git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
     git add .
-    git commit -m "Automated update"
+    git commit -m"Automated update"
     git push
 else 
     echo "This is an unexpected error"
+
     exit $EXIT_CODE
 fi
