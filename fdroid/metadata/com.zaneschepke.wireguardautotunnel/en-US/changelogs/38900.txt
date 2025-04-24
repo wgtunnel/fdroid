@@ -1,0 +1,44 @@
+No changelog found for 3.9.0
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+
+/home/runner/work/wgtunnel/wgtunnel/temp/wgtunnel-full-v3.9.0.apk: 5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`c90a7bb`](https://github.com/wgtunnel/wgtunnel/commit/c90a7bbaf597efd6ed336011af22833ff57b5e76) - add multi-select support *(commit by @zaneschepke)*
+- [`76186c0`](https://github.com/wgtunnel/wgtunnel/commit/76186c092f40ee01e80ebda256993544534ab12d) - export variable number of tunnels *(commit by @zaneschepke)*
+- [`9304d79`](https://github.com/wgtunnel/wgtunnel/commit/9304d79775814c79745ba077994592d9df43d6a1) - variable number tunnel export with file explorer support *(commit by @zaneschepke)*
+- [`9e797b2`](https://github.com/wgtunnel/wgtunnel/commit/9e797b24d688d38fe73ce23d83697828d3482640) - add in-app updater for release versions *(commit by @zaneschepke)*
+- [`cedc2db`](https://github.com/wgtunnel/wgtunnel/commit/cedc2db32639c37181f17193173d8cfa1a4cf1ff) - add app licenses screen *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`4d18dec`](https://github.com/wgtunnel/wgtunnel/commit/4d18decbf7715fda276f95ee96ab55f69438c598) - simplify bottom nav *(commit by @zaneschepke)*
+- [`f6d7cbc`](https://github.com/wgtunnel/wgtunnel/commit/f6d7cbc032ee62a740da9815839eacb8fbbd18eb) - recomposition bug, improve cancel scenario *(commit by @zaneschepke)*
+- [`f2b9eb5`](https://github.com/wgtunnel/wgtunnel/commit/f2b9eb526e104195d1ac20a8c882daf8729d179b) - amnezia compatibility action *(commit by @zaneschepke)*
+- [`256e3f7`](https://github.com/wgtunnel/wgtunnel/commit/256e3f795110b61c37ffd4852bff22866a8e2936) - version changed while testing *(commit by @zaneschepke)*
+- [`4707d3e`](https://github.com/wgtunnel/wgtunnel/commit/4707d3eb9503fefa5da104b86d5f093a43ba2b68) - app versioning *(commit by @zaneschepke)*
+- [`f30c48a`](https://github.com/wgtunnel/wgtunnel/commit/f30c48a90ab3d90454080bda850af29d1e3ef036) - android tv banner *(commit by @zaneschepke)*
+- [`dd9f329`](https://github.com/wgtunnel/wgtunnel/commit/dd9f329721c568f5c96d092d1645ac54d2c8f218) - banner foreground *(commit by @zaneschepke)*
+- [`969e9df`](https://github.com/wgtunnel/wgtunnel/commit/969e9dfe030872efc5de3c5893c689fbd2d44b58) - support screen padding *(commit by @zaneschepke)*
+- [`c833e15`](https://github.com/wgtunnel/wgtunnel/commit/c833e15c8fa19f461735868779cf95cbfc4168d5) - disable version checker for google, for now *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`abb2960`](https://github.com/wgtunnel/wgtunnel/commit/abb29607d308eef1c0603c62fbbbf6840e2adafa) - ui section divider padding *(commit by @zaneschepke)*
+- [`312062a`](https://github.com/wgtunnel/wgtunnel/commit/312062aa364a3244234d0ea9355c870ec3247bc2) - app versioning and flavors *(commit by @zaneschepke)*
+- [`aeb590d`](https://github.com/wgtunnel/wgtunnel/commit/aeb590db8cad6605adceb4bd14f0d16664ccbe64) - version code generation *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`8c01f5b`](https://github.com/wgtunnel/wgtunnel/commit/8c01f5bea42bd66d31449f944ee7178c0208179d) - **deps**: bump androidGradlePlugin from 8.9.1 to 8.9.2 *(PR #733 by @dependabot[bot])*
+- [`1c65435`](https://github.com/wgtunnel/wgtunnel/commit/1c6543554f445b4d571dda6c05373d0b88a79048) - **deps**: bump app.cash.licensee from 1.12.0 to 1.13.0 *(PR #735 by @dependabot[bot])*
+- [`dca72a7`](https://github.com/wgtunnel/wgtunnel/commit/dca72a70e8bad45f1c7ccdfb198c691c3babd034) - **deps**: bump hiltAndroid from 2.56.1 to 2.56.2 *(PR #703 by @dependabot[bot])*
+- [`287732d`](https://github.com/wgtunnel/wgtunnel/commit/287732dfb8348347ac9b422b41c988d85ffb47e7) - **deps**: bump ktorClientCore from 3.1.1 to 3.1.2 *(PR #734 by @dependabot[bot])*
+- [`b467d66`](https://github.com/wgtunnel/wgtunnel/commit/b467d66554a0a5ff2b4f3229e5ed93a0d5bbac72) - bump version with notes *(commit by @zaneschepke)*
+
