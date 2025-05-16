@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1745456625000,
+    "timestamp": 1747387907000,
     "version": 20002,
     "name": "WG Tunnel Repository",
     "icon": "icon.png",
@@ -18,8 +18,8 @@
         "Connectivity",
         "Security"
       ],
-      "suggestedVersionName": "3.9.0",
-      "suggestedVersionCode": "38900",
+      "suggestedVersionName": "3.9.2",
+      "suggestedVersionCode": "39200",
       "description": "An alternative VPN client app for WireGuard with additional features\n\n<b>Features</b>\n\n- Add tunnels via .conf file, zip, manual entry, or QR code\n- Auto connect to VPN based on Wi-Fi SSID, ethernet, or mobile data\n- Split tunneling by application with search\n- WireGuard support for kernel and userspace modes\n- Always-On VPN support\n- Export tunnels to zip\n- Quick tile support for VPN toggling\n- Static shortcuts support for primary tunnel for automation integration\n- Intent automation support for all tunnels\n- Automatic service restart after reboot\n- Battery preservation measures\n",
       "issueTracker": "https://github.com/wgtunnel/wgtunnel/issues",
       "license": "MIT",
@@ -29,7 +29,7 @@
       "webSite": "https://wgtunnel.com",
       "added": 1732076822000,
       "packageName": "com.zaneschepke.wireguardautotunnel",
-      "lastUpdated": 1745456617000,
+      "lastUpdated": 1747387901000,
       "localized": {
         "en-US": {
           "featureGraphic": "featureGraphic_w_IthR1DGfyUJHyeJS7P3Q1U9ySK3bumittdxKqWfyw=.png",
@@ -43,13 +43,193 @@
             "6.png"
           ],
           "tvBanner": "tvBanner_01Hvws855Q_SRPcny7hf1Qzb74jBUe4c0wEmBb5GoCg=.png",
-          "whatsNew": "No changelog found for 3.9.0\n\nSHA-256 fingerprints for the 4096-bit signing certificate:\n```sh\n\n/home/runner/work/wgtunnel/wgtunnel/temp/wgtunnel-full-v3.9.0.apk: 5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80\n```\n\nTo verify fingerprint:\n```sh\napksigner verify --print-certs [path to APK file] | grep SHA-256\n```\n\n### Changelog\n### :sparkles: New Features\n- [`c90a7bb`](https://github.com/wgtunnel/wgtunnel/commit/c90a7bbaf597efd6ed336011af22833ff57b5e76) - add multi-select support"
+          "whatsNew": "No changelog found for 3.9.2\n\nSHA-256 fingerprints for the 4096-bit signing certificate:\n```sh\n5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80\n```\n\nTo verify fingerprint:\n```sh\napksigner verify --print-certs [path to APK file] | grep SHA-256\n```\n\n### Changelog\n### :bug: Bug Fixes\n- [`fa064ef`](https://github.com/wgtunnel/wgtunnel/commit/fa064ef3a6fe4be13fc9ea2d138d4459e4705ee0) - qr scanner bug, disable beep *(commit by @zaneschepke)*\n- [`4a45387`](https://github.com/wgtunnel/wg"
         }
       }
     }
   ],
   "packages": {
     "com.zaneschepke.wireguardautotunnel": [
+      {
+        "added": 1747387901000,
+        "apkName": "wgtunnel_3.9.2.apk",
+        "hash": "e20d1b96ce6e902e2fdbed227d132dd914f65e4c229eba795d99ac28eb2f8295",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.zaneschepke.wireguardautotunnel",
+        "sig": "21dad82894453bd1db3f09179d247e3c",
+        "signer": "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80",
+        "size": 29342965,
+        "targetSdkVersion": 35,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+            null
+          ],
+          [
+            "android.permission.SCHEDULE_EXACT_ALARM",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_BACKGROUND_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.USE_BIOMETRIC",
+            null
+          ],
+          [
+            "android.permission.USE_FINGERPRINT",
+            null
+          ],
+          [
+            "com.zaneschepke.wireguardautotunnel.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ]
+        ],
+        "versionCode": 39200,
+        "versionName": "3.9.2"
+      },
+      {
+        "added": 1747387900000,
+        "apkName": "wgtunnel_3.9.1.apk",
+        "hash": "8001dfed63d50f5e8935beea1d6ea5f6ba78290c29763a7712f52578d8eb0da2",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.zaneschepke.wireguardautotunnel",
+        "sig": "21dad82894453bd1db3f09179d247e3c",
+        "signer": "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80",
+        "size": 29311202,
+        "targetSdkVersion": 35,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+            null
+          ],
+          [
+            "android.permission.SCHEDULE_EXACT_ALARM",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_BACKGROUND_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.USE_BIOMETRIC",
+            null
+          ],
+          [
+            "android.permission.USE_FINGERPRINT",
+            null
+          ],
+          [
+            "com.zaneschepke.wireguardautotunnel.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ]
+        ],
+        "versionCode": 39100,
+        "versionName": "3.9.1"
+      },
       {
         "added": 1745456617000,
         "apkName": "wgtunnel_3.9.0.apk",

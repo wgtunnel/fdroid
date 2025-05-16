@@ -1,0 +1,23 @@
+No changelog found for 3.9.2
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`fa064ef`](https://github.com/wgtunnel/wgtunnel/commit/fa064ef3a6fe4be13fc9ea2d138d4459e4705ee0) - qr scanner bug, disable beep *(commit by @zaneschepke)*
+- [`4a45387`](https://github.com/wgtunnel/wgtunnel/commit/4a45387efdf5baa5776560721e3559d0d0799449) - fdroid reproducibility baseline profile bug *(commit by @zaneschepke)*
+- [`063cbf3`](https://github.com/wgtunnel/wgtunnel/commit/063cbf3ea651cec7ef4fef67644d60bc0372fa35) - active network tracking bug *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`3f8894a`](https://github.com/wgtunnel/wgtunnel/commit/3f8894a5668b0e2a34eac7fca88d9b885067a7e6) - **deps**: bump deps *(commit by @zaneschepke)*
+- [`d5a3090`](https://github.com/wgtunnel/wgtunnel/commit/d5a3090782ba48bb572299d6f9610b916af787a6) - **deps**: bump ksp, kotlin, agp *(commit by @zaneschepke)*
+- [`b8deb7b`](https://github.com/wgtunnel/wgtunnel/commit/b8deb7b64425ed72312c3668a53720212b66b731) - bump version *(commit by @zaneschepke)*
+

@@ -2,8 +2,8 @@ AuthorName: wgtunnel
 Categories:
     - Connectivity
     - Security
-CurrentVersion: 3.9.0
-CurrentVersionCode: 38900
+CurrentVersion: 3.9.2
+CurrentVersionCode: 39200
 Description: |
     An alternative VPN client app for WireGuard with additional features
 
