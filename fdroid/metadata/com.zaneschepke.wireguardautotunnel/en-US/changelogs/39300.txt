@@ -1,0 +1,37 @@
+No changelog found for 3.9.3
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :boom: BREAKING CHANGES
+- due to [`03345bd`](https://github.com/wgtunnel/wgtunnel/commit/03345bdf868da7f77cd87b6ab181e8059629275c) - deprecated wifi info api, add detection option selection *(commit by @zaneschepke)*:
+
+  deprecated wifi info api, add detection option selection
+
+
+### :bug: Bug Fixes
+- [`7f3297d`](https://github.com/wgtunnel/wgtunnel/commit/7f3297db79cdfa14f598e8bc6952217f096cd112) - rapid toggling crash bug, typo *(commit by @zaneschepke)*
+- [`0a3447c`](https://github.com/wgtunnel/wgtunnel/commit/0a3447c63d8b21b5ab2dec0b22f6ebda55aa675d) - improve auto tunnel reliability with delayed check *(commit by @zaneschepke)*
+- [`03345bd`](https://github.com/wgtunnel/wgtunnel/commit/03345bdf868da7f77cd87b6ab181e8059629275c) - deprecated wifi info api, add detection option selection *(commit by @zaneschepke)*
+- [`599bf9c`](https://github.com/wgtunnel/wgtunnel/commit/599bf9c9e0e1e72d77813386ef76e85025362b6e) - wifi name surrounding quotes, prevent multiple auto-tunnel jobs *(commit by @zaneschepke)*
+- [`0c7bcb5`](https://github.com/wgtunnel/wgtunnel/commit/0c7bcb54534078a279ce61c3880848782a879a8b) - nightly version check *(commit by @zaneschepke)*
+- [`4697560`](https://github.com/wgtunnel/wgtunnel/commit/46975607c4b92bfffde4dfefcdb888620a3fe7c3) - version check name change *(commit by @zaneschepke)*
+- [`b63c6a9`](https://github.com/wgtunnel/wgtunnel/commit/b63c6a9b73af739309609686ff4f08d9a71150ac) - simplify update check dialog ui *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`53f7285`](https://github.com/wgtunnel/wgtunnel/commit/53f72850e2de23f1f1889c47449d13057da8b7db) - remove redundant pt *(commit by @zaneschepke)*
+- [`c8b3af4`](https://github.com/wgtunnel/wgtunnel/commit/c8b3af4857da27659547f0701ee1161592461672) - format *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`aa33aeb`](https://github.com/wgtunnel/wgtunnel/commit/aa33aebd2f9c55284b9e5dcecc68ea649c8ea69a) - add full description fastlane *(commit by @zaneschepke)*
+- [`b07e604`](https://github.com/wgtunnel/wgtunnel/commit/b07e604003d46247b61ad7c0b7e70a39dd596aa5) - bump deps *(commit by @zaneschepke)*
+- [`feec7f0`](https://github.com/wgtunnel/wgtunnel/commit/feec7f0ffcef8d7f884b53726bd6e5c4132da1ef) - bump version *(commit by @zaneschepke)*
+
