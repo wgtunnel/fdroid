@@ -1,0 +1,39 @@
+No changelog found for 3.9.4
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :boom: BREAKING CHANGES
+- due to [`872ff83`](https://github.com/wgtunnel/wgtunnel/commit/872ff83a12990dc2c5808a4fe6560774546a53be) - tunnel sorting *(commit by @zaneschepke)*:
+
+  tunnel sorting
+
+
+### :sparkles: New Features
+- [`a223289`](https://github.com/wgtunnel/wgtunnel/commit/a2232899490cbeb0d36b096e26c153f493a9284a) - add shizuku support *(PR #852 by @zaneschepke)*
+  - :arrow_lower_right: *addresses issue #400 opened by @derrodirik*
+- [`3df972d`](https://github.com/wgtunnel/wgtunnel/commit/3df972d031b25bd180df011b8c468c4fb0efe134) - **lang**: weblate localization changes *(PR #857 by @zaneschepke)*
+- [`872ff83`](https://github.com/wgtunnel/wgtunnel/commit/872ff83a12990dc2c5808a4fe6560774546a53be) - tunnel sorting *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`8b828cc`](https://github.com/wgtunnel/wgtunnel/commit/8b828cca555af16b90547bfd22e0d73e6f6a820b) - nightly installer permission bug *(commit by @zaneschepke)*
+- [`e46fe93`](https://github.com/wgtunnel/wgtunnel/commit/e46fe93ae07ba5c4ab01fef5b61d0aab40323372) - improve network detection reliability, permission change detection *(commit by @zaneschepke)*
+- [`b5196fb`](https://github.com/wgtunnel/wgtunnel/commit/b5196fbf018d9672da5d299b5faaed76dec6f16f) - android tv sorting bug, improve hover visibility *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`4a432d2`](https://github.com/wgtunnel/wgtunnel/commit/4a432d2bb74010ad4b48cb1bdace97d4c7ab6b88) - remove rudundant pt *(commit by @zaneschepke)*
+- [`8ba760a`](https://github.com/wgtunnel/wgtunnel/commit/8ba760a5ff6026fe229b9bfb00194724459f374e) - auto expand tunnel stats on active *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`33437ab`](https://github.com/wgtunnel/wgtunnel/commit/33437ab2370d3635b77881732b22371a2383baf2) - fix weblate sync *(commit by @zaneschepke)*
+- [`d431c2d`](https://github.com/wgtunnel/wgtunnel/commit/d431c2d39f70a9c39aa7c744a88836bb6ddff5ba) - bump deps, fix localization sync duplicates *(commit by @zaneschepke)*
+- [`21e56cd`](https://github.com/wgtunnel/wgtunnel/commit/21e56cda801a9859d05f03922b8a65b1cee7f428) - bump app version with notes *(commit by @zaneschepke)*
+
