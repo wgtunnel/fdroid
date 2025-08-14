@@ -1,0 +1,55 @@
+No changelog found for 3.9.5
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :boom: BREAKING CHANGES
+- due to [`38ecb0b`](https://github.com/wgtunnel/wgtunnel/commit/38ecb0b66b3b57129cfb9c5d7a2f287d4bb3af79) - tun monitoring, move ping restarts to auto-tunnel w/recovery *(PR #885 by @zaneschepke)*:
+
+  tun monitoring, move ping restarts to auto-tunnel w/recovery (#885)
+
+
+### :sparkles: New Features
+- [`f333319`](https://github.com/wgtunnel/wgtunnel/commit/f33331957683fbb247767defc91b031bc3a6b884) - auto-tunnel warning notifications for location permissions and services *(commit by @zaneschepke)*
+- [`38ecb0b`](https://github.com/wgtunnel/wgtunnel/commit/38ecb0b66b3b57129cfb9c5d7a2f287d4bb3af79) - tun monitoring, move ping restarts to auto-tunnel w/recovery *(PR #885 by @zaneschepke)*
+  - :arrow_lower_right: *addresses issue #325 opened by @tomtomclub*
+  - :arrow_lower_right: *addresses issue #639 opened by @Gothico74*
+  - :arrow_lower_right: *addresses issue #860 opened by @magicWF*
+- [`e8681af`](https://github.com/wgtunnel/wgtunnel/commit/e8681af273dcf17438d006d06d005cb46d628637) - app database backup and restore *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`a825a2f`](https://github.com/wgtunnel/wgtunnel/commit/a825a2f2a44f162e6cb2d4cde2e71a0123cef54d) - tunnel position bug after toggle *(commit by @zaneschepke)*
+- [`030082d`](https://github.com/wgtunnel/wgtunnel/commit/030082df344d317da3e289feafdbac3e770daeae) - miui segmented button color issue *(commit by @zaneschepke)*
+- [`e6ad153`](https://github.com/wgtunnel/wgtunnel/commit/e6ad1531c90b4de8f78a3279a7c7082fd66cdbcd) - improve permission flow, location permission detection, accessibility, tunnel notifications *(commit by @zaneschepke)*
+- [`cb92c96`](https://github.com/wgtunnel/wgtunnel/commit/cb92c9605fb48482d12d15ef3867b78680e44da8) - startup splash bug *(commit by @zaneschepke)*
+- [`2885d1a`](https://github.com/wgtunnel/wgtunnel/commit/2885d1a539c5deb604c3a3fd3377abfddf0f3e70) - ping target empty bug *(commit by @zaneschepke)*
+- [`e78469c`](https://github.com/wgtunnel/wgtunnel/commit/e78469c730d04d1ac5f8e5d18e0c2b37462a86e4) - split tunneling for AndroidTV only apps *(commit by @zaneschepke)*
+- [`96d8114`](https://github.com/wgtunnel/wgtunnel/commit/96d8114d3791895050e972114857ef3e64b36769) - split tunneling for AndroidTV only apps typo *(commit by @zaneschepke)*
+- [`0336c2a`](https://github.com/wgtunnel/wgtunnel/commit/0336c2ac9fdae6cba1ee02b6b00d064531fb551d) - duplicate tunnel names overwrite bug *(commit by @zaneschepke)*
+- [`6d100a2`](https://github.com/wgtunnel/wgtunnel/commit/6d100a2f46ec0a186ad8bf9f06d11553c17f95ae) - kill switch stuck on bug *(commit by @zaneschepke)*
+- [`5d8fb38`](https://github.com/wgtunnel/wgtunnel/commit/5d8fb38906c1b290ec93e5fe505b6d3f5d764301) - uapi socket connection with support for dynamic packages *(commit by @zaneschepke)*
+- [`3e2ffc1`](https://github.com/wgtunnel/wgtunnel/commit/3e2ffc1b641cb7675806c5b25ea079bdd0f80ece) - tunnel re-establish bug *(commit by @zaneschepke)*
+- [`99419eb`](https://github.com/wgtunnel/wgtunnel/commit/99419ebe9f7f77870ffd362ef1bd252dd6dbf0d2) - allow ping target to override all defaults *(commit by @zaneschepke)*
+- [`7940b97`](https://github.com/wgtunnel/wgtunnel/commit/7940b97329c5db9955fcefbdb4f969a57c8e62cd) - edit tunnel save config name append bug *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`230cd0a`](https://github.com/wgtunnel/wgtunnel/commit/230cd0adb8dd55d177c60485c32386127e229804) - remove prelease build, change icon color for nightly *(commit by @zaneschepke)*
+- [`5feb282`](https://github.com/wgtunnel/wgtunnel/commit/5feb2827fdff225044a73071b79441452cfb0c7b) - share import save logic *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`3aa03c1`](https://github.com/wgtunnel/wgtunnel/commit/3aa03c18965185bd93ce12c32a2b24b0be80b4ca) - fix fastlane missing full descriptions *(commit by @zaneschepke)*
+- [`aa1a344`](https://github.com/wgtunnel/wgtunnel/commit/aa1a344bb2a2aa05e196cf6c5614520b3f103b79) - fix short description vi *(commit by @zaneschepke)*
+- [`33b5182`](https://github.com/wgtunnel/wgtunnel/commit/33b51823abb3eca501116367505f78027f37b102) - deprecation, warnings *(commit by @zaneschepke)*
+- [`78b419d`](https://github.com/wgtunnel/wgtunnel/commit/78b419dc6efbf45485af2152380fe3fcdee75e63) - bump deps *(commit by @zaneschepke)*
+- [`753575c`](https://github.com/wgtunnel/wgtunnel/commit/753575c50d6f469fd4d1a90975f636ffb0910ac7) - gradle checksum *(commit by @zaneschepke)*
+- [`6f365a4`](https://github.com/wgtunnel/wgtunnel/commit/6f365a44904e4f04525969d02a995f3b13444ebd) - **deps**: bump actions/download-artifact from 4 to 5 *(PR #884 by @dependabot[bot])*
+- [`99cd1d9`](https://github.com/wgtunnel/wgtunnel/commit/99cd1d917a5288a9361df1324d47dffd36336c1b) - bump version with notes *(commit by @zaneschepke)*
+
