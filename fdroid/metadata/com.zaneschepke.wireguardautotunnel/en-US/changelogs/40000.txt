@@ -1,0 +1,86 @@
+No changelog found for 4.0.0
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :boom: BREAKING CHANGES
+- due to [`3eb72cd`](https://github.com/wgtunnel/wgtunnel/commit/3eb72cd43cd74a340bbfbe801fb8c056513c9b78) - proxied backend and lockdown mode *(PR #911 by @zaneschepke)*:
+
+  proxied backend and lockdown mode (#911)
+
+- due to [`5f8bc7b`](https://github.com/wgtunnel/wgtunnel/commit/5f8bc7b4f6304afbad5780deb4910dbb1ba680a8) - ddns re-resolve and dynamic peer update without bouncing tunnel *(commit by @zaneschepke)*:
+
+  ddns re-resolve and dynamic peer update without bouncing tunnel
+
+
+### :sparkles: New Features
+- [`3eb72cd`](https://github.com/wgtunnel/wgtunnel/commit/3eb72cd43cd74a340bbfbe801fb8c056513c9b78) - proxied backend and lockdown mode *(PR #911 by @zaneschepke)*
+  - :arrow_lower_right: *addresses issue #87 opened by @Dondrejohnson5*
+  - :arrow_lower_right: *addresses issue #708 opened by @Solarunit*
+  - :arrow_lower_right: *addresses issue #877 opened by @EngineerGlitch*
+- [`5f8bc7b`](https://github.com/wgtunnel/wgtunnel/commit/5f8bc7b4f6304afbad5780deb4910dbb1ba680a8) - ddns re-resolve and dynamic peer update without bouncing tunnel *(commit by @zaneschepke)*
+- [`050efe2`](https://github.com/wgtunnel/wgtunnel/commit/050efe2fb3c4450d1a92684e9f7ee6d72181e301) - add in app donation details, crypto addresses *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`8a3d781`](https://github.com/wgtunnel/wgtunnel/commit/8a3d781bb340e2c2c8bacdf1880bf3cb93abd5a5) - standalone can accidentally install fdroid version, progress indicator bug *(commit by @zaneschepke)*
+- [`132728f`](https://github.com/wgtunnel/wgtunnel/commit/132728f5dd7d594d239f13afdbd798566a0cf05f) - add missing db migration query *(commit by @zaneschepke)*
+- [`3256da1`](https://github.com/wgtunnel/wgtunnel/commit/3256da1cfa0ee05ebb3ea112b67eefb8f7a98811) - proguard minification bug *(commit by @zaneschepke)*
+- [`74c4efe`](https://github.com/wgtunnel/wgtunnel/commit/74c4efe4774425f9323adf96aa680d7377584b4c) - proguard rules consume bug *(commit by @zaneschepke)*
+- [`df7154d`](https://github.com/wgtunnel/wgtunnel/commit/df7154d0c16ae3c092299edd85848f63732029fb) - amnezia config parse *(commit by @zaneschepke)*
+- [`7a0af24`](https://github.com/wgtunnel/wgtunnel/commit/7a0af2462b795c8d6477b95e7a238d7ebcf6e8e9) - go parser *(commit by @zaneschepke)*
+- [`0ea84b3`](https://github.com/wgtunnel/wgtunnel/commit/0ea84b3e3143a4adf7e29dad59bf0a9def2d7e73) - navigation sync bug *(commit by @zaneschepke)*
+- [`875eae2`](https://github.com/wgtunnel/wgtunnel/commit/875eae29e7ba3e14baad079e83ab887c03cb1942) - tunnel ipv4 toggle bug *(commit by @zaneschepke)*
+- [`ee1fcc6`](https://github.com/wgtunnel/wgtunnel/commit/ee1fcc6b24061e9bd553ccdec1e87922f471226b) - proxy setting save bug *(commit by @zaneschepke)*
+- [`4cb65c5`](https://github.com/wgtunnel/wgtunnel/commit/4cb65c5d3049d0aec8aa19a00ae64a1c340ddc66) - improve tunnel shutdown, fix bounce bug *(commit by @zaneschepke)*
+- [`37845f2`](https://github.com/wgtunnel/wgtunnel/commit/37845f2e77c191db00c9f36ab3485261a35935d6) - proxy ui bugs *(commit by @zaneschepke)*
+- [`297e8c1`](https://github.com/wgtunnel/wgtunnel/commit/297e8c1f93b9de1a2e4d5dfd0d84410c74811514) - fmt, mode icon button alignment *(commit by @zaneschepke)*
+- [`c9c4bbf`](https://github.com/wgtunnel/wgtunnel/commit/c9c4bbf3bf9263e73e24ec3fabb298eb38d2dae8) - tunnel screen nav bar action rendering bug *(commit by @zaneschepke)*
+- [`82b3969`](https://github.com/wgtunnel/wgtunnel/commit/82b39695de354974e52bb42a16783bcf21274d40) - improve tun state icon to reflect health *(commit by @zaneschepke)*
+- [`207c1a4`](https://github.com/wgtunnel/wgtunnel/commit/207c1a4d1a62ab10846893b4c229c465bd2368d2) - remove biometrics requirement *(commit by @zaneschepke)*
+- [`5749f06`](https://github.com/wgtunnel/wgtunnel/commit/5749f06229189e7bc8092b3bf2577bc52f92778f) - non vpnservice mode crashes *(commit by @zaneschepke)*
+- [`e5888a6`](https://github.com/wgtunnel/wgtunnel/commit/e5888a628d0d29513770e3df207801e863f46f4b) - export amnezia config bug *(commit by @zaneschepke)*
+- [`512d765`](https://github.com/wgtunnel/wgtunnel/commit/512d765c5535160f92053f99f43f5367001d8459) - delete button hidden bug *(commit by @zaneschepke)*
+- [`2c6946c`](https://github.com/wgtunnel/wgtunnel/commit/2c6946cc767cf04683dfae8aad1f44e5eb3cf09d) - delete button hidden bug *(commit by @zaneschepke)*
+- [`39fe769`](https://github.com/wgtunnel/wgtunnel/commit/39fe7691e89a499136f363ee59000fb52bb84ee4) - tunnel status bug *(commit by @zaneschepke)*
+- [`5b0cda2`](https://github.com/wgtunnel/wgtunnel/commit/5b0cda2859f01281c079f91c8739870fa32750b5) - tunnel start fail on proxy mode switch *(commit by @zaneschepke)*
+- [`5762a02`](https://github.com/wgtunnel/wgtunnel/commit/5762a023a9ff2bc9ad2d6e671c08edc4a703961c) - nav to same screen bug *(commit by @zaneschepke)*
+- [`1127db1`](https://github.com/wgtunnel/wgtunnel/commit/1127db1c56fa2ed835a32973b4927885f9f1e7d1) - make auto tunnel observe mode switches *(commit by @zaneschepke)*
+- [`274e6ae`](https://github.com/wgtunnel/wgtunnel/commit/274e6aec0ff66a686cd9433e64f2c72963b5a753) - split tunnel sort checked to top *(commit by @zaneschepke)*
+- [`41cfa8f`](https://github.com/wgtunnel/wgtunnel/commit/41cfa8fcecd01e62483bd15357767212dd84ef63) - shizuku and root shell wifi command *(commit by @zaneschepke)*
+- [`280c187`](https://github.com/wgtunnel/wgtunnel/commit/280c187c5bef76f06dccc005e69c5fd0a3a8b408) - build performance *(commit by @zaneschepke)*
+- [`4b4a8cc`](https://github.com/wgtunnel/wgtunnel/commit/4b4a8cc27391eb24e893bc2d5629c1ec8a1ae4d5) - okhttp proguard bug *(commit by @zaneschepke)*
+- [`2b8131d`](https://github.com/wgtunnel/wgtunnel/commit/2b8131da41d72af6b431ccc524b49a0193965345) - location disclosure bug *(commit by @zaneschepke)*
+- [`255877d`](https://github.com/wgtunnel/wgtunnel/commit/255877db3b3232a0e456444ab217c2f3e7d6f976) - bump okhttp *(commit by @zaneschepke)*
+- [`6e6f405`](https://github.com/wgtunnel/wgtunnel/commit/6e6f4055357e4b0140c7addf1a393f72f796f4f5) - doh and stats not display bug *(commit by @zaneschepke)*
+- [`439dbf4`](https://github.com/wgtunnel/wgtunnel/commit/439dbf48a0fef0b60437dc877d3d1ef6b99420c0) - qr code import bug *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`fa4cc84`](https://github.com/wgtunnel/wgtunnel/commit/fa4cc84c0e8e8065cea77f7b83d0e9734dc59705) - navigation and viewmodels *(PR #925 by @zaneschepke)*
+  - :arrow_lower_right: *addresses issue #785 opened by @awm129*
+  - :arrow_lower_right: *addresses issue #903 opened by @spvkgn*
+  - :arrow_lower_right: *addresses issue #919 opened by @succeso4*
+  - :arrow_lower_right: *addresses issue #923 opened by @R7010A*
+- [`67eacc5`](https://github.com/wgtunnel/wgtunnel/commit/67eacc576c6581178c647c9e7315383c507217b6) - make launch options more obvious *(commit by @zaneschepke)*
+- [`5bd497c`](https://github.com/wgtunnel/wgtunnel/commit/5bd497c8bb91aab9f737fb94249244668ec2132f) - disbale unsupported features on mode changes, copy app version *(commit by @zaneschepke)*
+- [`ee808e0`](https://github.com/wgtunnel/wgtunnel/commit/ee808e0b4d23b1736a599a140544c58e7f4a0572) - add addreses and allow show address *(commit by @zaneschepke)*
+- [`5356246`](https://github.com/wgtunnel/wgtunnel/commit/5356246eea7ea300667451e9a3523bc6e02d37dc) - repositories *(commit by @zaneschepke)*
+- [`7a3fb03`](https://github.com/wgtunnel/wgtunnel/commit/7a3fb037eee64a1eb25505ce0bde29b96090c60b) - change support crypto options/update addresses *(commit by @zaneschepke)*
+- [`c8699f5`](https://github.com/wgtunnel/wgtunnel/commit/c8699f561042e2e84f4d243d6f10903fb668fdfe) - cleanup old strings, optimize *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`d07cf7a`](https://github.com/wgtunnel/wgtunnel/commit/d07cf7a24bb947f18ef86e32b069d4d83974e8fd) - bump deps *(commit by @zaneschepke)*
+- [`f90765f`](https://github.com/wgtunnel/wgtunnel/commit/f90765ff38abab93a1c4e090c008a27d474eb884) - **deps**: bump *(commit by @zaneschepke)*
+- [`62b6629`](https://github.com/wgtunnel/wgtunnel/commit/62b662950a4eee1bf3b54e0c20606008ff1510f2) - **deps**: bump actions/setup-java from 4 to 5 *(PR #910 by @dependabot[bot])*
+- [`706b2e8`](https://github.com/wgtunnel/wgtunnel/commit/706b2e8d90e6c49addd6299affcf35ed7875b6c6) - **deps**: bump actions/checkout from 4 to 5 *(PR #892 by @dependabot[bot])*
+- [`fe9315b`](https://github.com/wgtunnel/wgtunnel/commit/fe9315b64ad69c457d2b50ed703d9404dc00e8a2) - bump deps *(commit by @zaneschepke)*
+- [`fe21c0e`](https://github.com/wgtunnel/wgtunnel/commit/fe21c0eda396594d7944f1a69c31f073b127d4f1) - cleanup old changelogs *(commit by @zaneschepke)*
+- [`1c220b5`](https://github.com/wgtunnel/wgtunnel/commit/1c220b57a8e4115e54addacbf98c1cbe97c93416) - bump app version with notes *(PR #955 by @zaneschepke)*
+
