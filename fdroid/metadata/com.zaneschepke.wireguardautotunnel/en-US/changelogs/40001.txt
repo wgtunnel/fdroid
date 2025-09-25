@@ -1,0 +1,22 @@
+No changelog found for 4.0.1
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`88fff0b`](https://github.com/wgtunnel/wgtunnel/commit/88fff0b31cc346c804e0275563d1aee4e0964076) - logs export bug *(commit by @zaneschepke)*
+- [`7be051a`](https://github.com/wgtunnel/wgtunnel/commit/7be051a6645ec892b16bc4f696a28f2ebc267f9c) - can't edit ping target bug *(commit by @zaneschepke)*
+- [`8fd2d8f`](https://github.com/wgtunnel/wgtunnel/commit/8fd2d8f62fc9479a91528f8709b4740901fcb934) - ipv4 fallback, proxy search domain support and parser fix *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`99a3fba`](https://github.com/wgtunnel/wgtunnel/commit/99a3fba97fb8c9bb53d5d6d74e236810e9f1202c) - update issue template *(commit by @zaneschepke)*
+- [`14a7278`](https://github.com/wgtunnel/wgtunnel/commit/14a7278747dc76908239d25a7788b0369410a3d1) - bump for patch version *(commit by @zaneschepke)*
+
