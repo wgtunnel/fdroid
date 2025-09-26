@@ -1,0 +1,22 @@
+No changelog found for 4.0.2
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`33a0226`](https://github.com/wgtunnel/wgtunnel/commit/33a02262a81baa1316ecc86f4e7e792032e03634) - pin lock crash bug *(commit by @zaneschepke)*
+- [`09fa9da`](https://github.com/wgtunnel/wgtunnel/commit/09fa9dabdd88539b743b9357dc12513cc79f57ec) - tunnel on ethernet toggle *(commit by @zaneschepke)*
+- [`acdefd8`](https://github.com/wgtunnel/wgtunnel/commit/acdefd80fa7b5be9752169f2260293a9613f9b16) - fdroid agp build issue, bump deps *(commit by @zaneschepke)*
+- [`7c3eabb`](https://github.com/wgtunnel/wgtunnel/commit/7c3eabb19b7891522ee65c3a3bf8485267c1eea4) - logs export bug, export file naming *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`e269aa8`](https://github.com/wgtunnel/wgtunnel/commit/e269aa88d906e65e28937be81d0614f16c0158a3) - bump verison to 4.0.2 *(commit by @zaneschepke)*
+
