@@ -1,0 +1,20 @@
+No changelog found for 4.0.3
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`aa5adec`](https://github.com/wgtunnel/wgtunnel/commit/aa5adec902d55981e873b262db48458663e95a09) - notification stop action bug, monitoring failing to shut down race *(commit by @zaneschepke)*
+- [`dedef38`](https://github.com/wgtunnel/wgtunnel/commit/dedef385411cdb4b189b6f69aea69eb84fe442c3) - notification activity relaunch bug *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`b7e4f3c`](https://github.com/wgtunnel/wgtunnel/commit/b7e4f3c3e58a7f6d73cccf2b08bfb4a37c802241) - bump version to 4.0.3 *(commit by @zaneschepke)*
+
