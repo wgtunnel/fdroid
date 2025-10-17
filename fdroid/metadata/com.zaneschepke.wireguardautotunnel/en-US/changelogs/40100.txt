@@ -1,0 +1,69 @@
+No changelog found for 4.1.0
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`00c2c2a`](https://github.com/wgtunnel/wgtunnel/commit/00c2c2ac203b4e01fa5eee4107d166b645ec0241) - global config overrides *(PR #983 by @zaneschepke)*
+- [`c86733c`](https://github.com/wgtunnel/wgtunnel/commit/c86733c5723eff5aba6aa99307e6358c730d9d47) - additional app settings integration *(commit by @zaneschepke)*
+- [`9ea608b`](https://github.com/wgtunnel/wgtunnel/commit/9ea608beb55d4ea62f197a54f7e4810e2750d06d) - improved navigation animations *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`2cbace5`](https://github.com/wgtunnel/wgtunnel/commit/2cbace5bb5d99c5cb544257025bae42eb521ab32) - tunnel performance bug *(commit by @zaneschepke)*
+- [`f8fe3a4`](https://github.com/wgtunnel/wgtunnel/commit/f8fe3a4a3a3ea739c77fd0cdafe7c343b7de9f1a) - sorting bug *(commit by @zaneschepke)*
+- [`ae2b28c`](https://github.com/wgtunnel/wgtunnel/commit/ae2b28c9f61e626abb1bc710e5d1f48054dc5c59) - split tunnel ui bug, new progress indicators *(commit by @zaneschepke)*
+- [`ca85000`](https://github.com/wgtunnel/wgtunnel/commit/ca85000f1dd0b1223ae3ba45eca6bdb7a926e8ab) - qr modal ui bug *(commit by @zaneschepke)*
+- [`91e61c5`](https://github.com/wgtunnel/wgtunnel/commit/91e61c5c319c49e5332c9ab37624e2b878f83c6f) - add timeouts to prevent tunnel hang on slow dns *(commit by @zaneschepke)*
+- [`b341870`](https://github.com/wgtunnel/wgtunnel/commit/b341870c8b91ae5b94ec3290b8c6aee531e07a44) - peer stats of same peer key bug, minor status ui improvements *(commit by @zaneschepke)*
+- [`9be5932`](https://github.com/wgtunnel/wgtunnel/commit/9be593297978f93ccfe756b9969fa624dc2ef3ce) - config ui outline bug *(commit by @zaneschepke)*
+- [`5ee5ebe`](https://github.com/wgtunnel/wgtunnel/commit/5ee5ebe736db17edc534e1261b407c7cdfe99bf0) - health unknown if no rx *(commit by @zaneschepke)*
+- [`f71ec7b`](https://github.com/wgtunnel/wgtunnel/commit/f71ec7b33f7cf71c8f01c8fe44b6172df45ef6a2) - doh static ip bug *(commit by @zaneschepke)*
+- [`449b6c5`](https://github.com/wgtunnel/wgtunnel/commit/449b6c5422f3ae6280f520f7e81713fa10233cf2) - auto tunnel status badge *(commit by @zaneschepke)*
+- [`a6a7b3f`](https://github.com/wgtunnel/wgtunnel/commit/a6a7b3f7702edc2ae2fa2492860beb9066d0aa08) - nav crash bugfix *(commit by @zaneschepke)*
+- [`3c1e6b5`](https://github.com/wgtunnel/wgtunnel/commit/3c1e6b5862ca36e3481972cb8ce83e11ffbe7fb8) - improve tile binding *(commit by @zaneschepke)*
+- [`841ed71`](https://github.com/wgtunnel/wgtunnel/commit/841ed71e90cf6ee19c29cb95c8714b3b10e79aa3) - proguard issue, bump deps *(commit by @zaneschepke)*
+- [`2e72620`](https://github.com/wgtunnel/wgtunnel/commit/2e726206e0c355333e85ce7d1bf742d3ac61b57e) - nav3 tab bug *(commit by @zaneschepke)*
+- [`ce49e07`](https://github.com/wgtunnel/wgtunnel/commit/ce49e07b2f156fbcd59b2e2ad9714abc18d30d5f) - row click responsiveness issues with trailing components *(commit by @zaneschepke)*
+- [`5519f1d`](https://github.com/wgtunnel/wgtunnel/commit/5519f1da8b92d71871e7330eebb5199223a2f32c) - revert tile binder changes *(commit by @zaneschepke)*
+- [`b0da298`](https://github.com/wgtunnel/wgtunnel/commit/b0da2982d7f4c1211a0b5415fc35f1fdc38ed7ee) - more ui fixes, move ping targets *(commit by @zaneschepke)*
+- [`f3489e1`](https://github.com/wgtunnel/wgtunnel/commit/f3489e13eda652518d0f1ea95b5a78e914019951) - ping default target for split configs *(commit by @zaneschepke)*
+- [`2673518`](https://github.com/wgtunnel/wgtunnel/commit/2673518fdd25761e39ef123f6f228271c701e3b1) - wg config parser to allow server configs *(commit by @zaneschepke)*
+- [`5418ddd`](https://github.com/wgtunnel/wgtunnel/commit/5418ddde54936bb50a7bd39fa7eca6e91acf3f7f) - nav/status bar colors *(commit by @zaneschepke)*
+- [`60935c9`](https://github.com/wgtunnel/wgtunnel/commit/60935c9ff1b1639f9df92987633769ab00339fdb) - auto tunnel service worker *(commit by @zaneschepke)*
+- [`a451e96`](https://github.com/wgtunnel/wgtunnel/commit/a451e962b02ad08e8abaccc1550da0f442f38c8a) - location warning banner *(commit by @zaneschepke)*
+- [`a2139fa`](https://github.com/wgtunnel/wgtunnel/commit/a2139fa2fca8a11ada121fe2a2e65b8990e6be69) - lower notification importance, group notifications *(commit by @zaneschepke)*
+- [`9c0a4f1`](https://github.com/wgtunnel/wgtunnel/commit/9c0a4f117a6a95a826b9bd609c5e7c5b4eb9ea9d) - prevent redundant starts *(commit by @zaneschepke)*
+- [`bd38510`](https://github.com/wgtunnel/wgtunnel/commit/bd3851077c68d5296d86b7835f7c5ce8c3bdd08a) - Amnezia QR large text error handling *(commit by @zaneschepke)*
+- [`90bdb0f`](https://github.com/wgtunnel/wgtunnel/commit/90bdb0fae28a0533311eb9697be10cb38d26f5ec) - only allow backup/restore when all services are down *(commit by @zaneschepke)*
+- [`9198165`](https://github.com/wgtunnel/wgtunnel/commit/919816588bf4d4d1e9ed328c96f3a782cf8e2d46) - always-on vpn regression *(commit by @zaneschepke)*
+- [`2cc71e6`](https://github.com/wgtunnel/wgtunnel/commit/2cc71e657ba81337d1dcc6330eef805ac892564e) - restart on boot, dynamic dns, auto tunnel reliability *(commit by @zaneschepke)*
+- [`01b5298`](https://github.com/wgtunnel/wgtunnel/commit/01b5298254e4ab3773189659fe15ad42f3391410) - android tv config screen actions *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`4659ed9`](https://github.com/wgtunnel/wgtunnel/commit/4659ed92b644ac3c085c5ac622eaf13be7c21205) - update links *(commit by @zaneschepke)*
+- [`0cbd90d`](https://github.com/wgtunnel/wgtunnel/commit/0cbd90d4e17ff1345cc7d6b0483f4810af075856) - ui screen content spacing *(commit by @zaneschepke)*
+- [`77ef317`](https://github.com/wgtunnel/wgtunnel/commit/77ef3175641fbd75342cd885f6316f00e7e0331d) - migrate to navigation3 *(commit by @zaneschepke)*
+- [`9735f59`](https://github.com/wgtunnel/wgtunnel/commit/9735f59abb082785302702e2d27ed9debc75cc73) - animate bottom nav icons *(commit by @zaneschepke)*
+- [`ea77259`](https://github.com/wgtunnel/wgtunnel/commit/ea7725965379993ea0f0e435d803c648e11029f6) - deps *(commit by @zaneschepke)*
+- [`4015aa1`](https://github.com/wgtunnel/wgtunnel/commit/4015aa1f28fc6d1af47d7fc8ce395d07acbcbf91) - attempt to improve network change detection for tecno, redmi, samsung devices *(commit by @zaneschepke)*
+- [`71461f4`](https://github.com/wgtunnel/wgtunnel/commit/71461f4d0bd366b67fc0e44d795793225de13b0e) - ui improvements *(commit by @zaneschepke)*
+- [`5fddf03`](https://github.com/wgtunnel/wgtunnel/commit/5fddf03523ec45cd78370b2cb2304e5401fad4be) - additional ui changes *(commit by @zaneschepke)*
+- [`50dd240`](https://github.com/wgtunnel/wgtunnel/commit/50dd2404aef6725a6468dce3f0372f132e5e8ed9) - move some things around *(commit by @zaneschepke)*
+- [`afbd25f`](https://github.com/wgtunnel/wgtunnel/commit/afbd25f46c6471d0ec696f428a9163ee3bf38bb0) - add back active network details, optimize imports and strings *(commit by @zaneschepke)*
+- [`b30b0f3`](https://github.com/wgtunnel/wgtunnel/commit/b30b0f3cd2a72951263a13ab2550bd8ce831821c) - db restructuring *(commit by @zaneschepke)*
+- [`de3f431`](https://github.com/wgtunnel/wgtunnel/commit/de3f43100ed0ea0757a4b43ed0cd60c1d4374d02) - datamanager for migration *(commit by @zaneschepke)*
+- [`ff5331b`](https://github.com/wgtunnel/wgtunnel/commit/ff5331bea9b8d2604b7d48deae4b87795852503b) - remove nav ripple on mobile, improve key ui *(commit by @zaneschepke)*
+- [`a160802`](https://github.com/wgtunnel/wgtunnel/commit/a160802f81f4584da32b6747293d52016a00e422) - monitoring ui *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`954d0c1`](https://github.com/wgtunnel/wgtunnel/commit/954d0c1c88f5cff744d37f54c892e8e6d4ba3eab) - **deps**: bump peter-evans/repository-dispatch from 3 to 4 *(PR #987 by @dependabot[bot])*
+- [`21706db`](https://github.com/wgtunnel/wgtunnel/commit/21706db668943d6f6ba4d7ac73b17eb950759c95) - release 4.1.0 *(commit by @zaneschepke)*
+
