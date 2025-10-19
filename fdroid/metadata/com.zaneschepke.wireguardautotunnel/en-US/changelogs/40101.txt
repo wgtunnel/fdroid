@@ -1,0 +1,20 @@
+No changelog found for 4.1.1
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`706513a`](https://github.com/wgtunnel/wgtunnel/commit/706513a5b0f6c5cf3ae0df3f0725cfd85ebd7176) - auto tunnel start show battery optimization *(commit by @zaneschepke)*
+- [`e8146f0`](https://github.com/wgtunnel/wgtunnel/commit/e8146f0b976376eb35a73fbb52d990aab157a5f9) - peer stats ui bug *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`b2bd857`](https://github.com/wgtunnel/wgtunnel/commit/b2bd8574ec1e24ef734db744811526bec03eeadb) - release 4.1.1 *(commit by @zaneschepke)*
+
