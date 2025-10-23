@@ -104,74 +104,76 @@ func main() {
 
 		log.Printf("Received %d releases", len(releases))
 
-		for _, release := range releases {
-			fmt.Printf("::group::Release %s\n", release.GetTagName())
-			func() {
-				defer fmt.Println("::endgroup::")
+		if !app.Nightly {
+			for _, release := range releases {
+				fmt.Printf("::group::Release %s\n", release.GetTagName())
+				func() {
+					defer fmt.Println("::endgroup::")
 
-				if release.GetPrerelease() {
-					log.Printf("Skipping prerelease %q", release.GetTagName())
-					return
-				}
-				if release.GetDraft() {
-					log.Printf("Skipping draft %q", release.GetTagName())
-					return
-				}
-				if release.GetTagName() == "" {
-					log.Printf("Skipping release with empty tag name")
-					return
-				}
+					if release.GetPrerelease() {
+						log.Printf("Skipping prerelease %q", release.GetTagName())
+						return
+					}
+					if release.GetDraft() {
+						log.Printf("Skipping draft %q", release.GetTagName())
+						return
+					}
+					if release.GetTagName() == "" {
+						log.Printf("Skipping release with empty tag name")
+						return
+					}
 
-				log.Printf("Working on release with tag name %q", release.GetTagName())
+					log.Printf("Working on release with tag name %q", release.GetTagName())
 
-				apk := apps.FindAPKRelease(release)
-				if apk == nil {
-					log.Printf("Couldn't find a release asset with extension \".apk\"")
-					return
-				}
+					apk := apps.FindAPKRelease(release)
+					if apk == nil {
+						log.Printf("Couldn't find a release asset with extension \".apk\"")
+						return
+					}
 
-				appName := apps.GenerateReleaseFilename(app.Name(), release.GetTagName())
+					appName := apps.GenerateReleaseFilename(app.Name(), release.GetTagName())
 
-				log.Printf("Target APK name: %s", appName)
+					log.Printf("Target APK name: %s", appName)
 
-				appClone := app
+					appClone := app
 
-				appClone.ReleaseDescription = release.GetBody()
-				if appClone.ReleaseDescription != "" {
-					log.Printf("Release notes: %s", appClone.ReleaseDescription)
-				}
+					appClone.ReleaseDescription = release.GetBody()
+					if appClone.ReleaseDescription != "" {
+						log.Printf("Release notes: %s", appClone.ReleaseDescription)
+					}
 
-				apkInfoMap[appName] = appClone
+					apkInfoMap[appName] = appClone
 
-				appTargetPath := filepath.Join(*repoDir, appName)
+					appTargetPath := filepath.Join(*repoDir, appName)
 
-				// If the app file already exists for this version, we continue
-				if _, err := os.Stat(appTargetPath); !errors.Is(err, os.ErrNotExist) {
-					log.Printf("Already have APK for version %q at %q", release.GetTagName(), appTargetPath)
-					return
-				}
+					// If the app file already exists for this version, we continue
+					if _, err := os.Stat(appTargetPath); !errors.Is(err, os.ErrNotExist) {
+						log.Printf("Already have APK for version %q at %q", release.GetTagName(), appTargetPath)
+						return
+					}
 
-				log.Printf("Downloading APK %q from release %q to %q", apk.GetName(), release.GetTagName(), appTargetPath)
+					log.Printf("Downloading APK %q from release %q to %q", apk.GetName(), release.GetTagName(), appTargetPath)
 
-				dlCtx, cancel := context.WithTimeout(context.Background(), 5*time.Minute)
-				defer cancel()
+					dlCtx, cancel := context.WithTimeout(context.Background(), 5*time.Minute)
+					defer cancel()
 
-				appStream, _, err := githubClient.Repositories.DownloadReleaseAsset(dlCtx, repo.Author, repo.Name, apk.GetID(), http.DefaultClient)
-				if err != nil {
-					log.Printf("Error while downloading app %q (artifact id %d) from from release %q: %s", app.GitURL, apk.GetID(), release.GetTagName(), err.Error())
-					haveError = true
-					return
-				}
+					appStream, _, err := githubClient.Repositories.DownloadReleaseAsset(dlCtx, repo.Author, repo.Name, apk.GetID(), http.DefaultClient)
+					if err != nil {
+						log.Printf("Error while downloading app %q (artifact id %d) from from release %q: %s", app.GitURL, apk.GetID(), release.GetTagName(), err.Error())
+						haveError = true
+						return
+					}
 
-				err = downloadStream(appTargetPath, appStream)
-				if err != nil {
-					log.Printf("Error while downloading app %q (artifact id %d) from from release %q to %q: %s", app.GitURL, *apk.ID, *release.TagName, appTargetPath, err.Error())
-					haveError = true
-					return
-				}
+					err = downloadStream(appTargetPath, appStream)
+					if err != nil {
+						log.Printf("Error while downloading app %q (artifact id %d) from from release %q to %q: %s", app.GitURL, *apk.ID, *release.TagName, appTargetPath, err.Error())
+						haveError = true
+						return
+					}
 
-				log.Printf("Successfully downloaded app for version %q", release.GetTagName())
-			}()
+					log.Printf("Successfully downloaded app for version %q", release.GetTagName())
+				}()
+			}
 		}
 
 		// Handle nightly if enabled
@@ -215,10 +217,15 @@ func main() {
 
 					appTargetPath := filepath.Join(*repoDir, appName)
 
-					// If the app file already exists for this version, we continue
-					if _, err := os.Stat(appTargetPath); !errors.Is(err, os.ErrNotExist) {
-						log.Printf("Already have APK for nightly version %q at %q", latestPre.GetTagName(), appTargetPath)
-						return
+					// For nightly, always replace if exists
+					if _, err := os.Stat(appTargetPath); err == nil {
+						log.Printf("Deleting existing nightly APK at %q to replace with updated", appTargetPath)
+						err := os.Remove(appTargetPath)
+						if err != nil {
+							log.Printf("Error deleting existing %s: %s", appTargetPath, err.Error())
+							haveError = true
+							return
+						}
 					}
 
 					log.Printf("Downloading APK %q from nightly release %q to %q", apk.GetName(), latestPre.GetTagName(), appTargetPath)
@@ -247,9 +254,13 @@ func main() {
 			}
 		}
 
-		// Cleanup old APKs if keep_count > 0
-		if app.KeepCount > 0 {
-			log.Printf("Cleaning up old APKs, keeping latest %d", app.KeepCount)
+		// Cleanup old APKs if keep_count > 0 or if nightly (force keep 1)
+		effectiveKeep := int(app.KeepCount)
+		if app.Nightly {
+			effectiveKeep = 1
+		}
+		if effectiveKeep > 0 {
+			log.Printf("Cleaning up old APKs, keeping latest %d", effectiveKeep)
 
 			// Map tag to published date
 			tagToDate := make(map[string]time.Time)
@@ -303,7 +314,7 @@ func main() {
 			})
 
 			// Delete excess
-			for i := int(app.KeepCount); i < len(apkList); i++ {
+			for i := effectiveKeep; i < len(apkList); i++ {
 				delPath := filepath.Join(*repoDir, apkList[i].file)
 				log.Printf("Deleting old APK: %s", delPath)
 				err := os.Remove(delPath)
