@@ -15,9 +15,10 @@ This repository hosts a [F-Droid](https://f-droid.org/) repo for my apps. This r
 3. Click the + floating action button to add a new repository. 
 4. Click *SCAN QR CODE* and scan the QR below:
 
-    <p align="center">
-      <img src=".github/qrcode.png?raw=true" alt="F-Droid repo QR code" style="width:500px;height:500px;"/>
+    <p style="text-align: center;">
+        <img src=".github/qrcode.png?raw=true" alt="F-Droid repo QR code" style="max-width:100%; height:auto; width:400px;">
     </p>
+
 
     Alternatively, you can also add the repository manually with the following url:
 

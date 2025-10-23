@@ -11,3 +11,5 @@ fdroid/metadata/**/phoneScreenshots
 
 metascoop/metascoop
 .DS_Store
+
+.idea
