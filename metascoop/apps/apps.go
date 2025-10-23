@@ -25,6 +25,10 @@ type AppInfo struct {
 
 	AntiFeatures []string `yaml:"anti_features"`
 
+	Nightly bool `yaml:"nightly"`
+
+	KeepCount int8 `yaml:"keep_count"`
+
 	ReleaseDescription string
 
 	License string

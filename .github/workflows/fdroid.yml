@@ -49,7 +49,7 @@ jobs:
       - uses: actions/setup-go@v2
         name: Set up Go
         with:
-          go-version: '^1.17.0' 
+          go-version: '^1.25.1'
         
       - name: Run update script
         run: bash update.sh 2>&1

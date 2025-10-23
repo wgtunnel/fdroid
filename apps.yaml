@@ -1,6 +1,7 @@
 wgtunnel:
   git: https://github.com/wgtunnel/wgtunnel
   name: "WG Tunnel"
+  keep_count: 5
   description: |
     An alternative VPN client app for WireGuard with additional features
 
@@ -24,3 +25,16 @@ wgtunnel:
     - Connectivity
     - Security
 
+wgtunnel-nightly:
+  git: https://github.com/wgtunnel/wgtunnel
+  name: "WG Tunnel Nightly"
+  keep_count: 1
+  nightly: true
+  description: |
+    A nightly build of WG Tunnel, with the latest features and bugfixes.
+
+  # As described on https://f-droid.org/en/docs/Build_Metadata_Reference/#Categories,
+  # you can use any name here, but you should look at the existing categories first
+  categories:
+    - Connectivity
+    - Security
