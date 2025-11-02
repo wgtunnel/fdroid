@@ -1,0 +1,53 @@
+No changelog found for 
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :boom: BREAKING CHANGES
+- due to [`b4b96a7`](https://github.com/wgtunnel/wgtunnel/commit/b4b96a7e77dad657f47ebf61ab061c983068fc4b) - dual-stack kill switch support, metered tunnels *(commit by @zaneschepke)*:
+
+  dual-stack kill switch support, metered tunnels
+
+
+### :sparkles: New Features
+- [`b4b96a7`](https://github.com/wgtunnel/wgtunnel/commit/b4b96a7e77dad657f47ebf61ab061c983068fc4b) - dual-stack kill switch support, metered tunnels *(commit by @zaneschepke)*
+- [`ffd9c41`](https://github.com/wgtunnel/wgtunnel/commit/ffd9c4192a379b7cf3b572b5517c7f0ef3c9a957) - add translations link *(commit by @zaneschepke)*
+- [`433d383`](https://github.com/wgtunnel/wgtunnel/commit/433d383b0bef0a974779ad68b76acff5e5508492) - **lang**: update localization from Hosted Weblate *(PR #1029 by @weblate)*
+
+### :bug: Bug Fixes
+- [`c28e157`](https://github.com/wgtunnel/wgtunnel/commit/c28e15761601a4f43413f2eeeb32a6c5fd256c87) - proxy mode vpn permission *(commit by @zaneschepke)*
+- [`c62b328`](https://github.com/wgtunnel/wgtunnel/commit/c62b32818714e74fba780bc598b4771cd49d4aaa) - kernel tunnel symbols error handling *(commit by @zaneschepke)*
+- [`170b12a`](https://github.com/wgtunnel/wgtunnel/commit/170b12ab79d03338e4f690eea3b8ee3e16e7889a) - endpoints should be optional *(commit by @zaneschepke)*
+- [`59a70e5`](https://github.com/wgtunnel/wgtunnel/commit/59a70e53fff91da8b45567d9f65ad8e356eecb07) - mtu parser errors *(commit by @zaneschepke)*
+- [`68ab3fd`](https://github.com/wgtunnel/wgtunnel/commit/68ab3fdc52c3ec905ce1b8cab6462b0ec3f447d6) - split tunnel missing packages *(commit by @zaneschepke)*
+- [`349b56b`](https://github.com/wgtunnel/wgtunnel/commit/349b56b2e22d9eb91ceb7fc6d4f608b4aea68c01) - prevent backup restore issues by resetting active tuns storage *(commit by @zaneschepke)*
+- [`bfe3533`](https://github.com/wgtunnel/wgtunnel/commit/bfe35330306bd59396ddfd966db0c481a53cda47) - android tv long press behavior *(commit by @zaneschepke)*
+- [`6637539`](https://github.com/wgtunnel/wgtunnel/commit/6637539d1fd248b49d802c5b50420565b1ddeb28) - android tv hide kernel mode, ping toggle, import sheet *(commit by @zaneschepke)*
+- [`7e4f055`](https://github.com/wgtunnel/wgtunnel/commit/7e4f0558332b6f0c4f6bd1a276d24b7fccd4e34b) - app start kills other vpns bug *(commit by @zaneschepke)*
+- [`9991e06`](https://github.com/wgtunnel/wgtunnel/commit/9991e06c44219a6a12eb2d1597df89411669c9d3) - updater after abi split change *(commit by @zaneschepke)*
+- [`880d30f`](https://github.com/wgtunnel/wgtunnel/commit/880d30fdfae2adcc4121de9cd08cb0928196bd13) - snackbar and restarts bug *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`1f8d24c`](https://github.com/wgtunnel/wgtunnel/commit/1f8d24c7046ece461157703d85bd1b0e02b84b61) - show disabled feature by mode *(commit by @zaneschepke)*
+- [`883b9f7`](https://github.com/wgtunnel/wgtunnel/commit/883b9f7dae792acaf6d7d5298a9a62dd18c532c3) - wifi detection, bump deps *(commit by @zaneschepke)*
+- [`6d48345`](https://github.com/wgtunnel/wgtunnel/commit/6d483459a65190d52da22dac50be00941a46f2bc) - add restart to lockdown on config change *(commit by @zaneschepke)*
+- [`0874db8`](https://github.com/wgtunnel/wgtunnel/commit/0874db8bbfeda823824e3e97ddeee84ce1570cd9) - restart modal on config changes for proxy and tuns *(commit by @zaneschepke)*
+- [`afdc496`](https://github.com/wgtunnel/wgtunnel/commit/afdc49629c01b9a00d58df27163074c7000647d6) - snackbar, support prompt on update *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`0f365e2`](https://github.com/wgtunnel/wgtunnel/commit/0f365e2ef86735fc02689b49be87eef64db3cf83) - update description, fdroid link *(commit by @zaneschepke)*
+- [`062f59a`](https://github.com/wgtunnel/wgtunnel/commit/062f59aa3391d44667be7a64153e33c49acef190) - **deps**: bump actions/upload-artifact from 4 to 5 *(PR #1021 by @dependabot[bot])*
+- [`42aa378`](https://github.com/wgtunnel/wgtunnel/commit/42aa378938111058dd03e7575a07838b4d9ca44d) - **deps**: bump actions/download-artifact from 5 to 6 *(PR #1022 by @dependabot[bot])*
+- [`b61d494`](https://github.com/wgtunnel/wgtunnel/commit/b61d49469fd8d6c679edff11b8fb5caaa4beb7c6) - bump ksp *(commit by @zaneschepke)*
+- [`f846d54`](https://github.com/wgtunnel/wgtunnel/commit/f846d54d78053c2065792c2fb6a2c7eb18245741) - update screenshots *(commit by @zaneschepke)*
+- [`041f12d`](https://github.com/wgtunnel/wgtunnel/commit/041f12dc775746fec15370b163cb33d42d5260db) - remove orphaned strings *(commit by @zaneschepke)*
+- [`765785f`](https://github.com/wgtunnel/wgtunnel/commit/765785ff41a2c517494ee3ad108367d4e6001ac8) - release v4.1.2 *(commit by @zaneschepke)*
+
