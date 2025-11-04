@@ -1,0 +1,31 @@
+What's new:
+- Resource usage bugfix
+- Improve network monitoring
+- Tab navigation bugfix
+- Tunnel metered default bugfix
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`df864ad`](https://github.com/wgtunnel/wgtunnel/commit/df864ade957f3e0dcb17a2a1d82dce8a38c1780d) - binder leak *(commit by @zaneschepke)*
+- [`f61e6d6`](https://github.com/wgtunnel/wgtunnel/commit/f61e6d6c6efaa492b8abc911cb51b6a24e3c6ff1) - network detection bug *(commit by @zaneschepke)*
+- [`3d88feb`](https://github.com/wgtunnel/wgtunnel/commit/3d88feb97cb4294e5e54265e213bb0b081669acc) - r8 ip parsing bug *(commit by @zaneschepke)*
+- [`0993f60`](https://github.com/wgtunnel/wgtunnel/commit/0993f60977b80e91157730be0486b583cebfacef) - auto tunnel service binder *(commit by @zaneschepke)*
+- [`3a9b435`](https://github.com/wgtunnel/wgtunnel/commit/3a9b435e501cfb60f9c0af63a5ab46ecbbda03ed) - default wifi method needs flag *(commit by @zaneschepke)*
+- [`c496663`](https://github.com/wgtunnel/wgtunnel/commit/c49666303a530c3961935f6b5f82a274381d9d32) - network monitor changes for Android 10 *(commit by @zaneschepke)*
+- [`f256a32`](https://github.com/wgtunnel/wgtunnel/commit/f256a32bda5c1852f6f337671ede4f724e50f5b0) - restore proper metered tunnel default *(commit by @zaneschepke)*
+- [`e711749`](https://github.com/wgtunnel/wgtunnel/commit/e71174995b53e8dabe4d6cdf550d117e80842bf7) - tab back navigation bug *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`0abe3f6`](https://github.com/wgtunnel/wgtunnel/commit/0abe3f67efdfebc539d145faf3e2a96182328f21) - fix fastlane deploy *(commit by @zaneschepke)*
+- [`4bcd810`](https://github.com/wgtunnel/wgtunnel/commit/4bcd810b38fbbea7e19c2cc0b3c422eaeeb06838) - release 4.1.3 *(commit by @zaneschepke)*
+
