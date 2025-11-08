@@ -1,0 +1,23 @@
+What's new:
+- Auto tunnel network detection bugfix
+- Tunnel notification sometimes don't start bugfix
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`4beeb4e`](https://github.com/wgtunnel/wgtunnel/commit/4beeb4e01ec9a7a803583c81f769c482fe9cf281) - network monitoring bug *(commit by @zaneschepke)*
+- [`e83bbdf`](https://github.com/wgtunnel/wgtunnel/commit/e83bbdf23a4ebdb863e0bb30ad08065f82ca8b00) - tunnel service bind race *(commit by @zaneschepke)*
+- [`78def29`](https://github.com/wgtunnel/wgtunnel/commit/78def2998096832556866563a88512749f3d8776) - keep network monitor for full app lifecyle *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`9b3283a`](https://github.com/wgtunnel/wgtunnel/commit/9b3283a2b13a3136e82bcba15ce11d2dccf260dc) - release 4.1.4 *(commit by @zaneschepke)*
+
