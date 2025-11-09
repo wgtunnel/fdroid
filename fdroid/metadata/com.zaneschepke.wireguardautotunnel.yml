@@ -2,8 +2,8 @@ AuthorName: wgtunnel
 Categories:
     - Connectivity
     - Security
-CurrentVersion: 4.1.4
-CurrentVersionCode: 40104
+CurrentVersion: 4.1.6
+CurrentVersionCode: 40106
 Description: |
     An alternative VPN client app for WireGuard with additional features
 

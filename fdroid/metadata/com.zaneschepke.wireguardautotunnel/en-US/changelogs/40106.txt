@@ -1,0 +1,24 @@
+What's new:
+- Auto-tunnel regression bugfix
+- Resource usage bugfix for kill switch mode
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`584f038`](https://github.com/wgtunnel/wgtunnel/commit/584f0386b6168fe307b9673fa887939c9a8510d9) - network monitor ignoring valid states for underlying networks *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`a0f89d4`](https://github.com/wgtunnel/wgtunnel/commit/a0f89d40f57054f5114b2a501d89a64cc4550f2b) - DE short description length too long *(commit by @zaneschepke)*
+- [`e563608`](https://github.com/wgtunnel/wgtunnel/commit/e563608e49e775e7f88868225c5308b74986890c) - bump deps *(commit by @zaneschepke)*
+- [`aaeb251`](https://github.com/wgtunnel/wgtunnel/commit/aaeb251bbfe157e6d0f2e4f55fe6abd534e43a8b) - shorten ur short description *(commit by @zaneschepke)*
+- [`fd0fd33`](https://github.com/wgtunnel/wgtunnel/commit/fd0fd33f7175729ef045ab29d6995c83a12f2d1a) - release v4.1.6 *(commit by @zaneschepke)*
+
