@@ -1,0 +1,19 @@
+{
+  "repo": {
+    "timestamp": 1762979436000
+  },
+  "packages": {
+    "com.zaneschepke.wireguardautotunnel": {
+      "metadata": {
+        "summary": {
+          "en-US": "A FOSS WireGuard & AmneziaWG Android client with auto-tunneling, lockdown & p..."
+        }
+      },
+      "versions": {
+        "446cc6c72b87e5970a528dc045e9c71fa234210556b658fd6bb620b35eac8412": {
+          "releaseChannels": null
+        }
+      }
+    }
+  }
+}

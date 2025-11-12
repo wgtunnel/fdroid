@@ -1,0 +1,33 @@
+What's new:
+- Improved QR scanning and device support
+- Display tunnel uptime
+- Fixes quick tile crash bug when running app in multiple profiles
+- Fixes global overrides regression causing unexpected tunnel start errors
+- Fixes network detection race while VPN is active
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`5fd3f89`](https://github.com/wgtunnel/wgtunnel/commit/5fd3f89a59f955b01013b3696f41e17cd8419100) - show tunnel uptime, improve duration display *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`064aa6a`](https://github.com/wgtunnel/wgtunnel/commit/064aa6aa744a660c46f83f46375d8dd8c26aa394) - error notification bug *(commit by @zaneschepke)*
+- [`9510f43`](https://github.com/wgtunnel/wgtunnel/commit/9510f43252823e4cb9daee21071b81a2e9bee427) - global overrides regression, support prompt bug *(commit by @zaneschepke)*
+- [`7a60b90`](https://github.com/wgtunnel/wgtunnel/commit/7a60b90d2b6b77b6ace5ad52d7cd69907303f748) - qr scanning scanning can cause crash *(commit by @zaneschepke)*
+- [`22c17ef`](https://github.com/wgtunnel/wgtunnel/commit/22c17ef66b81813e03b4783431a2060508e046c4) - tile update crash when triggerd from non-user profile *(commit by @zaneschepke)*
+- [`ff53454`](https://github.com/wgtunnel/wgtunnel/commit/ff5345496694681abc724e4da075f970900cdbbe) - underlying network detection race *(commit by @zaneschepke)*
+- [`ee4ac4e`](https://github.com/wgtunnel/wgtunnel/commit/ee4ac4e9685dba84117d21b576b849714a15deeb) - improve qr device support and scanner *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`0c09add`](https://github.com/wgtunnel/wgtunnel/commit/0c09add0e4156a338b48eef79937abca56de13f9) - add custom funding link *(commit by @zaneschepke)*
+- [`4f816fa`](https://github.com/wgtunnel/wgtunnel/commit/4f816fa1759a31bea4b48b6a149d4d2255798099) - release v4.1.7 *(commit by @zaneschepke)*
+
