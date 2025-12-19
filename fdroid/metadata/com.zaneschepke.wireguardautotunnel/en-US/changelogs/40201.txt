@@ -1,0 +1,21 @@
+What's new:
+- Auto-tunnel screen not loading without connecting to Wi-Fi bugfix
+- Import tunnel via URL bugfix
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`eac674c`](https://github.com/wgtunnel/wgtunnel/commit/eac674c996cbfeb18d582ae4033ab05978a808f9) - auto-tunnel screen not loading without wifi *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`16d0642`](https://github.com/wgtunnel/wgtunnel/commit/16d0642a51115309d1d9761e391d93b0056bdcab) - release 4.2.1 *(commit by @zaneschepke)*
+
