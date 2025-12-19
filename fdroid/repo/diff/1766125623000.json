@@ -1,11 +1,11 @@
 {
   "repo": {
-    "timestamp": 1763150771000
+    "timestamp": 1766125629000
   },
   "packages": {
     "com.zaneschepke.wireguardautotunnel": {
       "versions": {
-        "24f7ec0b7b84bfb84d405d2c9faf5f5a747d4ab1a819a1f56fe089ef1993e931": {
+        "f3074094539702ad6fb4476abc3d0f8cfa85abf4c810d14715dafd63c1fbc8b7": {
           "releaseChannels": null
         }
       }

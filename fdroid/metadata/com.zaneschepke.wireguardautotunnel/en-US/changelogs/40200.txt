@@ -1,0 +1,38 @@
+What's new:
+- Amnezia 2.0 support
+- Copy split tunnel apps from existing config
+- Logger start bugfix
+- Quick tile added sync bugfix
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`a573208`](https://github.com/wgtunnel/wgtunnel/commit/a573208db62cb2a014c9c47b6b7eb12e04e3a0c8) - amnezia 2.0 *(commit by @zaneschepke)*
+- [`6b24cca`](https://github.com/wgtunnel/wgtunnel/commit/6b24cca551292dea0f0ceb068748a21f125fa724) - improve amnezia label names *(commit by @zaneschepke)*
+- [`90a693a`](https://github.com/wgtunnel/wgtunnel/commit/90a693abb44778a22a762846a1aceffe5ee978f6) - copy split config from existing *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`0b67468`](https://github.com/wgtunnel/wgtunnel/commit/0b674684bab40769d0940bb54417b3118b75dab3) - redundant location queries in legacy mode *(commit by @zaneschepke)*
+- [`8d257a6`](https://github.com/wgtunnel/wgtunnel/commit/8d257a604caf059ffc426640b83e87fb998e3d6a) - improve quickly state sync, nightly icon *(commit by @zaneschepke)*
+- [`de8b39d`](https://github.com/wgtunnel/wgtunnel/commit/de8b39d8487a96c1e4007f8a62ec36a0cdcdacfa) - amnezia 2.0 backwards compat, bump deps *(commit by @zaneschepke)*
+- [`c028b9b`](https://github.com/wgtunnel/wgtunnel/commit/c028b9b5b6b0e8cba4e6a47f99cfa8fdca26eba5) - logger start and clear *(commit by @zaneschepke)*
+- [`f0c8857`](https://github.com/wgtunnel/wgtunnel/commit/f0c885708bc0bb20cfee980cf8dae659091f8e6e) - amnezia 2.0 header ranges *(commit by @zaneschepke)*
+- [`05b950f`](https://github.com/wgtunnel/wgtunnel/commit/05b950fbb3769f2eeb4d383aff1a091915d88ef7) - add check if kernel supports WG *(PR #993 by @Zaptyp)*
+
+### :wrench: Chores
+- [`341a806`](https://github.com/wgtunnel/wgtunnel/commit/341a806f29ef6695827fb13fe6a3c65dee2affbf) - bump deps *(commit by @zaneschepke)*
+- [`0e9a63c`](https://github.com/wgtunnel/wgtunnel/commit/0e9a63c850a5bc3f31fb4a852e57fdb649cd6e24) - **deps**: bump actions/checkout from 5 to 6 *(PR #1065 by @dependabot[bot])*
+- [`e538ec8`](https://github.com/wgtunnel/wgtunnel/commit/e538ec80d00a30e37b044ee4441bb3513cee5cc5) - **deps**: bump actions/download-artifact from 6 to 7 *(PR #1097 by @dependabot[bot])*
+- [`3ffc8c5`](https://github.com/wgtunnel/wgtunnel/commit/3ffc8c5e39a4f574a2c2781fef734490336c819a) - **deps**: bump actions/upload-artifact from 5 to 6 *(PR #1096 by @dependabot[bot])*
+- [`5310cf1`](https://github.com/wgtunnel/wgtunnel/commit/5310cf17e63b562601d1c20957b2593d2b9ca322) - bump deps *(commit by @zaneschepke)*
+- [`394188b`](https://github.com/wgtunnel/wgtunnel/commit/394188b55ffd801976be1499e735ad791f01ae62) - release 4.2.0 *(commit by @zaneschepke)*
+
