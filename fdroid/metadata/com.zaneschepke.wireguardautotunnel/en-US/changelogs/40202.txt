@@ -1,0 +1,39 @@
+What's new:
+- Private profile lockdown mode bugfix
+- UI performance optimizations
+- Back navigation crash in certain scenarios bugfix
+- Auto tunneling race after Amnezia 2.0 changes bugfix
+- Localizations
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`9f9a15a`](https://github.com/wgtunnel/wgtunnel/commit/9f9a15a97cb7cf3bd80e12f5a6cb024ded2e75d9) - **lang**: translations from Weblate  *(PR #1115 by @weblate)*
+
+### :bug: Bug Fixes
+- [`e475fd2`](https://github.com/wgtunnel/wgtunnel/commit/e475fd27d9efb29e7e0fd2319e26417c5896a517) - race in vpn activation after amnezia 2.0 changes *(commit by @zaneschepke)*
+- [`679f6ab`](https://github.com/wgtunnel/wgtunnel/commit/679f6abbcb6549d969a1abd55a62844bf7d3f005) - race after recent tunnel manager refactor *(commit by @zaneschepke)*
+- [`c16a1b9`](https://github.com/wgtunnel/wgtunnel/commit/c16a1b9b55482384518436004a43366ed2bd6f07) - pop backstack crash in certain scenarios *(commit by @zaneschepke)*
+- [`0cf39fe`](https://github.com/wgtunnel/wgtunnel/commit/0cf39fed6884bbea85870e96760a992c5c973f16) - multiple profiles endpoint updates and lockdown bug *(commit by @zaneschepke)*
+- [`0bf52ad`](https://github.com/wgtunnel/wgtunnel/commit/0bf52ad378d6f30685cdf2215512891fb05895c2) - koin refactor param bug *(commit by @zaneschepke)*
+- [`eeeec56`](https://github.com/wgtunnel/wgtunnel/commit/eeeec5613f54c29c2cb03da1a02a243c8c3c97d0) - fdroid check update, in app messages bug *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`e2dd27e`](https://github.com/wgtunnel/wgtunnel/commit/e2dd27e70c30b488cfed040edd38ca9e51c0ce88) - dagger/hilt to koin for kmp *(commit by @zaneschepke)*
+- [`bbc62a2`](https://github.com/wgtunnel/wgtunnel/commit/bbc62a26e704578c7321c22367fe4652083edfc5) - ui state optimizations *(commit by @zaneschepke)*
+- [`590985d`](https://github.com/wgtunnel/wgtunnel/commit/590985d5cde94913367bf09823958b605cb5ebd8) - make clear kernel is wg only *(commit by @zaneschepke)*
+- [`af21a6a`](https://github.com/wgtunnel/wgtunnel/commit/af21a6a3cfe77a42e64de7850d2b97015cef9134) - remove redundant dispatchers *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`a994e8e`](https://github.com/wgtunnel/wgtunnel/commit/a994e8e2c1f5b3d994c039882cc8cd7fa53b5d0c) - bump agp *(commit by @zaneschepke)*
+- [`b641539`](https://github.com/wgtunnel/wgtunnel/commit/b641539af84c7044ec836f54eb6c6f65f118f6fc) - release v4.2.2 *(commit by @zaneschepke)*
+
