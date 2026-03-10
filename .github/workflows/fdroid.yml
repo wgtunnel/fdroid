@@ -58,9 +58,12 @@ jobs:
           gh release download --repo wgtunnel/wgtunnel --pattern "wgtunnel-fdroid-v${VERSION}.apk" --clobber
           mv "wgtunnel-fdroid-v${VERSION}.apk" "wgtunnel_${VERSION}.apk"
           ls -lh wgtunnel_*.apk
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
       - name: Run update script
         run: bash update.sh 2>&1
         env:
           GH_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
