@@ -50,8 +50,17 @@ jobs:
         name: Set up Go
         with:
           go-version: '^1.25.1'
+
+      - name: Force download correct F-Droid universal APK
+        run: |
+          cd fdroid/repo
+          VERSION=$(gh release view --repo wgtunnel/wgtunnel --json tagName -q .tagName | sed 's/^v//')
+          gh release download --repo wgtunnel/wgtunnel --pattern "wgtunnel-fdroid-v${VERSION}.apk" --clobber
+          mv "wgtunnel-fdroid-v${VERSION}.apk" "wgtunnel_${VERSION}.apk"
+          ls -lh wgtunnel_*.apk
         
       - name: Run update script
         run: bash update.sh 2>&1
         env:
           GH_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
