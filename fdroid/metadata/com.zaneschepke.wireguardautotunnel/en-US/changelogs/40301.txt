@@ -1,0 +1,38 @@
+What's new:
+- Doze mode handshake fix
+- Optional I2-5 bugfix
+- Create from scratch crash bugfix
+- Show tunnel statistics in notification
+- Filter tunnel by latency
+- Translations
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`6369d89`](https://github.com/wgtunnel/android/commit/6369d8975c92548bb9e3881260e0a60b44ef8563) - support for filtering by endpoint latency *(PR #1155 by @essinghigh)*
+  - :arrow_lower_right: *addresses issue #1150 opened by @essinghigh*
+- [`2ed0672`](https://github.com/wgtunnel/android/commit/2ed06728e35840b89cdf807ae60cbab244b932cd) - show consumed traffic in notification *(PR #1165 by @GrakovNe)*
+
+### :bug: Bug Fixes
+- [`bdd7c96`](https://github.com/wgtunnel/android/commit/bdd7c9689c6c5fea61ab110e1225421d434acfcc) - create from scratch bug, proxy mode UDP crash *(commit by @zaneschepke)*
+- [`0344b8f`](https://github.com/wgtunnel/android/commit/0344b8fde8df248f25a6c84b712babcf10e38e4a) - optional I2-5 params and socks5/lockdown crash on heavy load *(commit by @zaneschepke)*
+- [`2d9c5ec`](https://github.com/wgtunnel/android/commit/2d9c5ece4afe055d540b5c56e7003cf995efe77a) - **core**: always poll WireGuard stats regardless of Doze mode *(PR #1177 by @naonak)*
+- [`074229b`](https://github.com/wgtunnel/android/commit/074229b6b46a68e3cdeaf8d1774c65f18f53afba) - doze mode tunnel connectivity bug *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`35982aa`](https://github.com/wgtunnel/android/commit/35982aa3458c888a153e94de38abc7beeda9d9d8) - **deps**: bump actions/download-artifact from 7 to 8 *(PR #1179 by @dependabot[bot])*
+- [`d0f5861`](https://github.com/wgtunnel/android/commit/d0f58615b09020ca44b147224941695f450e957c) - **deps**: bump actions/upload-artifact from 6 to 7 *(PR #1178 by @dependabot[bot])*
+- [`5f8f699`](https://github.com/wgtunnel/android/commit/5f8f699ab51337e16e089ec70c63a148e58e47e3) - bump deps *(commit by @zaneschepke)*
+- [`585176f`](https://github.com/wgtunnel/android/commit/585176f08d5bbf35680d92dfc1dba9462b6496aa) - fmt *(commit by @zaneschepke)*
+- [`c130247`](https://github.com/wgtunnel/android/commit/c130247df14de320ed7ac9beb0ba7408ea34ea61) - release 4.3.0 *(commit by @zaneschepke)*
+- [`c24c33c`](https://github.com/wgtunnel/android/commit/c24c33c95c48dce842a1e8351a3d01ff10a747e7) - release 4.3.1 *(commit by @zaneschepke)*
+
