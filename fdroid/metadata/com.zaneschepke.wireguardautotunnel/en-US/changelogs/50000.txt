@@ -1,0 +1,99 @@
+What's new:
+- Improved tunnel reliability and leak protection with new deferred endpoint bootstrapping
+- Improved tunnel status monitoring with real time handshake status monitoring
+- Kernel mode and ping monitoring removed
+- Full config and live tunnel view in quick format
+- Automatic ipv4/ipv6 endpoint fallback and recovery
+- Added support got DoT and custom endpoints for peer resolution DNS
+- Amnezia tunnel globals
+- Improved notifications
+- UI improvements with better feature descriptions
+- Various bug fix and app performance improvements
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :boom: BREAKING CHANGES
+- due to [`82afe54`](https://github.com/wgtunnel/android/commit/82afe54b991189fc42bdade41a382f09a33432e8) - redesign tunnel bootstrapping to post tunnel up with realtime handshake monitoring *(PR #1237 by @zaneschepke)*:
+
+  redesign tunnel bootstrapping to post tunnel up with realtime handshake monitoring (#1237)
+
+
+### :sparkles: New Features
+- [`82afe54`](https://github.com/wgtunnel/android/commit/82afe54b991189fc42bdade41a382f09a33432e8) - **tunnel**: redesign tunnel bootstrapping to post tunnel up with realtime handshake monitoring *(PR #1237 by @zaneschepke)*
+- [`c453ae9`](https://github.com/wgtunnel/android/commit/c453ae9e0a7395055282f56f1947614a398f9bfd) - **lang**: sync weblate localization changes *(commit by @zaneschepke)*
+- [`89435dc`](https://github.com/wgtunnel/android/commit/89435dc6488959320d674867200409d419677971) - improve empty tunnel screen, logging screen *(commit by @zaneschepke)*
+- [`22c4a30`](https://github.com/wgtunnel/android/commit/22c4a303fcc8ef7ad24fd44f5716fcf996edf265) - **lang**: updated localizations *(PR #1256 by @weblate)*
+- [`5408cf3`](https://github.com/wgtunnel/android/commit/5408cf39547a7076149f57e6855f32ecbc9a82d1) - move active tunnels to top *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`db92055`](https://github.com/wgtunnel/android/commit/db920555ceaf453b413a9e9b762aef00ccfc9a8a) - disable notification timestamp to prevent jumps on some devices *(commit by @zaneschepke)*
+- [`9d312af`](https://github.com/wgtunnel/android/commit/9d312afdbaadcc7a590bf2645d95cd561234762c) - kill switch mode tunnel bug, restore/app bootstrap logic for killswitch and tunnels *(commit by @zaneschepke)*
+- [`d528c9b`](https://github.com/wgtunnel/android/commit/d528c9b56d5e40fd2bb1574d9dccfa1b07d965cd) - tunnel bootstrapping with system privatedns automatic *(commit by @zaneschepke)*
+- [`bf432cc`](https://github.com/wgtunnel/android/commit/bf432cca0da95493d13e67bff0800407fd9c141c) - dns server boostrapping with underlying dns servers *(commit by @zaneschepke)*
+- [`f83559f`](https://github.com/wgtunnel/android/commit/f83559f9101dfb71d6e86121987a1eef99a01ef3) - tunnel and auto-tunnel state sync *(commit by @zaneschepke)*
+- [`c14556a`](https://github.com/wgtunnel/android/commit/c14556a3470e5ba9531c3c9a9ca086d0f9f84f12) - config screen ime padding *(commit by @zaneschepke)*
+- [`03df457`](https://github.com/wgtunnel/android/commit/03df457b558dc0cd0b090783df262555bf24fffc) - dns server boostrapping and private dns DoH handling *(commit by @zaneschepke)*
+- [`87be6fa`](https://github.com/wgtunnel/android/commit/87be6fa9ea8c635524a50a0ffaa8f633eaf93129) - pull in amneziawg upstream changes *(commit by @zaneschepke)*
+- [`70ce1ad`](https://github.com/wgtunnel/android/commit/70ce1adda464f249bb599f0f62b0041af663b41d) - update parser for stricter amwg sig parsing *(commit by @zaneschepke)*
+- [`f3a5f14`](https://github.com/wgtunnel/android/commit/f3a5f14b0ec9167961ebdd4e5ff2b0d6e33b340f) - dns bootstrapping settings not applying properly *(commit by @zaneschepke)*
+- [`5f03b19`](https://github.com/wgtunnel/android/commit/5f03b190ddec3c18dfbc8ce4fedb41f866677161) - network roaming bug *(commit by @zaneschepke)*
+- [`7e264a6`](https://github.com/wgtunnel/android/commit/7e264a6f191e5303830cc994c5862de7bc905aff) - add network capability checks to properly detect network connectivity *(commit by @zaneschepke)*
+- [`82bda83`](https://github.com/wgtunnel/android/commit/82bda83464b293f3acad5630dc3081145d21716d) - proxy mode failing to shutdown properly, improved port availability checks *(commit by @zaneschepke)*
+- [`0963626`](https://github.com/wgtunnel/android/commit/096362616466a4538fcad6d06395a5866c77e754) - airplane mode detection *(commit by @zaneschepke)*
+- [`5327824`](https://github.com/wgtunnel/android/commit/53278243e89bde260aa98a73f9ddab2606fef526) - config hostname validator *(commit by @zaneschepke)*
+- [`c1760fd`](https://github.com/wgtunnel/android/commit/c1760fda10a26e0693d5c2530a61f933116d051d) - tile cleanup *(commit by @zaneschepke)*
+- [`9cb5796`](https://github.com/wgtunnel/android/commit/9cb5796f790333112e5dc9c49504cf838a5e2dbc) - remove duplicate tile declarations, adds constrained network support *(commit by @zaneschepke)*
+- [`9f4e801`](https://github.com/wgtunnel/android/commit/9f4e801aad45338b98e93aeae72fcba756aaf050) - allow binding to underlying network in split tunnel configs (android auto) *(commit by @zaneschepke)*
+- [`fed9537`](https://github.com/wgtunnel/android/commit/fed9537f5c4a89f529e38c19dc2bec911527954b) - parser key rotation, name comment, export name clarity *(commit by @zaneschepke)*
+- [`9124fcc`](https://github.com/wgtunnel/android/commit/9124fcc13361ec97915322425c2b89fff8f1c043) - dns bracketing for raw ipv6 dns upstream *(commit by @zaneschepke)*
+- [`e35a865`](https://github.com/wgtunnel/android/commit/e35a8657e690a712ecd33fe4f7510a6375a513e5) - update/add config name comment on edits/name changes *(commit by @zaneschepke)*
+- [`971ded3`](https://github.com/wgtunnel/android/commit/971ded36bb3dd4d8eb79e466e5bcc75ae102322c) - bump gvisor verison, remove legacy property *(commit by @zaneschepke)*
+- [`443f450`](https://github.com/wgtunnel/android/commit/443f450f46a07594232d76de7f735dd0824fea76) - resource cleanup, logging, UDP_GRO add share intent filters *(commit by @zaneschepke)*
+- [`7d0fda3`](https://github.com/wgtunnel/android/commit/7d0fda332fdffbc2bf6c60074159dcfd0dcfe92a) - socket options for lockdown, vpn code path *(commit by @zaneschepke)*
+- [`c03a8bb`](https://github.com/wgtunnel/android/commit/c03a8bbf94056f5880740ac1b57a4d3bf4fa6b0e) - tunnel tile regression *(commit by @zaneschepke)*
+- [`e790959`](https://github.com/wgtunnel/android/commit/e790959a3d13bac62c721143988e5cdddb1f310f) - check location permissions on resume *(commit by @zaneschepke)*
+- [`cbc582d`](https://github.com/wgtunnel/android/commit/cbc582df53cd67841cc883849e95acec6c0a6807) - ime padding on auto tunnel wifi screen, gradle bump *(commit by @zaneschepke)*
+- [`d80ea16`](https://github.com/wgtunnel/android/commit/d80ea167f458190cb656b88c8ea124e7681a083c) - notifications not update, add new notification channels *(commit by @zaneschepke)*
+- [`b0fe9d8`](https://github.com/wgtunnel/android/commit/b0fe9d8520563e6ef3716446cd9e5d6d01466fea) - lockdown mode not fully cleaning up hev bridge *(commit by @zaneschepke)*
+- [`7789e73`](https://github.com/wgtunnel/android/commit/7789e7395108db28c1ff6e944500c31398da1a19) - ddns caching causing invalid peer endpoint address *(commit by @zaneschepke)*
+- [`4c320f8`](https://github.com/wgtunnel/android/commit/4c320f89a66f096ba8c6ae6ac9aec2202bae73be) - improve tunnel display states and transitions *(commit by @zaneschepke)*
+- [`40a76bb`](https://github.com/wgtunnel/android/commit/40a76bb6703fee2e8d91ed68cd40840dbb280e98) - improve tunnel ipv6 tunnel descriptions *(commit by @zaneschepke)*
+- [`923f29c`](https://github.com/wgtunnel/android/commit/923f29c27b7a91b751ace6fdec3baeb0658880bb) - sync tiles on app start *(commit by @zaneschepke)*
+- [`bf9fca9`](https://github.com/wgtunnel/android/commit/bf9fca953c0ce678df0e057e94b246c1286fc899) - autotunnel respecting tunnel tile toggles as override *(commit by @zaneschepke)*
+- [`1af4043`](https://github.com/wgtunnel/android/commit/1af404329a2bac06b8ae058962c4703f5df1f142) - bump parser to fix allow applications quick config bug *(commit by @zaneschepke)*
+- [`26ecfec`](https://github.com/wgtunnel/android/commit/26ecfec3fce3fdc3ec6c8a6cea7b63cea99cb6e4) - root shell prompt for scripts *(commit by @zaneschepke)*
+- [`c7040b8`](https://github.com/wgtunnel/android/commit/c7040b80815abb909e2ab4f8f18921f291d6a900) - make stop on not internet deferred to prevent unwanted stops on flaky network states *(commit by @zaneschepke)*
+- [`5bc49ee`](https://github.com/wgtunnel/android/commit/5bc49eec50667b3821b317b7d24828724d5e4355) - auto tunnel should be neutral on no connectivity state *(commit by @zaneschepke)*
+- [`abdbf74`](https://github.com/wgtunnel/android/commit/abdbf74755da91da8b5dd650e7f3478e62a89057) - tunnel start/stop race on fast toggles *(commit by @zaneschepke)*
+- [`0e4e421`](https://github.com/wgtunnel/android/commit/0e4e421628690d9f241b8f95952d6e31dc362e8c) - backend races, auto tunnel override bug, tunnel state display bug *(commit by @zaneschepke)*
+- [`5220c1a`](https://github.com/wgtunnel/android/commit/5220c1a10cc1781251368d09f01dd5ae8e545a90) - proxy settings save bug, improve feature descriptions *(commit by @zaneschepke)*
+- [`40d0466`](https://github.com/wgtunnel/android/commit/40d0466c1424ebc70523199dec0eee67b6de7660) - init notification race *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`560f6a9`](https://github.com/wgtunnel/android/commit/560f6a998bbdc53e8edc683c2bd3febc04107fe8) - remove unsupported nod locale *(commit by @zaneschepke)*
+- [`42221da`](https://github.com/wgtunnel/android/commit/42221da443cf819fdee8b24309e46c273acef4ff) - notification ci *(commit by @zaneschepke)*
+- [`c18b3b7`](https://github.com/wgtunnel/android/commit/c18b3b7ba01e36e3ea89c5e243f537b5f3496aca) - adjust action ordering, make config view selectable *(commit by @zaneschepke)*
+- [`acb14d4`](https://github.com/wgtunnel/android/commit/acb14d4b61cf9625b1eeaa76ac4f0e3eabc6fd9c) - remove legacy strings and script *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`80d63db`](https://github.com/wgtunnel/android/commit/80d63db31a74fa348d626e41bab947844cd3bafc) - shorten uk description to 80 chars *(commit by @zaneschepke)*
+- [`6a93709`](https://github.com/wgtunnel/android/commit/6a9370966c0bad31a221849a2f4c696f7efc8748) - fix short description, fa-IR *(commit by @zaneschepke)*
+- [`0a3acf0`](https://github.com/wgtunnel/android/commit/0a3acf04c58b63e9b6be50363230c34ddeaa7cb6) - fix short description, vi *(commit by @zaneschepke)*
+- [`7d6e55e`](https://github.com/wgtunnel/android/commit/7d6e55e06e5d7e5da1c7c9284c2ebd0efd08099a) - bump deps *(commit by @zaneschepke)*
+- [`fee2878`](https://github.com/wgtunnel/android/commit/fee2878fa0009c52fd58dddf28a56c5c232957d3) - **deps**: bump timheuer/base64-to-file from 1.2 to 2.0 *(PR #1224 by @dependabot[bot])*
+- [`a421782`](https://github.com/wgtunnel/android/commit/a42178258ebddfc651b520ee83d0f16534ee7466) - **deps**: bump softprops/action-gh-release from 2 to 3 *(PR #1214 by @dependabot[bot])*
+- [`6066eb2`](https://github.com/wgtunnel/android/commit/6066eb2e7e2d2f2061e591b419602d597673357d) - bump deps *(commit by @zaneschepke)*
+- [`e17b6e3`](https://github.com/wgtunnel/android/commit/e17b6e322f56218c8b2731b9c783961612366248) - bump gradle, remove dead code *(commit by @zaneschepke)*
+- [`94d78a6`](https://github.com/wgtunnel/android/commit/94d78a60c7465e8ff106e61e1339d20a8c70b93c) - bump deps *(commit by @zaneschepke)*
+- [`a8d7518`](https://github.com/wgtunnel/android/commit/a8d75188813430f77a317a778916b2c4562e7fde) - bump quickie, ksp *(commit by @zaneschepke)*
+- [`d78443e`](https://github.com/wgtunnel/android/commit/d78443e7fadeef4af8db34eff76015aa2ebdb39e) - release version 5.0.0 *(commit by @zaneschepke)*
+
