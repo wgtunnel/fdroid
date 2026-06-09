@@ -1,0 +1,29 @@
+No changelog found for 50001
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`6201671`](https://github.com/wgtunnel/android/commit/6201671dd0ab60661f542e74b0c2468bf0110b51) - google play release pipeline *(commit by @zaneschepke)*
+- [`bb6e45e`](https://github.com/wgtunnel/android/commit/bb6e45ed92192fbfd7a2a69186e4c07e087c5f27) - localized short descriptions too long *(commit by @zaneschepke)*
+- [`01695c3`](https://github.com/wgtunnel/android/commit/01695c32867d0c7da5b2485e94243cf32860d26d) - short description too long *(commit by @zaneschepke)*
+- [`9494853`](https://github.com/wgtunnel/android/commit/9494853deebb27f6776119e7124ff6e701733f64) - use underlying network for system bootstrap *(commit by @zaneschepke)*
+- [`6788b05`](https://github.com/wgtunnel/android/commit/6788b05fa06952514118cc8d2f4560017dd6a12e) - globals ui state bug while tunnel active *(commit by @zaneschepke)*
+- [`5f03a97`](https://github.com/wgtunnel/android/commit/5f03a97fcc39a1ddbdd124885316524aef28a3e8) - proxy settings ui state reset when config active *(commit by @zaneschepke)*
+- [`03712a6`](https://github.com/wgtunnel/android/commit/03712a6c1de7fad9030ca43114bb414685103a3e) - custom text box input race *(commit by @zaneschepke)*
+- [`12c9b52`](https://github.com/wgtunnel/android/commit/12c9b52653281056dc8395eee04f19a591b99cf4) - split tunneling bug bypass bug, service shutdown handling *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`554499f`](https://github.com/wgtunnel/android/commit/554499f9de9372ef7c8bacbd0ece25699b1acf6c) - add back tunnel endpoint ip to main screen *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`fe54c9c`](https://github.com/wgtunnel/android/commit/fe54c9cd0e7921ee0359f864c8e3a18729d7f2d2) - release v5.0.1 *(commit by @zaneschepke)*
+
