@@ -1,0 +1,28 @@
+What's new:
+- Battery usage optimizations
+- Legacy Wi-Fi mode location access optimizations
+- Revert active to top of tunnel list
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`588a2a1`](https://github.com/wgtunnel/android/commit/588a2a18bdffc2f963ef6e7429ccb09c9edeb70f) - use testnet ip during bootstrap phase *(commit by @zaneschepke)*
+- [`afebd97`](https://github.com/wgtunnel/android/commit/afebd975ea6991a3a694b3e74bafaea5d2a55fd4) - remove automatic active tunnel to top, add scrollbars *(commit by @zaneschepke)*
+- [`96cffdf`](https://github.com/wgtunnel/android/commit/96cffdfa7d6b8e8170b7e6f96b64865b7651af5c) - optimize tunnel status callback *(commit by @zaneschepke)*
+- [`af1848f`](https://github.com/wgtunnel/android/commit/af1848f12d7d007d2b4aa6f9dbccd184fb37f3f2) - legacy mode triggering location pings more often than necessary due to network security check *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`9f85638`](https://github.com/wgtunnel/android/commit/9f85638b9a9be0014749de7e0d53f98cfa53db03) - fix whitespace in changelog *(commit by @zaneschepke)*
+- [`0008d8b`](https://github.com/wgtunnel/android/commit/0008d8b9bb61b343358d125d2ed152e751ea6cf2) - update docs and fastlane metadata for latest features *(commit by @zaneschepke)*
+- [`221b38a`](https://github.com/wgtunnel/android/commit/221b38a11946060018565560a45efafd969db9b6) - change proxy mode wording for consistency *(commit by @zaneschepke)*
+- [`6c3c689`](https://github.com/wgtunnel/android/commit/6c3c6891ebe8bcaf648f6fcf610b17dbcf4950cc) - release v5.0.2 *(commit by @zaneschepke)*
+
