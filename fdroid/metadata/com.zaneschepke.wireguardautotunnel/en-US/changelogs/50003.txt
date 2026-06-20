@@ -1,0 +1,47 @@
+What's new:
+- Improved tunnel start time
+- Added companion service to prevent new Android Auto app from detecting an active VPN
+- Improved notification sync with tunnel statuses
+- Various other minor fixes and improvements
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`379ffdc`](https://github.com/wgtunnel/android/commit/379ffdcbbf0594f9103262a562bb0acb3c22a98b) - encrypted backup *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`944034a`](https://github.com/wgtunnel/android/commit/944034ac7465f9697927b3cd9ca439a45ec82f98) - add fallback for networks without configured dns *(commit by @zaneschepke)*
+- [`2b8610f`](https://github.com/wgtunnel/android/commit/2b8610fa8a4a4828174d8a67d56a2e3b79e9909d) - bug where split tunnel settings overwrote tunnel name comment *(commit by @zaneschepke)*
+- [`660bea0`](https://github.com/wgtunnel/android/commit/660bea01047b52d2eb23a59442157a0f43f2a7e8) - allow duplicate error and tunnel event notifications *(commit by @zaneschepke)*
+- [`6e3c132`](https://github.com/wgtunnel/android/commit/6e3c1324b27f4812880b84c3f310df94737e890b) - snackbar and notification coordination *(commit by @zaneschepke)*
+- [`9ee1fa6`](https://github.com/wgtunnel/android/commit/9ee1fa69ed4bf596121ca4d66114595b4f76e76c) - tunnel sockets protection race *(commit by @zaneschepke)*
+- [`160a6ca`](https://github.com/wgtunnel/android/commit/160a6ca84d99b4023e0d7668fc0b7e3adcbbd35a) - peer stats units should not be lowercase *(commit by @zaneschepke)*
+- [`e6c3e3f`](https://github.com/wgtunnel/android/commit/e6c3e3f5b3de9d85afd5b14981592354794eafa0) - notification sync and tunnel name in title *(commit by @zaneschepke)*
+- [`48ddbcb`](https://github.com/wgtunnel/android/commit/48ddbcbb0ed578c963b55071b8d95ae940afe12c) - auto tunnel not respecting tunnel tile toggle overrides *(commit by @zaneschepke)*
+- [`0603cb2`](https://github.com/wgtunnel/android/commit/0603cb2fddaa15db819c690adbedf6b1a3033a1a) - switch to foregrounded companion service to prevent Android Auto VPN detection *(commit by @zaneschepke)*
+- [`8083ab9`](https://github.com/wgtunnel/android/commit/8083ab9526074b0bbd288876356af235dcec3a91) - add small delay to help jni propagation of socket protector on slow devices *(commit by @zaneschepke)*
+- [`4c72549`](https://github.com/wgtunnel/android/commit/4c725491f4c51552527d28f42dbeaa6e63f4d7d1) - import from clipboard crash on invalid data *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`9f394ae`](https://github.com/wgtunnel/android/commit/9f394aeffb43b9061dd795e7d3536a6b19e1f771) - improve vpn integration for older android version, add revoke for faster cleanup *(commit by @zaneschepke)*
+- [`a1e3489`](https://github.com/wgtunnel/android/commit/a1e3489ba2d3c0eaa41b0a3d45ba627844c2d6ed) - bring tunnel up after successful dns resolution *(commit by @zaneschepke)*
+- [`294f262`](https://github.com/wgtunnel/android/commit/294f2624c7a4176a2a493ed20137d06492552aa3) - clean up proxy jni *(commit by @zaneschepke)*
+- [`d4dbc43`](https://github.com/wgtunnel/android/commit/d4dbc43c70f3889d71df39eb4481e514e44f5091) - improve bypass socket jni for potential races *(commit by @zaneschepke)*
+- [`7529c11`](https://github.com/wgtunnel/android/commit/7529c11172f20c7ff7780c5261c4b43843b52197) - make bypass socket jni glue more robust against races *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`c51a7ee`](https://github.com/wgtunnel/android/commit/c51a7ee39368711a38395e0f3100e8654387358e) - bump koin *(commit by @zaneschepke)*
+- [`5c98aab`](https://github.com/wgtunnel/android/commit/5c98aab9e00d0694f577f850d63df60dd6b3fc88) - bump deps *(commit by @zaneschepke)*
+- [`0d75699`](https://github.com/wgtunnel/android/commit/0d75699b4092f41b0e3a03bc4da0575015bff3b0) - **deps**: bump gradle/actions from 3 to 6 *(PR #1279 by @dependabot[bot])*
+- [`7d1312d`](https://github.com/wgtunnel/android/commit/7d1312da0f64cce1884298ec93a4ca5a42687432) - **deps**: bump actions/checkout from 6 to 7 *(PR #1285 by @dependabot[bot])*
+- [`daf5eeb`](https://github.com/wgtunnel/android/commit/daf5eebdd2dca40594772b26c5e4012e74417e86) - release 5.0.3 *(commit by @zaneschepke)*
+
