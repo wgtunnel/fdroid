@@ -1,0 +1,31 @@
+What's new:
+- Bugfix for certain scenarios that were not cleaning up the vpn service fully
+- Allows tunnel imports via wg:// url deep links
+- Improvements to Always-On VPN reliability
+- Improved cellular connectivity detection for dual sims
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`16d5586`](https://github.com/wgtunnel/android/commit/16d5586433b79dfec0c1726cc60b4300ccea361c) - config import via wg:// deep links *(PR #1213 by @alexandervlpl)*
+
+### :bug: Bug Fixes
+- [`e062fbb`](https://github.com/wgtunnel/android/commit/e062fbb34d92760087617c6e8b643532e6cd2785) - vpnservice not cleaned up properly in certain scenarios *(commit by @zaneschepke)*
+- [`9ac7ae7`](https://github.com/wgtunnel/android/commit/9ac7ae77b3b660cb677815a849c253c6edf76089) - improve always on vpn reliability *(commit by @zaneschepke)*
+- [`77f8a82`](https://github.com/wgtunnel/android/commit/77f8a8215bb230dbb96dd685643e7732e747c365) - improve mobile network detection for dual sim setups *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`63625cc`](https://github.com/wgtunnel/android/commit/63625ccbd7e461320fe4b857190c117a025f7b22) - service manager to use new user start function *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`619e3c1`](https://github.com/wgtunnel/android/commit/619e3c1cdeecfbfe22711ad4663752acec84d4f2) - release 5.0.5 *(commit by @zaneschepke)*
+
