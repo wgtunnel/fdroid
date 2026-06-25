@@ -1,0 +1,26 @@
+What's new:
+- Bugfix for Android 17 local network permission requirement
+- Bugfix for app shortcuts causing crash
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`74e9e46`](https://github.com/wgtunnel/android/commit/74e9e462bbe82d7a3f6d09ade756c7dfa4a0e60f) - app shortcuts crash *(commit by @zaneschepke)*
+- [`7d7b99f`](https://github.com/wgtunnel/android/commit/7d7b99f448afe0c47ec0607d8da65edfa111e55a) - quick tile logo for samsung OneUI *(commit by @zaneschepke)*
+- [`3cb4480`](https://github.com/wgtunnel/android/commit/3cb4480a6551908ebdc5596f43615a6e404c07d6) - android 17 local devices/network permission requirement *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`a7f3255`](https://github.com/wgtunnel/android/commit/a7f3255a7698163b4b8d73856ea1db3a0e43bc67) - remove legacy round icons *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`0a9773d`](https://github.com/wgtunnel/android/commit/0a9773d202a6a04ec71a38b1e8ed58d99958e757) - release 5.0.6 *(commit by @zaneschepke)*
+
