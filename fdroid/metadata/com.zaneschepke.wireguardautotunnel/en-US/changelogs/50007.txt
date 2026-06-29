@@ -1,0 +1,37 @@
+What's new:
+- Auto tunnel feature to disable active tunnels on captive portal networks
+- Improve local network permission dialog wording and theming
+- Bugfix for Dynamic DNS feature not working correctly
+- Bugfix for Lockdown mode with IPv4 only tunnels
+- Bugfix for DNS resolution hanging issues for peer resolution
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`614f97f`](https://github.com/wgtunnel/android/commit/614f97fd14fec49c34b06793af858ddb1d7b62dd) - add disable tunnel on captive portal to auto tunnel *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`85acca8`](https://github.com/wgtunnel/android/commit/85acca8604f06a1befcce57f67e3940ce9ee3d4a) - local network permission dialog theme and wording *(commit by @zaneschepke)*
+- [`cbf0760`](https://github.com/wgtunnel/android/commit/cbf07600b473b1d48bfb941965a06a5de5b65354) - ddns checking logic, force well known DoH to bypass system dns cache *(commit by @zaneschepke)*
+- [`244a990`](https://github.com/wgtunnel/android/commit/244a990c3781e057ff9725f9508b7e43a7459c41) - ddns job logic, respect user dns setting for DDNS with default fallback if cache suspected *(commit by @zaneschepke)*
+- [`f3bb666`](https://github.com/wgtunnel/android/commit/f3bb6667c3b2b9c17ec97dd95dae73f4314fb12c) - private dns to use network bind, bootstrap custom with system dns *(commit by @zaneschepke)*
+- [`68c1a19`](https://github.com/wgtunnel/android/commit/68c1a19bd3fd63a6ad71780d0364c6def5dd0184) - remove ipv6 address from lockdown causing routing issues ipv4 only tunnels *(commit by @zaneschepke)*
+- [`9503a32`](https://github.com/wgtunnel/android/commit/9503a3284b5a7d11cca73b0cb3f0e582bd1e6167) - kill switch should restore properly on tunnel up if it was killed by system or another app *(commit by @zaneschepke)*
+- [`fbd470f`](https://github.com/wgtunnel/android/commit/fbd470f5d25f80ea692490bbf8f09b23f7adcd84) - make network monitor less strict for network capabilities *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`5f89b2e`](https://github.com/wgtunnel/android/commit/5f89b2ed31232908279b900f69d1d63ce920a3d1) - improve mobile network detection, cleanup network monitor *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`ec8d90d`](https://github.com/wgtunnel/android/commit/ec8d90d13dc0b59a9b4ba8e69ae04a7798cc9a56) - bump ktor and leakcanary *(commit by @zaneschepke)*
+- [`7c8adb3`](https://github.com/wgtunnel/android/commit/7c8adb380ba827243c83faa0a7e0fd3e93c62b31) - release 5.0.7 *(commit by @zaneschepke)*
+
