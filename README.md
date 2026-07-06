@@ -23,7 +23,7 @@ This repository hosts a [F-Droid](https://f-droid.org/) repo for my apps. This r
     Alternatively, you can also add the repository manually with the following url:
 
       ```
-    https://raw.githubusercontent.com/zaneschepke/fdroid/main/fdroid/repo?fingerprint=0890C5D44C0109E366801C39840325E810E21B270B9D2AEC53CE0D6C5FC849DB
+    https://raw.githubusercontent.com/wgtunnel/fdroid/main/fdroid/repo?fingerprint=0890C5D44C0109E366801C39840325E810E21B270B9D2AEC53CE0D6C5FC849DB
     ```
 
 4. You can now install my apps, e.g. start by searching for "WG Tunnel" in the F-Droid client.
