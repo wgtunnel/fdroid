@@ -1,0 +1,23 @@
+What's new:
+- Bugfix for proxy mode failing to start tunnel
+- Improved foreground service start reliability
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`3d076b9`](https://github.com/wgtunnel/android/commit/3d076b93b5eb2ce9fdedcb25b15eb97a9c4bcaad) - service foreground start and recovery for tunnel and companion service *(commit by @zaneschepke)*
+- [`3a89f2a`](https://github.com/wgtunnel/android/commit/3a89f2a6a9e8f1148e3deb031d02461c9b9bbbfa) - standard proxy should not try to protect socket if bypass not set *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`aaa4a28`](https://github.com/wgtunnel/android/commit/aaa4a28f4e4a34c72b8539fa28e3fb1dffd48de1) - fix android tv banner *(commit by @zaneschepke)*
+- [`3eff5be`](https://github.com/wgtunnel/android/commit/3eff5be1303b9b90815b2464839e3db48fd54f12) - release 5.0.9 *(commit by @zaneschepke)*
+
