@@ -6,7 +6,7 @@ This repository hosts a [F-Droid](https://f-droid.org/) repo for my apps. This r
 <!-- This table is auto-generated. Do not edit -->
 | Icon | Name | Description | Version |
 | --- | --- | --- | --- |
-| <a href="https://github.com/wgtunnel/android"><img src="fdroid/repo/com.zaneschepke.wireguardautotunnel/en-US/icon.png" alt="WG Tunnel icon" width="36px" height="36px"></a> | [**WG Tunnel**](https://github.com/wgtunnel/android) | A FOSS WireGuard &amp; AmneziaWG Android client with auto-tunneling, lockdown &amp; l... | 5.0.7 (50007) |
+| <a href="https://github.com/wgtunnel/android"><img src="fdroid/repo/com.zaneschepke.wireguardautotunnel/en-US/icon.png" alt="WG Tunnel icon" width="36px" height="36px"></a> | [**WG Tunnel**](https://github.com/wgtunnel/android) | A FOSS WireGuard &amp; AmneziaWG Android client with auto-tunneling, lockdown &amp; l... | 5.0.8 (50008) |
 <!-- end apps table -->
 
 ### How to use

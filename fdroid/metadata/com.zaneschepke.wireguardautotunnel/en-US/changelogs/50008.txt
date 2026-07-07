@@ -1,0 +1,57 @@
+What's new:
+- Auto tunnel by BSSID feature with wildcard support
+- Auto tunnel specificity support for conflicting rule matches
+- Seamless roaming feature for tunnel recovery on Wi-Fi access point and airplane mode migrations
+- Bugfixes for DNS resolution and tunnel hanshake issues
+- Various other fixes and improvements
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`4a94905`](https://github.com/wgtunnel/android/commit/4a94905893432a84086ebd99e9a7fc2a59a542ee) - seamless roaming *(commit by @zaneschepke)*
+- [`d24a172`](https://github.com/wgtunnel/android/commit/d24a172921ea6a7a54390ecd45a7eec4050e6850) - auto tunnel bssid support *(commit by @zaneschepke)*
+- [`5089694`](https://github.com/wgtunnel/android/commit/5089694790d5ab98cb408287d055eaad204c8fb3) - **lang**: update Russian translation *(PR #1304 by @solokot)*
+- [`c6c8e17`](https://github.com/wgtunnel/android/commit/c6c8e17e4063ecbe251c5c9780b937c3d35a0c96) - **lang**: translations update from Hosted Weblate *(PR #1257 by @weblate)*
+
+### :bug: Bug Fixes
+- [`c8c041b`](https://github.com/wgtunnel/android/commit/c8c041b8727ceec746b16619e0384c14cd4036ad) - improve ktor client to prevent download failures from github *(commit by @zaneschepke)*
+- [`fa89715`](https://github.com/wgtunnel/android/commit/fa89715ede0cf4cfdd5e253ff6f9b7014afb2809) - disable on captive portal toggle bug *(commit by @zaneschepke)*
+- [`8bdeff5`](https://github.com/wgtunnel/android/commit/8bdeff515e80bb398e959180b4773fd36e750723) - aboutlibraries r8 crash *(commit by @zaneschepke)*
+- [`f6bbb5d`](https://github.com/wgtunnel/android/commit/f6bbb5d8150d0a713163b9d64f97caf801cddb08) - url imports *(commit by @zaneschepke)*
+- [`7c66aea`](https://github.com/wgtunnel/android/commit/7c66aea5eace806b9566e064932d1c11cca7a018) - make seamless roaming aware of relevant Wi-Fi AP roams *(commit by @zaneschepke)*
+- [`d33820d`](https://github.com/wgtunnel/android/commit/d33820d2cfc44bb4cd95ed23049f9c816eb62e5b) - active network initial detection race *(commit by @zaneschepke)*
+- [`440afe4`](https://github.com/wgtunnel/android/commit/440afe447467874e83b196ad0cf467d77f67d9dd) - system dns resolution can return loopback *(commit by @zaneschepke)*
+- [`a78a947`](https://github.com/wgtunnel/android/commit/a78a947ff335d54f7646d02284f242af416a2ba5) - prevent kill switch from being destroyed except on mode change *(commit by @zaneschepke)*
+- [`2b21f80`](https://github.com/wgtunnel/android/commit/2b21f80ff3a365227f7d5fc04f35bf1599f01500) - auto tunnel specificity and duplicates *(commit by @zaneschepke)*
+- [`a4a4994`](https://github.com/wgtunnel/android/commit/a4a499457f005fd97b80501dd0a9bd8d5c2a2f7c) - donation toast localization handling *(commit by @zaneschepke)*
+- [`f6cb357`](https://github.com/wgtunnel/android/commit/f6cb3579c2d75554f07e7eb407e7c86d743413c9) - apply Amnezia 2.0 compat values for legacy 1.5 configs on tunnel start *(commit by @zaneschepke)*
+- [`315262a`](https://github.com/wgtunnel/android/commit/315262a2b7e135bc374c15f11cecdd08c7cc364f) - improve noisy log filters for logger *(commit by @zaneschepke)*
+- [`839a764`](https://github.com/wgtunnel/android/commit/839a7649dfe667305b74ae8b6b679abf837bfcc7) - app translation link should be invite link *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`e0ddb87`](https://github.com/wgtunnel/android/commit/e0ddb8730de56b4d7eb46790ab6e3835bb26c740) - switch license view to aboutlibraries, add native dep licenses *(commit by @zaneschepke)*
+- [`cf184f2`](https://github.com/wgtunnel/android/commit/cf184f2042c874716fd7ef0201870f4da2f4cddb) - remove old license viewmodel *(commit by @zaneschepke)*
+- [`2c78e9f`](https://github.com/wgtunnel/android/commit/2c78e9fcbdd6d9b17cb6bf7a4b8c081571e10767) - app icons and assets, change nightly launcher color *(commit by @zaneschepke)*
+- [`2b0ffd1`](https://github.com/wgtunnel/android/commit/2b0ffd18d51c41d5576c9cdd1cdaee4a4519a2aa) - logger optimizations and log sanitizing *(commit by @zaneschepke)*
+- [`035e5ed`](https://github.com/wgtunnel/android/commit/035e5ed8c00b3bf53c52290faeaf3fea1b56ec34) - seamless roaming to only refresh bind, not bind network *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`186f063`](https://github.com/wgtunnel/android/commit/186f063e231d44550f4e28ceded8d54673291e9b) - **deps**: bump deps *(commit by @zaneschepke)*
+- [`53b2850`](https://github.com/wgtunnel/android/commit/53b285015ab46137cf36da3085642ed6a172b4ea) - add crowdin config *(commit by @zaneschepke)*
+- [`42f822c`](https://github.com/wgtunnel/android/commit/42f822c39e4b141fa618134fc89ccf2adb8c2fb9) - clean up localizations *(commit by @zaneschepke)*
+- [`a2aec0b`](https://github.com/wgtunnel/android/commit/a2aec0b1b442171e14b16a0b169a3196f5a08052) - update crowdin config with code mappings *(commit by @zaneschepke)*
+- [`ffa995d`](https://github.com/wgtunnel/android/commit/ffa995d6749cda45156b4ce433dd42a0a0a4c29e) - fix crowdin language sync issues *(commit by @zaneschepke)*
+- [`856d044`](https://github.com/wgtunnel/android/commit/856d0444d9fe387eeceede330a87edf47975a61c) - remove translated changelogs *(commit by @zaneschepke)*
+- [`75b9298`](https://github.com/wgtunnel/android/commit/75b9298d0bf9d1a1e7f0673d172c9851505a6856) - add fastlane store metadata to crowdin *(commit by @zaneschepke)*
+- [`321484d`](https://github.com/wgtunnel/android/commit/321484d8f7ba44b0c939dc68a9deb506a1b2c4b3) - release 5.0.8 *(commit by @zaneschepke)*
+- [`5086307`](https://github.com/wgtunnel/android/commit/50863070c0b65a3be4a75e88deb9613fb50cd586) - clean up old translation strings *(commit by @zaneschepke)*
+
