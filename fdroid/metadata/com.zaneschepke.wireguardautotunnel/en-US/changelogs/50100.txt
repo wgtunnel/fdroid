@@ -1,0 +1,49 @@
+What's new:
+- Seamless tunnel recovery feature for tunnel connectivity recovery without dropping VPN protection
+- Improved tile integration with tunnel statuses
+- Toggle tunnel action added for remote control feature
+- Auto-tunnel Wi-Fi detection bugfix on VPN starts
+- Translations
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`71712c0`](https://github.com/wgtunnel/android/commit/71712c09c1b9678189a623beda0b00c443cb4525) - seamless recovery *(commit by @zaneschepke)*
+- [`3c69382`](https://github.com/wgtunnel/android/commit/3c693827004f91ea9f8e5a57325ccda38588df1b) - add toggle tunnel action to remote control feature *(commit by @zaneschepke)*
+- [`e414fba`](https://github.com/wgtunnel/android/commit/e414fba47cf442922b1e215ed07fc7415c7546f4) - **lang**: New Crowdin updates *(PR #1335 by @zaneschepke)*
+- [`e8e889f`](https://github.com/wgtunnel/android/commit/e8e889f96c0f32b986fc22f015abf88ced03ea3a) - **lang**: New Crowdin updates *(PR #1346 by @zaneschepke)*
+- [`561337c`](https://github.com/wgtunnel/android/commit/561337cc84f339310af3ae3be6385a9a8750b4eb) - **lang**: New Crowdin updates *(PR #1350 by @zaneschepke)*
+- [`666e015`](https://github.com/wgtunnel/android/commit/666e015314f05d5bc23064be968b5f3341a4c5ce) - add tunnel connection state to tunnel control tile *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`adf96c6`](https://github.com/wgtunnel/android/commit/adf96c66f578fd056d6566d15781552720d99deb) - companion service start and shutdown *(commit by @zaneschepke)*
+- [`396e62d`](https://github.com/wgtunnel/android/commit/396e62df058ae37ff0ce5ecc0d68799a5ad28a27) - defensive copies and async native resolver callback for GrapheneOS MTE crash *(commit by @zaneschepke)*
+- [`95d99d8`](https://github.com/wgtunnel/android/commit/95d99d83eb3e2ac1395a3955ddac3f271ff64916) - proguard rules for new jni callback *(commit by @zaneschepke)*
+- [`ba4dd0a`](https://github.com/wgtunnel/android/commit/ba4dd0ab20ab2c2d44cff5fadad96494bf56be20) - integrate seamless recovery events with notifications *(commit by @zaneschepke)*
+- [`1a35507`](https://github.com/wgtunnel/android/commit/1a35507a03dea24ef4bf2e3b168f532bc28d587d) - dns resolver jni race, MTE tagging issue *(commit by @zaneschepke)*
+- [`ff58ffb`](https://github.com/wgtunnel/android/commit/ff58ffba11da954c70d1f5815164004d51a3c4d7) - network detection race during vpn starts *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`b6c3f27`](https://github.com/wgtunnel/android/commit/b6c3f27f37a295cf9cb1a2b0da90382aa1d57d94) - clean up jni layer, improve logging, move status callback init to on load *(commit by @zaneschepke)*
+- [`c57a274`](https://github.com/wgtunnel/android/commit/c57a274b2af1439aadfd23a07115fc1d0f3de72b) - add defensive socket protector clearing *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`4fe9824`](https://github.com/wgtunnel/android/commit/4fe9824dd27eca298e54ba061d87271c1a34fea6) - fix warnings, bump gradle and ksp *(commit by @zaneschepke)*
+- [`0a6a639`](https://github.com/wgtunnel/android/commit/0a6a639abb6be469e2612867431e7b3f067db66f) - fix translation duplicates from merge *(commit by @zaneschepke)*
+- [`ff7eb0a`](https://github.com/wgtunnel/android/commit/ff7eb0a90aabdc344284c9a401140432ef39fa1b) - fix crowdin sync issue, language mapping *(commit by @zaneschepke)*
+- [`10357d6`](https://github.com/wgtunnel/android/commit/10357d689ecc35754d4cb2c4d9d0bbca4ef9c42a) - fix crowdin to skip untranslated *(commit by @zaneschepke)*
+- [`f0c0942`](https://github.com/wgtunnel/android/commit/f0c094231c7a29337f7d943a889f0d988423be87) - update crowdin config *(commit by @zaneschepke)*
+- [`2021a9e`](https://github.com/wgtunnel/android/commit/2021a9ebe32d4ad3fe656e1fb8fcfbd1101d8b7b) - bump orbit and kotlin *(commit by @zaneschepke)*
+- [`dbfaa3d`](https://github.com/wgtunnel/android/commit/dbfaa3d657c5c3f3fbebbfb5deea7363a8f4c307) - code formatting *(commit by @zaneschepke)*
+- [`06ce2b7`](https://github.com/wgtunnel/android/commit/06ce2b76fa60c2839f9386a8796306ff5b37ff31) - release 5.1.0 *(commit by @zaneschepke)*
+- [`22aa087`](https://github.com/wgtunnel/android/commit/22aa08754392072a42d70768d0f3894be420f9c2) - fix crowdin sync issues and metadata language mappings *(commit by @zaneschepke)*
+
