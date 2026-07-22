@@ -1,0 +1,39 @@
+What's new:
+- Advanced tunnel DNS options like split and encrypted tunnel DNS
+- IP4P support for servers behind CGNAT
+- Bugfix for auto tunnel that sometimes caused rapid toggle of tunnels
+- Bugfix for the tunnel stats job high CPU and battery usage on some devices
+- Various other bugfixes and improvements
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`412c249`](https://github.com/wgtunnel/android/commit/412c249629c91d5e14c037d859dd5a0d2e0a25cf) - split dns, encrypted tunnel dns *(commit by @zaneschepke)*
+- [`a32da7b`](https://github.com/wgtunnel/android/commit/a32da7b7585a839432192cd9ae0865d9cc0561ad) - IP4P support *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`4f08b9a`](https://github.com/wgtunnel/android/commit/4f08b9a6d9915bb0bd9d5ffa1143c9288a9664fa) - bssid should always be normalized to uppercase *(commit by @zaneschepke)*
+- [`a1b4f47`](https://github.com/wgtunnel/android/commit/a1b4f4752fc3d77fd647eb96fd6a2fb96c7355ba) - make exclude lan feature private IP DNS server aware *(commit by @zaneschepke)*
+- [`f25887f`](https://github.com/wgtunnel/android/commit/f25887fb18918b92318c5b54f684aff8137fc4fb) - making the split tunnel screen aware of package installs and removals *(commit by @zaneschepke)*
+- [`ff3607f`](https://github.com/wgtunnel/android/commit/ff3607f5cc65283d8f13761d87860cf1183afba0) - auto tunnel BSSID exact match bug *(commit by @zaneschepke)*
+- [`69ca4ab`](https://github.com/wgtunnel/android/commit/69ca4ab0aa6ad3c41000c9395003ea5f83a7aaf7) - stats job failed to find tunnel bug *(commit by @zaneschepke)*
+- [`d3b72f0`](https://github.com/wgtunnel/android/commit/d3b72f0421bc55dcd531407880167c88a934f9fc) - tunnel dns ui bug when moving from split to encrypted *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`15f12a0`](https://github.com/wgtunnel/android/commit/15f12a064d4dc295307ac2043549747f60d449a5) - migrate deprecated orbit api *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`22aa087`](https://github.com/wgtunnel/android/commit/22aa08754392072a42d70768d0f3894be420f9c2) - fix crowdin sync issues and metadata language mappings *(commit by @zaneschepke)*
+- [`38eb703`](https://github.com/wgtunnel/android/commit/38eb70347fcab6094589d8d0b8112d774b3fc182) - bump agp, enable parallel tooling *(commit by @zaneschepke)*
+- [`c30a2ee`](https://github.com/wgtunnel/android/commit/c30a2eed95510215c822e7a12889191564b7a0ac) - bump quickie and aboutlibraries *(commit by @zaneschepke)*
+- [`6122b21`](https://github.com/wgtunnel/android/commit/6122b21b05fa1fa80cab419597343d306f96be42) - release 5.2.0 *(commit by @zaneschepke)*
+
