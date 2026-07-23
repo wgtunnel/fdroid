@@ -1,0 +1,29 @@
+What's new:
+- Bugfix for Wi-Fi changes failing to be detected while a VPN is active on certain OEMs
+- Back press/swipe now properly clears selected tunnels instead of exiting the app
+- Chevrons added to settings rows with subscreens
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`8e41986`](https://github.com/wgtunnel/android/commit/8e41986809aba417f6fecaa300c61a2ef0657a3f) - attempt to fix wifi change detection on problem oems while vpn active *(commit by @zaneschepke)*
+- [`554f837`](https://github.com/wgtunnel/android/commit/554f83744ac7134635b33c73722dbe6b39b896d1) - hide Wi-Fi details if they are android defaults *(commit by @zaneschepke)*
+- [`d65c43e`](https://github.com/wgtunnel/android/commit/d65c43eb9eedd58f66dbb15f55880d72230219c8) - selected tunnels should consume and clear selected on back *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`34edc47`](https://github.com/wgtunnel/android/commit/34edc47afe9e1bc8add0c20376d39b7aa0344a02) - improve UI divider with a chevron *(commit by @zaneschepke)*
+- [`a456b2e`](https://github.com/wgtunnel/android/commit/a456b2e510b450702e6ea45a0a53a9afe81a2195) - add chevron for app mode *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`38093c3`](https://github.com/wgtunnel/android/commit/38093c304868c6e9cf37004c14cbd8b79e518ed7) - **deps**: update sonner *(commit by @zaneschepke)*
+- [`f585050`](https://github.com/wgtunnel/android/commit/f585050bf23e444007c276fb8d6c93bb0e75fa03) - release 5.2.1 *(commit by @zaneschepke)*
+
