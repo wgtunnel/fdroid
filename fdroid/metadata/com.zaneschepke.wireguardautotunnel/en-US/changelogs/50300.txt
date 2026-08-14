@@ -1,0 +1,62 @@
+What's new:
+- Amnezia 3.0 support
+- Fix for restoring tunnels/auto tunnel on system kill/package update
+- Android TV and legacy android versions tunnel export support
+- DDNS and seamless recovery fixes and improvements
+- Locale updates
+- Various other fixes and improvements
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :boom: BREAKING CHANGES
+- due to [`86d7748`](https://github.com/wgtunnel/android/commit/86d77488ee89c51d97d98630d728139b5aeb497b) - seamless recovery, DDNS recovery, and IPv4/IPv6 fallback/recovery *(commit by @zaneschepke)*:
+
+  seamless recovery, DDNS recovery, and IPv4/IPv6 fallback/recovery
+
+
+### :sparkles: New Features
+- [`c0922a2`](https://github.com/wgtunnel/android/commit/c0922a210be03ab2c6f37b6f1b1f5937455a2c6b) - amnezia 3.0 support *(commit by @zaneschepke)*
+- [`c0b0b87`](https://github.com/wgtunnel/android/commit/c0b0b878261fa3ca339b745ba5649d18895a4e8d) - **lang**: add basque locale *(PR #1385 by @planetryan)*
+- [`eeb886f`](https://github.com/wgtunnel/android/commit/eeb886f8305047a2bca79e1829f5331c04eaa3e6) - **lang**: new Crowdin updates *(PR #1359 by @zaneschepke)*
+- [`c00afcb`](https://github.com/wgtunnel/android/commit/c00afcbfdc5bed40f19b390a343daeb36c045c65) - **lang**: new Crowdin updates *(PR #1410 by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`2a0209d`](https://github.com/wgtunnel/android/commit/2a0209d6090a0cfc9c63aee63c56d5cc6860a532) - seamless recovery should only fire if we detect a usable network *(commit by @zaneschepke)*
+- [`13171ed`](https://github.com/wgtunnel/android/commit/13171ed1bbb9716d079ca4ec073c684ac2064640) - old handle not properly cleaned up in tunnel bounce scenarios *(commit by @zaneschepke)*
+- [`86d7748`](https://github.com/wgtunnel/android/commit/86d77488ee89c51d97d98630d728139b5aeb497b) - seamless recovery, DDNS recovery, and IPv4/IPv6 fallback/recovery *(commit by @zaneschepke)*
+- [`6076994`](https://github.com/wgtunnel/android/commit/6076994a22ef96cf6f40d05b824a73c10b3f30cc) - config import validation and ip4p parsing *(commit by @zaneschepke)*
+- [`d552abc`](https://github.com/wgtunnel/android/commit/d552abc3e85d44a51909a895ea04657ff9fb76b3) - missing core deps *(commit by @zaneschepke)*
+- [`71b1466`](https://github.com/wgtunnel/android/commit/71b1466b56ad86df316713224c66261a9265e69c) - ddns failing to retry after detecting no change *(commit by @zaneschepke)*
+- [`b647b39`](https://github.com/wgtunnel/android/commit/b647b39eaa9fe5dacd30ec9be78d14d272580aee) - gamepad google play warning *(commit by @zaneschepke)*
+- [`4e344b2`](https://github.com/wgtunnel/android/commit/4e344b2e6549a30dbd738b6c983b1af63eca3c36) - android tv and legacy device file exports *(commit by @zaneschepke)*
+- [`ae043d6`](https://github.com/wgtunnel/android/commit/ae043d6014c9a36656e76066312410f8d2236d87) - Android TV export flow to legacy downloads export *(commit by @zaneschepke)*
+- [`3e2ebb5`](https://github.com/wgtunnel/android/commit/3e2ebb5b1c1fa10cdf23ee4e8e6ba4fb87c6753a) - sticky service restore and package replace restore *(commit by @zaneschepke)*
+- [`8571b4e`](https://github.com/wgtunnel/android/commit/8571b4ef9b21e3794eedc7f2dcf7025fd9a0acb9) - export .conf mimetype and legacy downloads export snackbar message *(commit by @zaneschepke)*
+- [`71ae168`](https://github.com/wgtunnel/android/commit/71ae16802c23163d73446195116990e6fad6292d) - bump core for boottime go runtime patch *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`3730224`](https://github.com/wgtunnel/android/commit/373022412be4fce3b7d8b9a9e92a4609a9a823c5) - migrate to new shared backend and core *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`3e17c12`](https://github.com/wgtunnel/android/commit/3e17c12d3724e51e39269bbb78b0d72fcf5ce599) - **deps**: bump agp *(commit by @zaneschepke)*
+- [`d349aee`](https://github.com/wgtunnel/android/commit/d349aeef52fd83bfb755edc9637abfe049d280dd) - **deps**: bump navigation3, ktor client *(commit by @zaneschepke)*
+- [`59869e0`](https://github.com/wgtunnel/android/commit/59869e0333a4289c9cb32100e1bcbf0e71a509ac) - **deps**: bump ksp, ktfmt, gradle wrapper *(commit by @zaneschepke)*
+- [`e35d3e7`](https://github.com/wgtunnel/android/commit/e35d3e72fd01c5c8c325dd229715e2c785d77273) - **deps**: bump gradle/actions from 6 to 6.2.0 *(PR #1392 by @dependabot[bot])*
+- [`233babd`](https://github.com/wgtunnel/android/commit/233babde4c0a2c54f075aa93cafea11750c15e6c) - **deps**: bump gradle/actions from 6.2.0 to 6.3.0 *(PR #1406 by @dependabot[bot])*
+- [`a2695c8`](https://github.com/wgtunnel/android/commit/a2695c8b442595f97261e4e249e2980c4f6297b2) - trigger Crowdin source sync *(commit by @zaneschepke)*
+- [`f14db97`](https://github.com/wgtunnel/android/commit/f14db97a491e81d2bbed01c6953f9bb1cfe3e11f) - fix crowdin config locale mapping *(commit by @zaneschepke)*
+- [`1eff703`](https://github.com/wgtunnel/android/commit/1eff703bfcee66ee92e5e106b293ee6fbd49b557) - fix crowdin config *(commit by @zaneschepke)*
+- [`b12173a`](https://github.com/wgtunnel/android/commit/b12173ab6e0d7697a5ea22583d82a0c35a218b84) - add basque language code mapping *(commit by @zaneschepke)*
+- [`5526260`](https://github.com/wgtunnel/android/commit/552626062987ea5b9c01ac9322ff9f7fef87e1a6) - fix crowdin fastlane mappings *(commit by @zaneschepke)*
+- [`04c7e28`](https://github.com/wgtunnel/android/commit/04c7e287e9c8a338ab586397f2405e5ee0c330d1) - fix fastlane for crowdin skip untranslated *(commit by @zaneschepke)*
+- [`2e574c5`](https://github.com/wgtunnel/android/commit/2e574c563a5f1fbdaed52e924f91546bcd718414) - release 5.3.0 *(commit by @zaneschepke)*
+
