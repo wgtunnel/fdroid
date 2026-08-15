@@ -1,0 +1,28 @@
+What's new:
+- Fix for IPv6 plain DNS failing during lockdown or split DNS was failing
+- Fix for lockdown and split DNS (plain) resolution loops
+- Fix for IPv6 recovery job not properly triggering
+- Fix for lockdown mode settings changes while a tunnel is active could break the tunnel connection
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`6c37a26`](https://github.com/wgtunnel/android/commit/6c37a26becf3d96b7242410bb23fd99bc5da6326) - ipv6 recovery, kill switch settings change when active tun, lockdown and split tun dns failures *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`21cb4ee`](https://github.com/wgtunnel/android/commit/21cb4ee69fe329f481440607519e1a955815e594) - IPv6 endpoint settings, fallback is now automatic for ipv6 preferred endpoints *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`e525f9f`](https://github.com/wgtunnel/android/commit/e525f9f2b2fc9f798941d5a6bfb49451679f42b0) - **lang**: New Crowdin updates *(PR #1411 by @zaneschepke)*
+- [`a8edde0`](https://github.com/wgtunnel/android/commit/a8edde0ee8791375577f61f0b15d99847e1a8bd1) - fix fastfile for missing metadata files *(commit by @zaneschepke)*
+- [`1bedaba`](https://github.com/wgtunnel/android/commit/1bedaba32b460048708d34105142ea04d55e7a8e) - release 5.3.1 *(commit by @zaneschepke)*
+
