@@ -1,0 +1,70 @@
+{
+  "repo": {
+    "timestamp": 1787036891123
+  },
+  "packages": {
+    "com.zaneschepke.wireguardautotunnel.nightly": {
+      "metadata": {
+        "screenshots": {
+          "phone": {
+            "en-US": [
+              {
+                "name": "/com.zaneschepke.wireguardautotunnel.nightly/en-US/phoneScreenshots/1.png",
+                "sha256": "9e166680a88efc309c491fd4295fb7d541a6c75026cc8a61d3fa12eb7e3d6b1c",
+                "size": 149095
+              },
+              {
+                "name": "/com.zaneschepke.wireguardautotunnel.nightly/en-US/phoneScreenshots/10.png",
+                "sha256": "b201a953be8b153b1b83bcc3686a23b192a5260d2995708897416af71a54df24",
+                "size": 87183
+              },
+              {
+                "name": "/com.zaneschepke.wireguardautotunnel.nightly/en-US/phoneScreenshots/2.png",
+                "sha256": "1cb5dd5423b83626e15a1c65c0f29ffac02e1960590079fc55580dc85c4c7007",
+                "size": 102245
+              },
+              {
+                "name": "/com.zaneschepke.wireguardautotunnel.nightly/en-US/phoneScreenshots/3.png",
+                "sha256": "eaedb23aa719c3f4e14b5871de60492cb4704694c7ef28e3caa7dd03d152bb48",
+                "size": 55285
+              },
+              {
+                "name": "/com.zaneschepke.wireguardautotunnel.nightly/en-US/phoneScreenshots/4.png",
+                "sha256": "fc6931e6f337c3602e6655f26307ab21d2e6f33916b2a0c771e411a0b5f91a2c",
+                "size": 118601
+              },
+              {
+                "name": "/com.zaneschepke.wireguardautotunnel.nightly/en-US/phoneScreenshots/5.png",
+                "sha256": "51a3a82883f001c2188b1bba9ed32c2a222b05b04298c910229eedb321d1aeb5",
+                "size": 124344
+              },
+              {
+                "name": "/com.zaneschepke.wireguardautotunnel.nightly/en-US/phoneScreenshots/6.png",
+                "sha256": "a1af5ac07a81c84d3466e3cedb0dffbd2f68f0f63f881a3c3bab885e5d6f59d1",
+                "size": 111930
+              },
+              {
+                "name": "/com.zaneschepke.wireguardautotunnel.nightly/en-US/phoneScreenshots/7.png",
+                "sha256": "9acb67a59b837c9b92f83fe492f3061d9ea76545723c9d2f8ac868ea2467781a",
+                "size": 101606
+              },
+              {
+                "name": "/com.zaneschepke.wireguardautotunnel.nightly/en-US/phoneScreenshots/8.png",
+                "sha256": "ac154a59233f7d6f712259f2db0caeac17e65c2d7a81f475fa394e24ef29f87e",
+                "size": 35496
+              },
+              {
+                "name": "/com.zaneschepke.wireguardautotunnel.nightly/en-US/phoneScreenshots/9.png",
+                "sha256": "e91496675dc4a8d4cecda6544e4cf65cf510aeb70f5bf2247a3ef7a9bfd815cd",
+                "size": 78582
+              }
+            ]
+          }
+        },
+        "summary": {
+          "en-US": "A FOSS WireGuard & AmneziaWG Android client with auto-tunneling, lockdown & l..."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`6c37a26`](https://github.com/wgtunnel/android/commit/6c37a26becf3d96b7242410bb23fd99bc5da6326) - ipv6 recovery, kill switch settings change when active tun, lockdown and split tun dns failures *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`1bedaba`](https://github.com/wgtunnel/android/commit/1bedaba32b460048708d34105142ea04d55e7a8e) - release 5.3.1 *(commit by @zaneschepke)*
+
