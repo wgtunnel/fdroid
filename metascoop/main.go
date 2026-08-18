@@ -316,8 +316,8 @@ func main() {
 
 	if !*debugMode {
 		fmt.Println("::group::F-Droid: Creating metadata stubs")
-		// Now, we run the fdroid update command
-		cmd := exec.Command("fdroid", "update", "--pretty", "--delete-unknown")
+		// Create stub metadata for any new APKs first
+		cmd := exec.Command("fdroid", "update", "--pretty", "--create-metadata")
 		cmd.Stderr = os.Stderr
 		cmd.Stdout = os.Stdout
 		cmd.Stdin = os.Stdin
@@ -328,7 +328,7 @@ func main() {
 		err = cmd.Run()
 
 		if err != nil {
-			log.Println("Error while running \"fdroid update -c\":", err.Error())
+			log.Println("Error while running \"fdroid update --create-metadata\":", err.Error())
 
 			fmt.Println("::endgroup::")
 			os.Exit(1)
@@ -514,7 +514,7 @@ func main() {
 
 		err = cmd.Run()
 		if err != nil {
-			log.Println("Error while running \"fdroid update -c\":", err.Error())
+			log.Println("Error while running \"fdroid update --delete-unknown\":", err.Error())
 
 			fmt.Println("::endgroup::")
 			os.Exit(1)

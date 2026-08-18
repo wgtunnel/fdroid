@@ -1,0 +1,17 @@
+AuthorName: wgtunnel
+Categories:
+    - Connectivity
+    - Security
+Description: |
+    Nightly development build of WG Tunnel.
+
+    <b>Features</b>
+
+    - Same as WG Tunnel, with additional features and fixes not yet available in the stable release
+    - Separate app ID so it can be installed alongside the stable release
+IssueTracker: https://github.com/wgtunnel/wgtunnel/issues
+License: MIT
+Name: WG Tunnel Nightly
+SourceCode: https://github.com/wgtunnel/android
+Summary: Nightly development build of WG Tunnel (installs alongside stable)
+WebSite: https://wgtunnel.com
