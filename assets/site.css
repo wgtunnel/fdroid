@@ -1,0 +1,192 @@
+:root {
+  --bg: #21272a;
+  --bg-elevated: #2a3136;
+  --text: #ffffff;
+  --text-muted: #b8c0c4;
+  --primary: #76bebd;
+  --primary-dim: rgba(118, 190, 189, 0.12);
+  --border: rgba(255, 255, 255, 0.08);
+  --radius: 12px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.55;
+  min-height: 100%;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+header .eyebrow {
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
+
+.lede {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin: 0;
+  max-width: 42rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 2.25rem 0 1rem;
+  font-weight: 650;
+}
+
+.apps {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.app-card {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+
+.app-card img {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: block;
+  background: var(--bg);
+}
+
+.app-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.app-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.app-card .version {
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  background: var(--primary-dim);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+}
+
+.steps {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+}
+
+.steps li {
+  margin: 0.45rem 0;
+}
+
+.steps li::marker {
+  color: var(--primary);
+}
+
+.qr {
+  text-align: center;
+  margin: 1.25rem 0;
+}
+
+.qr img {
+  width: min(280px, 70vw);
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 0.75rem;
+}
+
+.repo-url {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  color: var(--text);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.note {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-top: 1rem;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .app-card {
+    grid-template-columns: 48px 1fr;
+  }
+
+  .app-card .version {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .app-card img {
+    width: 48px;
+    height: 48px;
+  }
+}

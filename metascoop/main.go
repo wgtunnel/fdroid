@@ -539,11 +539,17 @@ func main() {
 		}
 	}
 
-	// We can now generate the README file
+	// We can now generate the README file and GitHub Pages landing page
 	readmePath := filepath.Join(filepath.Dir(filepath.Dir(*repoDir)), "README.md")
 	err = md.RegenerateReadme(readmePath, fdroidIndex)
 	if err != nil {
 		log.Fatalf("error generating %q: %s\n", readmePath, err.Error())
+	}
+
+	sitePath := md.SitePathFromRepoDir(*repoDir)
+	err = md.RegenerateSite(sitePath, fdroidIndex)
+	if err != nil {
+		log.Fatalf("error generating %q: %s\n", sitePath, err.Error())
 	}
 
 	cpath, haveSignificantChanges := apps.HasSignificantChanges(initialFdroidIndex, fdroidIndex)
@@ -557,13 +563,15 @@ func main() {
 			log.Fatalf("getting changed files: %s\n::endgroup::\n", err.Error())
 		}
 
-		// If only the index files changed, we ignore the commit
+		// Ignore fdroid repo index artifacts; treat everything else (README, Pages
+		// index.html, APKs, metadata) as significant.
 		for _, fname := range changedFiles {
-			if !strings.Contains(fname, "index") {
-				haveSignificantChanges = true
-
-				log.Printf("File %q is a significant change", fname)
+			base := filepath.Base(fname)
+			if strings.Contains(fname, "fdroid/repo/") && strings.HasPrefix(base, "index") {
+				continue
 			}
+			haveSignificantChanges = true
+			log.Printf("File %q is a significant change", fname)
 		}
 
 		if !haveSignificantChanges {

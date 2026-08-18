@@ -1,5 +1,8 @@
-# fdroid
-This repository hosts a [F-Droid](https://f-droid.org/) repo for my apps. This repository allows you to get the latest and greatest app updates faster than the app stores. 
+# WG Tunnel F-Droid repository
+
+This repository hosts the official [F-Droid](https://f-droid.org/) repo for **WG Tunnel**. It publishes developer-built APKs so you can get stable and nightly updates faster than the app stores.
+
+**Public site:** https://fdroid.wgtunnel.com
 
 ### Apps
 
@@ -11,25 +14,26 @@ This repository hosts a [F-Droid](https://f-droid.org/) repo for my apps. This r
 <!-- end apps table -->
 
 ### How to use
-1. First, you should [install the F-Droid app](https://f-droid.org/), it's an alternative app store for Android.
-2. In the F-droid app, navigate to Settings > Repositories.
-3. Click the + floating action button to add a new repository. 
-4. Click *SCAN QR CODE* and scan the QR below:
-
-    <p style="text-align: center;">
+1. Install an F-Droid client like [official F-Droid](https://f-droid.org/) or [Droid-ify](https://droidify.app/).
+2. Navigate to **Settings > Repositories** (may vary by client).
+3. Click the **+** button, then **Scan QR code or add manually**.
+<div>
+   <br/>
+   <p style="text-align: center;">
         <img src=".github/qrcode.png?raw=true" alt="F-Droid repo QR code" style="max-width:100%; height:auto; width:400px;">
     </p>
+</div>
 
 
-    Alternatively, you can also add the repository manually with the following url:
 
-      ```
+Manual URL:
+```
     https://raw.githubusercontent.com/wgtunnel/fdroid/main/fdroid/repo?fingerprint=0890C5D44C0109E366801C39840325E810E21B270B9D2AEC53CE0D6C5FC849DB
-    ```
+```
 
-4. You can now install my apps, e.g. start by searching for "WG Tunnel" in the F-Droid client.
 
-Please note that some apps published here might contain [Anti-Features](https://f-droid.org/en/docs/Anti-Features/). If you can't find an app by searching for it, you can go to settings and enable "Include anti-feature apps".
+
+**🎉 You can now install WG Tunnel apps!**
 
 ### For developers
 If you are a developer and want to publish your own apps right from GitHub Actions as an F-Droid repo, you can fork/copy this repo and see  [the documentation](setup.md) for more information on how to set it up.
