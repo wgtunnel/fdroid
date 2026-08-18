@@ -20,7 +20,7 @@ This repository hosts the official [F-Droid](https://f-droid.org/) repo for **WG
 <div>
    <br/>
    <p style="text-align: center;">
-        <img src=".github/qrcode.png?raw=true" alt="F-Droid repo QR code" style="max-width:100%; height:auto; width:400px;">
+        <img src="qrcode.png?raw=true" alt="F-Droid repo QR code" style="max-width:100%; height:auto; width:400px;">
     </p>
 </div>
 
