@@ -27,6 +27,9 @@ type AppInfo struct {
 
 	Nightly bool `yaml:"nightly"`
 
+	// ApkPrefix optionally restricts which release asset is chosen
+	ApkPrefix string `yaml:"apk_prefix"`
+
 	KeepCount int8 `yaml:"keep_count"`
 
 	ReleaseDescription string

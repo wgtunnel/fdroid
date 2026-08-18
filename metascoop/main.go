@@ -125,9 +125,9 @@ func main() {
 
 					log.Printf("Working on release with tag name %q", release.GetTagName())
 
-					apk := apps.FindAPKRelease(release)
+					apk := apps.FindAPKRelease(release, app.ApkPrefix)
 					if apk == nil {
-						log.Printf("Couldn't find a release asset with extension \".apk\"")
+						log.Printf("Couldn't find a suitable \".apk\" asset (prefix=%q)", app.ApkPrefix)
 						return
 					}
 
@@ -178,37 +178,30 @@ func main() {
 
 		// Handle nightly if enabled
 		if app.Nightly {
-			var latestPre *github.RepositoryRelease
-			var latestTime time.Time
-			for _, r := range releases {
-				if r.GetPrerelease() && !r.GetDraft() && r.GetTagName() != "" {
-					pubAt := r.GetPublishedAt().Time
-					if !pubAt.IsZero() && (latestPre == nil || pubAt.After(latestTime)) {
-						latestPre = r
-						latestTime = pubAt
-					}
-				}
-			}
-			if latestPre != nil {
-				fmt.Printf("::group::Nightly Release %s\n", latestPre.GetTagName())
+			nightlyRelease, _, err := githubClient.Repositories.GetReleaseByTag(context.Background(), repo.Author, repo.Name, "nightly")
+			if err != nil {
+				log.Printf("Error fetching nightly tag release: %s", err.Error())
+				haveError = true
+			} else if nightlyRelease != nil {
+				fmt.Printf("::group::Nightly Release %s\n", nightlyRelease.GetTagName())
 				func() {
 					defer fmt.Println("::endgroup::")
 
-					log.Printf("Working on nightly prerelease with tag name %q", latestPre.GetTagName())
+					log.Printf("Working on nightly prerelease with tag name %q", nightlyRelease.GetTagName())
 
-					apk := apps.FindAPKRelease(latestPre)
+					apk := apps.FindAPKRelease(nightlyRelease, app.ApkPrefix)
 					if apk == nil {
-						log.Printf("Couldn't find a release asset with extension \".apk\" in nightly")
+						log.Printf("Couldn't find a suitable \".apk\" asset in nightly (prefix=%q)", app.ApkPrefix)
 						return
 					}
 
-					appName := apps.GenerateReleaseFilename(app.Name(), latestPre.GetTagName())
+					versionKey := apps.VersionKeyFromAPKAsset(apk.GetName())
+					appName := apps.GenerateReleaseFilename(app.Name(), versionKey)
 
-					log.Printf("Target APK name for nightly: %s", appName)
+					log.Printf("Target APK name for nightly: %s (from asset %q)", appName, apk.GetName())
 
 					appClone := app
-
-					appClone.ReleaseDescription = latestPre.GetBody()
+					appClone.ReleaseDescription = nightlyRelease.GetBody()
 					if appClone.ReleaseDescription != "" {
 						log.Printf("Release notes for nightly: %s", appClone.ReleaseDescription)
 					}
@@ -217,52 +210,44 @@ func main() {
 
 					appTargetPath := filepath.Join(*repoDir, appName)
 
-					// For nightly, always replace if exists
-					if _, err := os.Stat(appTargetPath); err == nil {
-						log.Printf("Deleting existing nightly APK at %q to replace with updated", appTargetPath)
-						err := os.Remove(appTargetPath)
-						if err != nil {
-							log.Printf("Error deleting existing %s: %s", appTargetPath, err.Error())
-							haveError = true
-							return
-						}
+					// Unique version key → skip if we already have this nightly build
+					if _, err := os.Stat(appTargetPath); !errors.Is(err, os.ErrNotExist) {
+						log.Printf("Already have nightly APK for version %q at %q", versionKey, appTargetPath)
+						return
 					}
 
-					log.Printf("Downloading APK %q from nightly release %q to %q", apk.GetName(), latestPre.GetTagName(), appTargetPath)
+					log.Printf("Downloading APK %q from nightly release to %q", apk.GetName(), appTargetPath)
 
 					dlCtx, cancel := context.WithTimeout(context.Background(), 5*time.Minute)
 					defer cancel()
 
 					appStream, _, err := githubClient.Repositories.DownloadReleaseAsset(dlCtx, repo.Author, repo.Name, apk.GetID(), http.DefaultClient)
 					if err != nil {
-						log.Printf("Error while downloading nightly app %q (artifact id %d) from release %q: %s", app.GitURL, apk.GetID(), latestPre.GetTagName(), err.Error())
+						log.Printf("Error while downloading nightly app %q (artifact id %d): %s", app.GitURL, apk.GetID(), err.Error())
 						haveError = true
 						return
 					}
 
 					err = downloadStream(appTargetPath, appStream)
 					if err != nil {
-						log.Printf("Error while downloading nightly app %q (artifact id %d) from release %q to %q: %s", app.GitURL, *apk.ID, *latestPre.TagName, appTargetPath, err.Error())
+						log.Printf("Error while downloading nightly app %q to %q: %s", app.GitURL, appTargetPath, err.Error())
 						haveError = true
 						return
 					}
 
-					log.Printf("Successfully downloaded nightly app for version %q", latestPre.GetTagName())
+					log.Printf("Successfully downloaded nightly app for version %q", versionKey)
 				}()
 			} else {
-				log.Printf("No suitable prerelease found for nightly")
+				log.Printf("No nightly release found")
 			}
 		}
 
-		// Cleanup old APKs if keep_count > 0 or if nightly (force keep 1)
+		// Cleanup old APKs when keep_count > 0 (applies to release and nightly)
 		effectiveKeep := int(app.KeepCount)
-		if app.Nightly {
-			effectiveKeep = 1
-		}
 		if effectiveKeep > 0 {
-			log.Printf("Cleaning up old APKs, keeping latest %d", effectiveKeep)
+			log.Printf("Cleaning up old APKs for %s, keeping latest %d", app.Name(), effectiveKeep)
 
-			// Map tag to published date
+			// Map tag to published date (stable releases). Nightlies use file mtime.
 			tagToDate := make(map[string]time.Time)
 			for _, r := range releases {
 				tag := r.GetTagName()
@@ -271,13 +256,12 @@ func main() {
 				}
 				pubTime := r.GetPublishedAt().Time
 				if pubTime.IsZero() {
-					log.Printf("Skipping tag %q with zero published time", tag)
 					continue
 				}
 				tagToDate[tag] = pubTime
+				tagToDate[strings.TrimPrefix(tag, "v")] = pubTime
 			}
 
-			// List APK files for this app
 			files, err := os.ReadDir(*repoDir)
 			if err != nil {
 				log.Printf("Error reading repo dir for cleanup: %s", err.Error())
@@ -302,18 +286,22 @@ func main() {
 				tag = strings.TrimSuffix(tag, suffix)
 				date, ok := tagToDate[tag]
 				if !ok {
-					log.Printf("No date found for tag %q in file %q, treating as very old", tag, fname)
-					date = time.Time{}
+					info, ierr := f.Info()
+					if ierr != nil {
+						log.Printf("No date for %q and cannot read mtime: %s", fname, ierr.Error())
+						date = time.Time{}
+					} else {
+						date = info.ModTime()
+						log.Printf("Using file mtime for %q (%s)", fname, date.Format(time.RFC3339))
+					}
 				}
 				apkList = append(apkList, apkInfo{file: fname, date: date})
 			}
 
-			// Sort by date descending
 			sort.Slice(apkList, func(i, j int) bool {
 				return apkList[i].date.After(apkList[j].date)
 			})
 
-			// Delete excess
 			for i := effectiveKeep; i < len(apkList); i++ {
 				delPath := filepath.Join(*repoDir, apkList[i].file)
 				log.Printf("Deleting old APK: %s", delPath)

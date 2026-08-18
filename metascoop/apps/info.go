@@ -12,18 +12,48 @@ import (
 	"golang.org/x/text/unicode/norm"
 )
 
-func FindAPKRelease(release *github.RepositoryRelease) *github.ReleaseAsset {
+func isABISpecificAPK(name string) bool {
+	lower := strings.ToLower(name)
+	for _, suffix := range []string{
+		"-arm64.apk",
+		"-armv7.apk",
+		"-armeabi-v7a.apk",
+		"-x86.apk",
+		"-x64.apk",
+		"-x86_64.apk",
+	} {
+		if strings.HasSuffix(lower, suffix) {
+			return true
+		}
+	}
+	return false
+}
+
+// FindAPKRelease returns a suitable APK asset from a release.
+func FindAPKRelease(release *github.RepositoryRelease, apkPrefix string) *github.ReleaseAsset {
+	var fallback *github.ReleaseAsset
+
 	for _, asset := range release.Assets {
 		if asset.State == nil || *asset.State != "uploaded" {
 			continue
 		}
-
-		if asset.Name != nil && strings.HasSuffix(*asset.Name, ".apk") {
-			return asset
+		if asset.Name == nil || !strings.HasSuffix(*asset.Name, ".apk") {
+			continue
 		}
+		name := *asset.Name
+		if apkPrefix != "" && !strings.HasPrefix(name, apkPrefix) {
+			continue
+		}
+		if isABISpecificAPK(name) {
+			if fallback == nil {
+				fallback = asset
+			}
+			continue
+		}
+		return asset
 	}
 
-	return nil
+	return fallback
 }
 
 func GenerateReleaseFilename(appName string, tagName string) string {
@@ -50,6 +80,15 @@ func GenerateReleaseFilename(appName string, tagName string) string {
 		}
 		return -1
 	}, cleaned)
+}
+
+// VersionKeyFromAPKAsset extracts a stable version key from an APK asset name.
+func VersionKeyFromAPKAsset(assetName string) string {
+	name := strings.TrimSuffix(assetName, ".apk")
+	if i := strings.Index(name, "-v"); i >= 0 && i+2 < len(name) {
+		return name[i+2:]
+	}
+	return name
 }
 
 func ListAllReleases(githubClient *github.Client, appRepoAuthor, appRepoName string) (allReleases []*github.RepositoryRelease, err error) {

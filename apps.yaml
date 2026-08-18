@@ -1,7 +1,8 @@
 wgtunnel:
   git: https://github.com/wgtunnel/android
   name: "WG Tunnel"
-  keep_count: 5
+  keep_count: 10
+  apk_prefix: "wgtunnel-fdroid-v"
   description: |
     A WireGuard & AmneziaWG VPN client with auto-tunneling, lockdown & proxying.
 
@@ -23,5 +24,23 @@ wgtunnel:
   # As described on https://f-droid.org/en/docs/Build_Metadata_Reference/#Categories,
   # you can use any name here, but you should look at the existing categories first
   categories: 
+    - Connectivity
+    - Security
+
+wgtunnel-nightly:
+  git: https://github.com/wgtunnel/android
+  name: "WG Tunnel Nightly"
+  nightly: true
+  keep_count: 10
+  apk_prefix: "wgtunnel-standalone-v"
+  description: |
+    Nightly development build of WG Tunnel.
+
+    <b>Features</b>
+
+    - Same as WG Tunnel, with additional features and fixes not yet available in the stable release
+    - Separate app ID so it can be installed alongside the stable release
+
+  categories:
     - Connectivity
     - Security
