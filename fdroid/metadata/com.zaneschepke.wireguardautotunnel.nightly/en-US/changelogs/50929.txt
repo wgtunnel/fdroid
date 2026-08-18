@@ -1,0 +1,22 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`64b8f33`](https://github.com/wgtunnel/android/commit/64b8f33de578511c88bb5d579aee28482b2f8392) - add user configurable foreign dns and dns suffix policy options *(commit by @zaneschepke)*
+- [`7092498`](https://github.com/wgtunnel/android/commit/70924980dbb29849127924463899da5964d1c3e4) - daily app update check and notification for standalone app flavor *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`dae1df5`](https://github.com/wgtunnel/android/commit/dae1df5887fb5308e2c1180d0b926ffb83778c18) - bump core to 1.1.5 *(commit by @zaneschepke)*
+- [`6486cd6`](https://github.com/wgtunnel/android/commit/6486cd60fb2ceca3e730e6fc74f91f6114f47c0f) - tile refresh crash in work profile for some android devices *(commit by @zaneschepke)*
+- [`cddd514`](https://github.com/wgtunnel/android/commit/cddd5149f0631afebc5602a8f2a361e2cd8f01c9) - file name import bug and Android TV import error messaging *(commit by @zaneschepke)*
+
