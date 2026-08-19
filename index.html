@@ -77,13 +77,103 @@
         </div>
 
         <p class="note">Manual URL:</p>
-        <pre class="repo-url">https://raw.githubusercontent.com/wgtunnel/fdroid/main/fdroid/repo?fingerprint=0890C5D44C0109E366801C39840325E810E21B270B9D2AEC53CE0D6C5FC849DB</pre>
+
+        <div class="repo-block">
+          <div class="repo-code"><code>https://raw.githubusercontent.com/wgtunnel/fdroid/main/fdroid/repo?fingerprint=0890C5D44C0109E366801C39840325E810E21B270B9D2AEC53CE0D6C5FC849DB</code></div>
+
+          <button
+                  class="copy-button"
+                  type="button"
+                  aria-label="Copy repository URL"
+                  title="Copy to clipboard"
+          >
+            <svg
+                    class="copy-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+            >
+              <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span class="copy-label">Copy</span>
+          </button>
+        </div>
+
+        <div class="copy-message" role="status" aria-live="polite">
+          <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+          <span>Copied to clipboard</span>
+        </div>
 
         <br/>
         <div class="alert-success">
           <strong>🎉 You can now install WG Tunnel apps!</strong><br />
         </div>
       </section>
+
+      <script>
+        const copyButton = document.querySelector(".copy-button");
+        const repoCode = document.querySelector(".repo-code code");
+        const copyMessage = document.querySelector(".copy-message");
+
+        copyButton.addEventListener("click", async () => {
+          const text = repoCode.textContent.trim();
+
+          try {
+            await navigator.clipboard.writeText(text);
+
+            copyButton.classList.add("copied");
+            copyButton.querySelector(".copy-label").textContent = "Copied";
+            copyMessage.classList.add("visible");
+
+            setTimeout(() => {
+              copyButton.classList.remove("copied");
+              copyButton.querySelector(".copy-label").textContent = "Copy";
+              copyMessage.classList.remove("visible");
+            }, 2000);
+
+          } catch {
+            const textarea = document.createElement("textarea");
+            textarea.value = text;
+            textarea.style.position = "fixed";
+            textarea.style.opacity = "0";
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            try {
+              document.execCommand("copy");
+
+              copyButton.classList.add("copied");
+              copyButton.querySelector(".copy-label").textContent = "Copied";
+              copyMessage.classList.add("visible");
+
+              setTimeout(() => {
+                copyButton.classList.remove("copied");
+                copyButton.querySelector(".copy-label").textContent = "Copy";
+                copyMessage.classList.remove("visible");
+              }, 2000);
+            } finally {
+              textarea.remove();
+            }
+          }
+        });
+      </script>
 
       <footer>
         <a href="https://wgtunnel.com">App website</a>
