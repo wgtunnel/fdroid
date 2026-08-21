@@ -15,6 +15,14 @@ This repository hosts the official [F-Droid](https://f-droid.org/) repo for **WG
 
 ### How to use
 1. Install an F-Droid client like [official F-Droid](https://f-droid.org/) or [Droid-ify](https://droidify.app/).
+2. Open the following url in a browser
+```
+fdroidrepos://fdroid.wgtunnel.com/fdroid/repo/
+```
+3. All the installed clients will be available to use
+
+OR
+
 2. Navigate to **Settings > Repositories** (may vary by client).
 3. Click the **+** button, then **Scan QR code or add manually**.
 <div>
@@ -28,7 +36,7 @@ This repository hosts the official [F-Droid](https://f-droid.org/) repo for **WG
 
 Manual URL:
 ```
-    https://raw.githubusercontent.com/wgtunnel/fdroid/main/fdroid/repo?fingerprint=0890C5D44C0109E366801C39840325E810E21B270B9D2AEC53CE0D6C5FC849DB
+https://raw.githubusercontent.com/wgtunnel/fdroid/main/fdroid/repo?fingerprint=0890C5D44C0109E366801C39840325E810E21B270B9D2AEC53CE0D6C5FC849DB
 ```
 
 
