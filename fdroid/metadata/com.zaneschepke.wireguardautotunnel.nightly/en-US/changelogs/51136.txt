@@ -1,0 +1,22 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`c7bd0b4`](https://github.com/wgtunnel/android/commit/c7bd0b4f667e90993f90cfd01e0ad9937be50156) - seamless recovery tuning *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`0309017`](https://github.com/wgtunnel/android/commit/0309017ee39abf0388721b9b1f555629759717fd) - notify on active tunnel feature toggles *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`661a6ed`](https://github.com/wgtunnel/android/commit/661a6ed0b5be9dbbfde6d54f024fc75495280c7b) - release 5.5.0 *(commit by @zaneschepke)*
+
