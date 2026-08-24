@@ -1,0 +1,31 @@
+What's new:
+- Seamless recovery configurable delay and stats
+- Tunnel recovery features can now be applied while a tunnel is active
+- Bugfixes for peer endpoints resolution of IPv6 only endpoints
+- Bugfixes for failed parsing of valid Amnezia packet signatures
+- Various other fixes and improvements
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`c7bd0b4`](https://github.com/wgtunnel/android/commit/c7bd0b4f667e90993f90cfd01e0ad9937be50156) - seamless recovery tuning *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`8dc51ab`](https://github.com/wgtunnel/android/commit/8dc51ab83ed3fc25ab37a8eec271cb5613c45b57) - bump core, fix suffixes description *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`0309017`](https://github.com/wgtunnel/android/commit/0309017ee39abf0388721b9b1f555629759717fd) - notify on active tunnel feature toggles *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`ecafc05`](https://github.com/wgtunnel/android/commit/ecafc05c505169f1d7bbcf0b2197b2f389df495c) - bump gradle, agp *(commit by @zaneschepke)*
+- [`661a6ed`](https://github.com/wgtunnel/android/commit/661a6ed0b5be9dbbfde6d54f024fc75495280c7b) - release 5.5.0 *(commit by @zaneschepke)*
+
