@@ -1,0 +1,16 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`1e95c8f`](https://github.com/wgtunnel/android/commit/1e95c8fef3e843e17268cb8a2881ef0791f3266e) - amnezia 3.1 properties, parsing ipc *(commit by @zaneschepke)*
+
