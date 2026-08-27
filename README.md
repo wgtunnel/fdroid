@@ -9,7 +9,7 @@ This repository hosts the official [F-Droid](https://f-droid.org/) repo for **WG
 <!-- This table is auto-generated. Do not edit -->
 | Icon | Name | Description | Version |
 | --- | --- | --- | --- |
-| <a href="https://github.com/wgtunnel/android"><img src="fdroid/repo/com.zaneschepke.wireguardautotunnel/en-US/icon.png" alt="WG Tunnel icon" width="36px" height="36px"></a> | [**WG Tunnel**](https://github.com/wgtunnel/android) | A FOSS WireGuard &amp; AmneziaWG Android client with auto-tunneling, lockdown &amp; l... | 5.5.0 (50500) |
+| <a href="https://github.com/wgtunnel/android"><img src="fdroid/repo/com.zaneschepke.wireguardautotunnel/en-US/icon.png" alt="WG Tunnel icon" width="36px" height="36px"></a> | [**WG Tunnel**](https://github.com/wgtunnel/android) | A FOSS WireGuard &amp; AmneziaWG Android client with auto-tunneling, lockdown &amp; l... | 5.6.0 (50600) |
 | <a href="https://github.com/wgtunnel/android"><img src="fdroid/repo/com.zaneschepke.wireguardautotunnel.nightly/en-US/icon.png" alt="WG Tunnel Nightly icon" width="36px" height="36px"></a> | [**WG Tunnel Nightly**](https://github.com/wgtunnel/android) | A FOSS WireGuard &amp; AmneziaWG Android client with auto-tunneling, lockdown &amp; l... | 5.5.1-nightly&#43;git.1e95c8f (51140) |
 <!-- end apps table -->
 
