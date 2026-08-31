@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add WG Tunnel F-Droid repository</title>
+    <meta
+      name="description"
+      content="Add the official WG Tunnel F-Droid repository to F-Droid or Droid-ify."
+    />
+    <link rel="icon" href="fdroid/repo/icons/icon.png" type="image/png" />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <p class="eyebrow">WG Tunnel</p>
+        <h1>Add this repository</h1>
+        <p class="lede">
+          Opens F-Droid or Droid-ify to add the official WG Tunnel repo,
+          including the signing fingerprint.
+        </p>
+      </header>
+
+      <p>
+        <a class="add-repo" id="add-link" href="fdroidrepos://fdroid.wgtunnel.com/fdroid/repo?fingerprint=0890C5D44C0109E366801C39840325E810E21B270B9D2AEC53CE0D6C5FC849DB"
+          >Add repository in F-Droid</a
+        >
+      </p>
+      <p class="note">
+        If nothing opens, install
+        <a href="https://f-droid.org/">F-Droid</a> or
+        <a href="https://droidify.app/">Droid-ify</a>, then tap the button again
+        or paste the URL below.
+      </p>
+
+      <p class="note">Manual URL:</p>
+      <div class="repo-block">
+        <div class="repo-code">
+          <code
+            >https://fdroid.wgtunnel.com/fdroid/repo?fingerprint=0890C5D44C0109E366801C39840325E810E21B270B9D2AEC53CE0D6C5FC849DB</code
+          >
+        </div>
+      </div>
+
+      <p><a href="./">Back to the repository site</a></p>
+    </main>
+    <script>
+      const deeplink =
+        "fdroidrepos://fdroid.wgtunnel.com/fdroid/repo?fingerprint=0890C5D44C0109E366801C39840325E810E21B270B9D2AEC53CE0D6C5FC849DB";
+      window.location.replace(deeplink);
+    </script>
+  </body>
+</html>

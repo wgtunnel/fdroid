@@ -16,11 +16,7 @@ This repository hosts the official [F-Droid](https://f-droid.org/) repo for **WG
 ### How to use
 
 1. Install an F-Droid client like [official F-Droid](https://f-droid.org/) or [Droid-ify](https://droidify.app/).
-2. Add this repository:
-
-**[Add repository in F-Droid](fdroidrepos://fdroid.wgtunnel.com/fdroid/repo?fingerprint=0890C5D44C0109E366801C39840325E810E21B270B9D2AEC53CE0D6C5FC849DB)**
-
-That `fdroidrepos://` link opens your F-Droid client to add the repo, including the fingerprint.
+2. **[Add repository in F-Droid](https://fdroid.wgtunnel.com/add.html)** - opens your client with the fingerprint included.
 
 Or scan the QR code, or paste the HTTPS URL below.
 
