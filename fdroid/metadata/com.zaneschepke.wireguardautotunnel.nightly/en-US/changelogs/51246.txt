@@ -1,0 +1,24 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`629036c`](https://github.com/wgtunnel/android/commit/629036cb75995165bb79b7c743755ad75ba673a5) - bssid aware network key *(commit by @zaneschepke)*
+- [`931fbb9`](https://github.com/wgtunnel/android/commit/931fbb9d6d278716b5ea46f9e2d4d634aab8462a) - bump core for tunnel split dns policy bugfix *(commit by @zaneschepke)*
+
+### :zap: Performance Improvements
+- [`f1e3579`](https://github.com/wgtunnel/android/commit/f1e3579526add26421d7a83ac8a7f49075293de8) - reduce app memory footprint *(PR #1444 by @dennisgr7)*
+
+### :wrench: Chores
+- [`06c6e8c`](https://github.com/wgtunnel/android/commit/06c6e8cf730bc298bd5eeb61e29d62b518879f62) - **deps**: bump orbit, aboutlibraries, agp *(commit by @zaneschepke)*
+- [`2d770af`](https://github.com/wgtunnel/android/commit/2d770af09869f4e338f5df444607c8685f466ac8) - **deps**: bump actions/setup-java from 5 to 6 *(PR #1438 by @dependabot[bot])*
+
