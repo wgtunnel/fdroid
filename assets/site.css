@@ -133,6 +133,30 @@ h2 {
   color: var(--primary);
 }
 
+.add-repo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.35rem 0 0.75rem;
+  padding: 0.7rem 1.15rem;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #142022;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.add-repo:hover {
+  text-decoration: none;
+  filter: brightness(1.06);
+}
+
+.add-repo:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
 .qr {
   text-align: center;
   margin: 1.25rem 0;
