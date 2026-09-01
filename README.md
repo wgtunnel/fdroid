@@ -30,7 +30,7 @@ Or scan the QR code, or paste the HTTPS URL below.
 Manual URL:
 
 ```
-https://fdroid.wgtunnel.com/fdroid/repo?fingerprint=0890C5D44C0109E366801C39840325E810E21B270B9D2AEC53CE0D6C5FC849DB
+https://raw.githubusercontent.com/wgtunnel/fdroid/main/fdroid/repo?fingerprint=0890C5D44C0109E366801C39840325E810E21B270B9D2AEC53CE0D6C5FC849DB
 ```
 
 
