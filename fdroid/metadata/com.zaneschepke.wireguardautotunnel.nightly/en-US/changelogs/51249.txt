@@ -1,0 +1,16 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`618475b`](https://github.com/wgtunnel/android/commit/618475b8cafe1df3081dad85d35d049ed89b11e9) - add live updates for tunnel notifications with customizations *(PR #1446 by @dennisgr7)*
+
