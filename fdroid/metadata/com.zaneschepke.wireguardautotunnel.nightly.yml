@@ -2,8 +2,8 @@ AuthorName: wgtunnel
 Categories:
     - Connectivity
     - Security
-CurrentVersion: 5.6.1-nightly+git.618475b
-CurrentVersionCode: 51249
+CurrentVersion: 5.6.1-nightly+git.19685b5
+CurrentVersionCode: 51252
 Description: |
     Nightly development build of WG Tunnel.
 
