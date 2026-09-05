@@ -2,8 +2,8 @@ AuthorName: wgtunnel
 Categories:
     - Connectivity
     - Security
-CurrentVersion: 5.6.0
-CurrentVersionCode: 50600
+CurrentVersion: 5.7.0
+CurrentVersionCode: 50700
 Description: |
     A WireGuard & AmneziaWG VPN client with auto-tunneling, lockdown & proxying.
 
