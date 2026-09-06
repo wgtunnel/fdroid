@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1788665733068,
+    "timestamp": 1788684813918,
     "version": 30000,
     "name": "WG Tunnel Repository",
     "icon": "icon.png",
@@ -18,8 +18,8 @@
         "Connectivity",
         "Security"
       ],
-      "suggestedVersionName": "5.7.0",
-      "suggestedVersionCode": "50700",
+      "suggestedVersionName": "5.7.1",
+      "suggestedVersionCode": "50701",
       "description": "A WireGuard & AmneziaWG VPN client with auto-tunneling, lockdown & proxying.\n\n<b>Features</b>\n\n- **Auto-Tunneling:** Automatically activate tunnels based on your device's active network details.\n- **Deferred Endpoint Bootstrapping:** Safely resolves endpoints and updates peers after the tunnel is up for better reliability and leak protection on startup.\n- **Handshake Monitoring:** Real-time handshake monitoring for instant tunnel health feedback.\n- **AmneziaWG Support:** Full support for AmneziaWG 2.0 through 3.1, providing robust censorship protection.\n- **Split Tunneling:** Flexible support for routing specific apps or traffic through the VPN.\n- **Split & Encrypted DNS:** Resolve DNS through the tunnel using plain DNS, DoT, or DoH, and optionally split by domain suffix (tunnel or system).\n- **Local Proxy Mode:** Expose WireGuard tunnels over a local SOCKS5 or HTTP proxy to browsers or firewall apps (like AdGuard).\n- **Lockdown Mode:** Advanced in-app kill switch that blocks all traffic while the tunnel is down.\n- **Quick Controls:** Quick Settings tile and home screen shortcuts for easy toggling.\n- **Remote Control Support:** Intent-based automation for controlling tunnels and auto-tunneling from automation apps (like Tasker).\n- **Dynamic DNS Handling:** Automatically detect and update endpoints on server IP changes without requiring a restart.\n- **IPv6 Endpoints:** Automatically upgrade to IPv6 endpoints or fall back to IPv4 based on network conditions without requiring a restart.\n- **Android TV Support:** Full support for nearly all features on Android TV.\n",
       "issueTracker": "https://github.com/wgtunnel/wgtunnel/issues",
       "license": "MIT",
@@ -28,9 +28,9 @@
       "summary": "A FOSS WireGuard & AmneziaWG Android client with auto-tunneling, lockdown & l...",
       "webSite": "https://wgtunnel.com",
       "added": 1784139924935,
-      "icon": "com.zaneschepke.wireguardautotunnel.50700.png",
+      "icon": "com.zaneschepke.wireguardautotunnel.50701.png",
       "packageName": "com.zaneschepke.wireguardautotunnel",
-      "lastUpdated": 1788584550189,
+      "lastUpdated": 1788684783715,
       "localized": {
         "en-US": {
           "featureGraphic": "featureGraphic_w_IthR1DGfyUJHyeJS7P3Q1U9ySK3bumittdxKqWfyw=.png",
@@ -48,7 +48,7 @@
             "9.png"
           ],
           "tvBanner": "tvBanner_01Hvws855Q_SRPcny7hf1Qzb74jBUe4c0wEmBb5GoCg=.png",
-          "whatsNew": "What's new:\n- Live notifications and notification improvements with detail customization toggles\n- In app language sync with system per app language settings\n- Bugfix for tunnel split DNS suffixes\n- Improvements to app memory usage when logger is active\n\nSHA-256 fingerprints for the 4096-bit signing certificate:\n```sh\n5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80\n```\n\nTo verify fingerprint:\n```sh\napksigner verify --print-certs [path to APK file] | grep SHA-256\n```\n\n### Changel"
+          "whatsNew": "What's new:\n- Bugfix for custom tunnel dns memory leak\n\nSHA-256 fingerprints for the 4096-bit signing certificate:\n```sh\n5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80\n```\n\nTo verify fingerprint:\n```sh\napksigner verify --print-certs [path to APK file] | grep SHA-256\n```\n\n### Changelog\n### :bug: Bug Fixes\n- [`5b9dc43`](https://github.com/wgtunnel/android/commit/5b9dc43f4471bd54bab53d685549c12d4c398d24) - core custom tunnel dns memory leak *(commit by @zaneschepke)*\n\n"
         }
       }
     },
@@ -95,6 +95,116 @@
   ],
   "packages": {
     "com.zaneschepke.wireguardautotunnel": [
+      {
+        "added": 1788684783715,
+        "apkName": "wgtunnel_5.7.1.apk",
+        "hash": "49f5f983867e695c2d62daa687694bbd561f629c6a067c41527b89122b2c60c4",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.zaneschepke.wireguardautotunnel",
+        "sig": "21dad82894453bd1db3f09179d247e3c",
+        "signer": "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80",
+        "size": 55552624,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.POST_PROMOTED_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_SPECIAL_USE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_BACKGROUND_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_LOCAL_NETWORK",
+            null
+          ],
+          [
+            "android.permission.SCHEDULE_EXACT_ALARM",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "com.zaneschepke.wireguardautotunnel.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "moe.shizuku.manager.permission.API_V23",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            28
+          ]
+        ],
+        "versionCode": 50701,
+        "versionName": "5.7.1"
+      },
       {
         "added": 1788584550189,
         "apkName": "wgtunnel_5.7.0.apk",
@@ -1028,104 +1138,6 @@
         ],
         "versionCode": 50100,
         "versionName": "5.1.0"
-      },
-      {
-        "added": 1787036292007,
-        "apkName": "wgtunnel_5.0.9.apk",
-        "hash": "0a54c7e7e18ffb812247abcf73d5a53389483d8f4c6ddd21ebdfb6538b946c41",
-        "hashType": "sha256",
-        "minSdkVersion": 26,
-        "nativecode": [
-          "arm64-v8a",
-          "armeabi-v7a",
-          "x86",
-          "x86_64"
-        ],
-        "packageName": "com.zaneschepke.wireguardautotunnel",
-        "sig": "21dad82894453bd1db3f09179d247e3c",
-        "signer": "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80",
-        "size": 51510066,
-        "targetSdkVersion": 37,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.POST_NOTIFICATIONS",
-            null
-          ],
-          [
-            "android.permission.QUERY_ALL_PACKAGES",
-            null
-          ],
-          [
-            "android.permission.FOREGROUND_SERVICE_SPECIAL_USE",
-            null
-          ],
-          [
-            "android.permission.FOREGROUND_SERVICE",
-            null
-          ],
-          [
-            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
-            null
-          ],
-          [
-            "android.permission.RECEIVE_BOOT_COMPLETED",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_LOCAL_NETWORK",
-            null
-          ],
-          [
-            "android.permission.SCHEDULE_EXACT_ALARM",
-            null
-          ],
-          [
-            "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_COARSE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_FINE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_BACKGROUND_LOCATION",
-            null
-          ],
-          [
-            "android.permission.CAMERA",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "com.zaneschepke.wireguardautotunnel.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-            null
-          ],
-          [
-            "moe.shizuku.manager.permission.API_V23",
-            null
-          ]
-        ],
-        "versionCode": 50009,
-        "versionName": "5.0.9"
       }
     ],
     "com.zaneschepke.wireguardautotunnel.nightly": [
