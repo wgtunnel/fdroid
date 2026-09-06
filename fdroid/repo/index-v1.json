@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1788584579717,
+    "timestamp": 1788665733068,
     "version": 30000,
     "name": "WG Tunnel Repository",
     "icon": "icon.png",
@@ -58,8 +58,8 @@
         "Connectivity",
         "Security"
       ],
-      "suggestedVersionName": "5.6.1-nightly+git.19685b5",
-      "suggestedVersionCode": "51252",
+      "suggestedVersionName": "5.7.1-nightly+git.1c4fa40",
+      "suggestedVersionCode": "51353",
       "description": "Nightly development build of WG Tunnel.\n\n<b>Features</b>\n\n- Same as WG Tunnel, with additional features and fixes not yet available in the stable release\n- Separate app ID so it can be installed alongside the stable release\n",
       "issueTracker": "https://github.com/wgtunnel/wgtunnel/issues",
       "license": "MIT",
@@ -67,10 +67,10 @@
       "sourceCode": "https://github.com/wgtunnel/android",
       "summary": "A FOSS WireGuard & AmneziaWG Android client with auto-tunneling, lockdown & l...",
       "webSite": "https://wgtunnel.com",
-      "added": 1787369434693,
-      "icon": "com.zaneschepke.wireguardautotunnel.nightly.51252.png",
+      "added": 1787560010825,
+      "icon": "com.zaneschepke.wireguardautotunnel.nightly.51353.png",
       "packageName": "com.zaneschepke.wireguardautotunnel.nightly",
-      "lastUpdated": 1788579324782,
+      "lastUpdated": 1788665701436,
       "localized": {
         "en-US": {
           "featureGraphic": "featureGraphic_vlYqv7_KFoXZ-D1eoRMHWaT6K7i1Ra7fLksYNnEIjfo=.png",
@@ -88,7 +88,7 @@
             "9.png"
           ],
           "tvBanner": "tvBanner_fXn7yHbY5IzQXns7Jk9ZnKSYAPCfU_CgY-pCGsuohKw=.png",
-          "whatsNew": "Nightly build for the latest development version of the app.\n\nSHA-256 fingerprints for the 4096-bit signing certificate:\n```sh\n5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80\n```\n\nTo verify fingerprint:\n```sh\napksigner verify --print-certs [path to APK file] | grep SHA-256\n```\n\n### Changelog\n### :bug: Bug Fixes\n- [`19685b5`](https://github.com/wgtunnel/android/commit/19685b512328d781b8995db32d973d19fc2a8160) - stop on no network bug *(commit by @zaneschepke)*\n\n### :recycle: Refa"
+          "whatsNew": "Nightly build for the latest development version of the app.\n\nSHA-256 fingerprints for the 4096-bit signing certificate:\n```sh\n5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80\n```\n\nTo verify fingerprint:\n```sh\napksigner verify --print-certs [path to APK file] | grep SHA-256\n```\n\n### Changelog\n### :wrench: Chores\n- [`1c4fa40`](https://github.com/wgtunnel/android/commit/1c4fa40c04b40a8354fbe16b6d4362109de72bb2) - release 5.7.0 *(commit by @zaneschepke)*\n\n"
         }
       }
     }
@@ -1130,6 +1130,120 @@
     ],
     "com.zaneschepke.wireguardautotunnel.nightly": [
       {
+        "added": 1788665701436,
+        "apkName": "wgtunnel-nightly_5.7.1-nightlygit.1c4fa40.apk",
+        "hash": "c29988aebb787e95da652435a230c8544c9f72b28e23583379eac4631ca8f4b4",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.zaneschepke.wireguardautotunnel.nightly",
+        "sig": "21dad82894453bd1db3f09179d247e3c",
+        "signer": "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80",
+        "size": 56816679,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.POST_PROMOTED_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.QUERY_ALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_SPECIAL_USE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_BACKGROUND_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_LOCAL_NETWORK",
+            null
+          ],
+          [
+            "android.permission.SCHEDULE_EXACT_ALARM",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "com.zaneschepke.wireguardautotunnel.nightly.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "moe.shizuku.manager.permission.API_V23",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            28
+          ]
+        ],
+        "versionCode": 51353,
+        "versionName": "5.7.1-nightly+git.1c4fa40"
+      },
+      {
         "added": 1788579324782,
         "apkName": "wgtunnel-nightly_5.6.1-nightlygit.19685b5.apk",
         "hash": "dc4ef2c3d1a2a8e1aab49990e471f7a17cc5a560d02fc2368df907c57f6ddf68",
@@ -2126,116 +2240,6 @@
         ],
         "versionCode": 51136,
         "versionName": "5.5.1-nightly+git.661a6ed"
-      },
-      {
-        "added": 1787369434693,
-        "apkName": "wgtunnel-nightly_5.4.1-nightlygit.ecafc05.apk",
-        "hash": "fd6109ca6a3629426ae793bd9e80786f29461c145f3571de816257ee8604dc82",
-        "hashType": "sha256",
-        "minSdkVersion": 26,
-        "nativecode": [
-          "arm64-v8a",
-          "armeabi-v7a",
-          "x86",
-          "x86_64"
-        ],
-        "packageName": "com.zaneschepke.wireguardautotunnel.nightly",
-        "sig": "21dad82894453bd1db3f09179d247e3c",
-        "signer": "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80",
-        "size": 55160329,
-        "targetSdkVersion": 37,
-        "uses-permission": [
-          [
-            "android.permission.REQUEST_INSTALL_PACKAGES",
-            null
-          ],
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.POST_NOTIFICATIONS",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            28
-          ],
-          [
-            "android.permission.QUERY_ALL_PACKAGES",
-            null
-          ],
-          [
-            "android.permission.FOREGROUND_SERVICE_SPECIAL_USE",
-            null
-          ],
-          [
-            "android.permission.FOREGROUND_SERVICE",
-            null
-          ],
-          [
-            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
-            null
-          ],
-          [
-            "android.permission.RECEIVE_BOOT_COMPLETED",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_COARSE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_FINE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_BACKGROUND_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_LOCAL_NETWORK",
-            null
-          ],
-          [
-            "android.permission.SCHEDULE_EXACT_ALARM",
-            null
-          ],
-          [
-            "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
-            null
-          ],
-          [
-            "android.permission.CAMERA",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "com.zaneschepke.wireguardautotunnel.nightly.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-            null
-          ],
-          [
-            "moe.shizuku.manager.permission.API_V23",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            28
-          ]
-        ],
-        "versionCode": 51032,
-        "versionName": "5.4.1-nightly+git.ecafc05"
       }
     ]
   }
