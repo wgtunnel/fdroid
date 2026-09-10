@@ -1,0 +1,14 @@
+{
+  "repo": {
+    "timestamp": 1789084375233
+  },
+  "packages": {
+    "com.zaneschepke.wireguardautotunnel.nightly": {
+      "versions": {
+        "49cbace00d6463b09d699e481e4224ffc0ce39422ca5a173a562c4fccb13ab51": {
+          "releaseChannels": null
+        }
+      }
+    }
+  }
+}
