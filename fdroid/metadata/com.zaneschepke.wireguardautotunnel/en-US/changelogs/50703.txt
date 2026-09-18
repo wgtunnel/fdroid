@@ -1,0 +1,31 @@
+What's new:
+- Auto-tunnel stability issue fixes
+- Stop on no network causing flapping in certain scenarios
+- Samsung network detection issues of underlay network while VPN active
+- Tunnel DNS DoH and DoT bugfixes that were causing DNS timeouts
+- System kill of Auto-tunnel service restart storm bugfix
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`52b9fa3`](https://github.com/wgtunnel/android/commit/52b9fa312f6a6dc7a9b2c22cd5fbca5a521def9c) - auto tunnel stop on captive portal flapping *(commit by @zaneschepke)*
+- [`2517839`](https://github.com/wgtunnel/android/commit/251783921bea04934483e160ac23b63f62ce5b01) - sanitize tunnel names for export that break file export *(commit by @zaneschepke)*
+- [`4ab4e44`](https://github.com/wgtunnel/android/commit/4ab4e44ee82e0c7151df3fb932490f40308f98a4) - bump core to 1.6.0 for tunnel dns fixes *(commit by @zaneschepke)*
+- [`dbd44a7`](https://github.com/wgtunnel/android/commit/dbd44a788f010fee4155bf90a289486524723576) - underlay detection on samsung, stop on no network, and DoT tunnel DNS *(commit by @zaneschepke)*
+- [`e8862e2`](https://github.com/wgtunnel/android/commit/e8862e2ed9537fe05e8e9e482c2097fe2d0e6876) - auto tunnel recovery on system kill, network identity stabilization *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`cffdf46`](https://github.com/wgtunnel/android/commit/cffdf465e2663626f60dfc25ac3605741fb6f1ee) - move dns validator to core *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`5328c31`](https://github.com/wgtunnel/android/commit/5328c319e7c5ef6f839aa4c61e96ce5b49caa5a6) - release 5.7.3 *(commit by @zaneschepke)*
+
