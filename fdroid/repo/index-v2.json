@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/wgtunnel/fdroid/main/fdroid/repo",
-    "timestamp": 1789084375233,
+    "timestamp": 1789715679259,
     "categories": {
       "Connectivity": {
         "name": {
@@ -116,7 +116,7 @@
           "en-US": "WG Tunnel"
         },
         "summary": {
-          "en-US": "A FOSS WireGuard & AmneziaWG Android client with auto-tunneling, lockdown & l..."
+          "en-US": "An advanced, open-source client for WireGuard and AmneziaWG on Android."
         },
         "description": {
           "en-US": "A WireGuard & AmneziaWG VPN client with auto-tunneling, lockdown & proxying.\n\n<b>Features</b>\n\n- **Auto-Tunneling:** Automatically activate tunnels based on your device's active network details.\n- **Deferred Endpoint Bootstrapping:** Safely resolves endpoints and updates peers after the tunnel is up for better reliability and leak protection on startup.\n- **Handshake Monitoring:** Real-time handshake monitoring for instant tunnel health feedback.\n- **AmneziaWG Support:** Full support for AmneziaWG 2.0 through 3.1, providing robust censorship protection.\n- **Split Tunneling:** Flexible support for routing specific apps or traffic through the VPN.\n- **Split & Encrypted DNS:** Resolve DNS through the tunnel using plain DNS, DoT, or DoH, and optionally split by domain suffix (tunnel or system).\n- **Local Proxy Mode:** Expose WireGuard tunnels over a local SOCKS5 or HTTP proxy to browsers or firewall apps (like AdGuard).\n- **Lockdown Mode:** Advanced in-app kill switch that blocks all traffic while the tunnel is down.\n- **Quick Controls:** Quick Settings tile and home screen shortcuts for easy toggling.\n- **Remote Control Support:** Intent-based automation for controlling tunnels and auto-tunneling from automation apps (like Tasker).\n- **Dynamic DNS Handling:** Automatically detect and update endpoints on server IP changes without requiring a restart.\n- **IPv6 Endpoints:** Automatically upgrade to IPv6 endpoints or fall back to IPv4 based on network conditions without requiring a restart.\n- **Android TV Support:** Full support for nearly all features on Android TV.\n"
@@ -1068,13 +1068,13 @@
     },
     "com.zaneschepke.wireguardautotunnel.nightly": {
       "metadata": {
-        "added": 1787807346879,
+        "added": 1788212111103,
         "categories": [
           "Connectivity",
           "Security"
         ],
         "issueTracker": "https://github.com/wgtunnel/wgtunnel/issues",
-        "lastUpdated": 1789084346227,
+        "lastUpdated": 1789715652619,
         "license": "MIT",
         "sourceCode": "https://github.com/wgtunnel/android",
         "webSite": "https://wgtunnel.com",
@@ -1153,7 +1153,7 @@
           "en-US": "WG Tunnel Nightly"
         },
         "summary": {
-          "en-US": "A FOSS WireGuard & AmneziaWG Android client with auto-tunneling, lockdown & l..."
+          "en-US": "An advanced, open-source client for WireGuard and AmneziaWG on Android."
         },
         "description": {
           "en-US": "Nightly development build of WG Tunnel.\n\n<b>Features</b>\n\n- Same as WG Tunnel, with additional features and fixes not yet available in the stable release\n- Separate app ID so it can be installed alongside the stable release\n"
@@ -1168,6 +1168,106 @@
         "preferredSigner": "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80"
       },
       "versions": {
+        "666a9b45b34873ad05eadd65049264d03495673eca813050f37e9fc8fa8ac6b9": {
+          "added": 1789715652619,
+          "file": {
+            "name": "/wgtunnel-nightly_5.7.3-nightlygit.dbd44a7.apk",
+            "sha256": "666a9b45b34873ad05eadd65049264d03495673eca813050f37e9fc8fa8ac6b9",
+            "size": 55655055
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "5.7.3-nightly+git.dbd44a7",
+            "versionCode": 51369,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+              },
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.POST_PROMOTED_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE",
+                "maxSdkVersion": 28
+              },
+              {
+                "name": "android.permission.QUERY_ALL_PACKAGES"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.ACCESS_WIFI_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_COARSE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_FINE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_BACKGROUND_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_LOCAL_NETWORK"
+              },
+              {
+                "name": "android.permission.SCHEDULE_EXACT_ALARM"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED"
+              },
+              {
+                "name": "android.permission.CAMERA"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "com.zaneschepke.wireguardautotunnel.nightly.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              },
+              {
+                "name": "moe.shizuku.manager.permission.API_V23"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE",
+                "maxSdkVersion": 28
+              }
+            ]
+          }
+        },
         "49cbace00d6463b09d699e481e4224ffc0ce39422ca5a173a562c4fccb13ab51": {
           "added": 1789084346227,
           "file": {
@@ -1981,103 +2081,6 @@
             ],
             "versionName": "5.6.1-nightly+git.8e872b5",
             "versionCode": 51246,
-            "usesSdk": {
-              "minSdkVersion": 26,
-              "targetSdkVersion": 37
-            },
-            "signer": {
-              "sha256": [
-                "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80"
-              ]
-            },
-            "usesPermission": [
-              {
-                "name": "android.permission.REQUEST_INSTALL_PACKAGES"
-              },
-              {
-                "name": "android.permission.INTERNET"
-              },
-              {
-                "name": "android.permission.POST_NOTIFICATIONS"
-              },
-              {
-                "name": "android.permission.WRITE_EXTERNAL_STORAGE",
-                "maxSdkVersion": 28
-              },
-              {
-                "name": "android.permission.QUERY_ALL_PACKAGES"
-              },
-              {
-                "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
-              },
-              {
-                "name": "android.permission.FOREGROUND_SERVICE"
-              },
-              {
-                "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
-              },
-              {
-                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
-              },
-              {
-                "name": "android.permission.ACCESS_WIFI_STATE"
-              },
-              {
-                "name": "android.permission.ACCESS_COARSE_LOCATION"
-              },
-              {
-                "name": "android.permission.ACCESS_FINE_LOCATION"
-              },
-              {
-                "name": "android.permission.ACCESS_BACKGROUND_LOCATION"
-              },
-              {
-                "name": "android.permission.ACCESS_NETWORK_STATE"
-              },
-              {
-                "name": "android.permission.ACCESS_LOCAL_NETWORK"
-              },
-              {
-                "name": "android.permission.SCHEDULE_EXACT_ALARM"
-              },
-              {
-                "name": "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED"
-              },
-              {
-                "name": "android.permission.CAMERA"
-              },
-              {
-                "name": "android.permission.WAKE_LOCK"
-              },
-              {
-                "name": "com.zaneschepke.wireguardautotunnel.nightly.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-              },
-              {
-                "name": "moe.shizuku.manager.permission.API_V23"
-              },
-              {
-                "name": "android.permission.READ_EXTERNAL_STORAGE",
-                "maxSdkVersion": 28
-              }
-            ]
-          }
-        },
-        "4126b128ec358d828ca2f9a64912b2fee72e672a2468f2c159dea061a038fc62": {
-          "added": 1787807346879,
-          "file": {
-            "name": "/wgtunnel-nightly_5.6.1-nightlygit.02b6024.apk",
-            "sha256": "4126b128ec358d828ca2f9a64912b2fee72e672a2468f2c159dea061a038fc62",
-            "size": 56756393
-          },
-          "manifest": {
-            "nativecode": [
-              "arm64-v8a",
-              "armeabi-v7a",
-              "x86",
-              "x86_64"
-            ],
-            "versionName": "5.6.1-nightly+git.02b6024",
-            "versionCode": 51241,
             "usesSdk": {
               "minSdkVersion": 26,
               "targetSdkVersion": 37

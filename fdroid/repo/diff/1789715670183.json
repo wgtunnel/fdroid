@@ -1,0 +1,26 @@
+{
+  "repo": {
+    "timestamp": 1789715679259
+  },
+  "packages": {
+    "com.zaneschepke.wireguardautotunnel": {
+      "metadata": {
+        "summary": {
+          "en-US": "An advanced, open-source client for WireGuard and AmneziaWG on Android."
+        }
+      }
+    },
+    "com.zaneschepke.wireguardautotunnel.nightly": {
+      "metadata": {
+        "summary": {
+          "en-US": "An advanced, open-source client for WireGuard and AmneziaWG on Android."
+        }
+      },
+      "versions": {
+        "666a9b45b34873ad05eadd65049264d03495673eca813050f37e9fc8fa8ac6b9": {
+          "releaseChannels": null
+        }
+      }
+    }
+  }
+}
