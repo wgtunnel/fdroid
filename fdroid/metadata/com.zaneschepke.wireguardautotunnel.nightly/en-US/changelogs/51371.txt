@@ -1,0 +1,19 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`e8862e2`](https://github.com/wgtunnel/android/commit/e8862e2ed9537fe05e8e9e482c2097fe2d0e6876) - auto tunnel recovery on system kill, network identity stabilization *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`5328c31`](https://github.com/wgtunnel/android/commit/5328c319e7c5ef6f839aa4c61e96ce5b49caa5a6) - release 5.7.3 *(commit by @zaneschepke)*
+

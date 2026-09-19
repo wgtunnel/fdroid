@@ -10,7 +10,7 @@ This repository hosts the official [F-Droid](https://f-droid.org/) repo for **WG
 | Icon | Name | Description | Version |
 | --- | --- | --- | --- |
 | <a href="https://github.com/wgtunnel/android"><img src="fdroid/repo/com.zaneschepke.wireguardautotunnel/en-US/icon.png" alt="WG Tunnel icon" width="36px" height="36px"></a> | [**WG Tunnel**](https://github.com/wgtunnel/android) | An advanced, open-source client for WireGuard and AmneziaWG on Android. | 5.7.3 (50703) |
-| <a href="https://github.com/wgtunnel/android"><img src="fdroid/repo/com.zaneschepke.wireguardautotunnel.nightly/en-US/icon.png" alt="WG Tunnel Nightly icon" width="36px" height="36px"></a> | [**WG Tunnel Nightly**](https://github.com/wgtunnel/android) | An advanced, open-source client for WireGuard and AmneziaWG on Android. | 5.7.3-nightly&#43;git.dbd44a7 (51369) |
+| <a href="https://github.com/wgtunnel/android"><img src="fdroid/repo/com.zaneschepke.wireguardautotunnel.nightly/en-US/icon.png" alt="WG Tunnel Nightly icon" width="36px" height="36px"></a> | [**WG Tunnel Nightly**](https://github.com/wgtunnel/android) | An advanced, open-source client for WireGuard and AmneziaWG on Android. | 5.7.4-nightly&#43;git.5328c31 (51371) |
 <!-- end apps table -->
 
 ### How to use
