@@ -1,0 +1,16 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`0629b4d`](https://github.com/wgtunnel/android/commit/0629b4d6dfb703d72afcea92256442bd9c1ded36) - bump core for amnezia padding fix and tunnel dns network handle race *(commit by @zaneschepke)*
+
