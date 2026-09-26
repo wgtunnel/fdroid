@@ -1,0 +1,25 @@
+What's new:
+- Auto tunnel race fix on certain devices
+- In app updater improvement and fixes for standalone
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`6d99959`](https://github.com/wgtunnel/android/commit/6d99959eecbb3dd067fe5ff73c51d4885ea6fd7a) - auto tunnel partial tunnel teardown and sync *(commit by @zaneschepke)*
+- [`207ec7f`](https://github.com/wgtunnel/android/commit/207ec7fca46b535b88161edab2724c3fd7a96f9a) - in-app updater to use download manager when available *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`6829d1e`](https://github.com/wgtunnel/android/commit/6829d1e1ff3a5d3b061fd1d9192603b21b91a6bc) - bump core socket opts and tunnel healthy ack race *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`0dbf07c`](https://github.com/wgtunnel/android/commit/0dbf07c38ace5e05252b21a62e39ea88e91185a2) - release 5.7.5 *(commit by @zaneschepke)*
+
