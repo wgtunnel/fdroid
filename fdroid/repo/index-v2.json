@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/wgtunnel/fdroid/main/fdroid/repo",
-    "timestamp": 1790430989569,
+    "timestamp": 1790480305652,
     "categories": {
       "Connectivity": {
         "name": {
@@ -1093,13 +1093,13 @@
     },
     "com.zaneschepke.wireguardautotunnel.nightly": {
       "metadata": {
-        "added": 1788752197936,
+        "added": 1788838545061,
         "categories": [
           "Connectivity",
           "Security"
         ],
         "issueTracker": "https://github.com/wgtunnel/wgtunnel/issues",
-        "lastUpdated": 1790422601147,
+        "lastUpdated": 1790480278602,
         "license": "MIT",
         "sourceCode": "https://github.com/wgtunnel/android",
         "webSite": "https://wgtunnel.com",
@@ -1193,6 +1193,106 @@
         "preferredSigner": "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80"
       },
       "versions": {
+        "76e2cc6589e1372c94dd327c4a86b0676d130ddadb1b2725d2098fe9e34bacb1": {
+          "added": 1790480278602,
+          "file": {
+            "name": "/wgtunnel-nightly_5.7.6-nightlygit.0dbf07c.apk",
+            "sha256": "76e2cc6589e1372c94dd327c4a86b0676d130ddadb1b2725d2098fe9e34bacb1",
+            "size": 55661647
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "5.7.6-nightly+git.0dbf07c",
+            "versionCode": 51385,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+              },
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.POST_PROMOTED_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE",
+                "maxSdkVersion": 28
+              },
+              {
+                "name": "android.permission.QUERY_ALL_PACKAGES"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.ACCESS_WIFI_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_COARSE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_FINE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_BACKGROUND_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_LOCAL_NETWORK"
+              },
+              {
+                "name": "android.permission.SCHEDULE_EXACT_ALARM"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED"
+              },
+              {
+                "name": "android.permission.CAMERA"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "com.zaneschepke.wireguardautotunnel.nightly.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              },
+              {
+                "name": "moe.shizuku.manager.permission.API_V23"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE",
+                "maxSdkVersion": 28
+              }
+            ]
+          }
+        },
         "60f190446b86e269356a8362c81a562c256f2d536b017ac7399670075ee18231": {
           "added": 1790422601147,
           "file": {
@@ -2009,106 +2109,6 @@
             ],
             "versionName": "5.7.3-nightly+git.52b9fa3",
             "versionCode": 51357,
-            "usesSdk": {
-              "minSdkVersion": 26,
-              "targetSdkVersion": 37
-            },
-            "signer": {
-              "sha256": [
-                "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80"
-              ]
-            },
-            "usesPermission": [
-              {
-                "name": "android.permission.REQUEST_INSTALL_PACKAGES"
-              },
-              {
-                "name": "android.permission.INTERNET"
-              },
-              {
-                "name": "android.permission.POST_NOTIFICATIONS"
-              },
-              {
-                "name": "android.permission.POST_PROMOTED_NOTIFICATIONS"
-              },
-              {
-                "name": "android.permission.WRITE_EXTERNAL_STORAGE",
-                "maxSdkVersion": 28
-              },
-              {
-                "name": "android.permission.QUERY_ALL_PACKAGES"
-              },
-              {
-                "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
-              },
-              {
-                "name": "android.permission.FOREGROUND_SERVICE"
-              },
-              {
-                "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
-              },
-              {
-                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
-              },
-              {
-                "name": "android.permission.ACCESS_WIFI_STATE"
-              },
-              {
-                "name": "android.permission.ACCESS_COARSE_LOCATION"
-              },
-              {
-                "name": "android.permission.ACCESS_FINE_LOCATION"
-              },
-              {
-                "name": "android.permission.ACCESS_BACKGROUND_LOCATION"
-              },
-              {
-                "name": "android.permission.ACCESS_NETWORK_STATE"
-              },
-              {
-                "name": "android.permission.ACCESS_LOCAL_NETWORK"
-              },
-              {
-                "name": "android.permission.SCHEDULE_EXACT_ALARM"
-              },
-              {
-                "name": "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED"
-              },
-              {
-                "name": "android.permission.CAMERA"
-              },
-              {
-                "name": "android.permission.WAKE_LOCK"
-              },
-              {
-                "name": "com.zaneschepke.wireguardautotunnel.nightly.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-              },
-              {
-                "name": "moe.shizuku.manager.permission.API_V23"
-              },
-              {
-                "name": "android.permission.READ_EXTERNAL_STORAGE",
-                "maxSdkVersion": 28
-              }
-            ]
-          }
-        },
-        "35017c702a39ba10a2e4fb2cc2fb207927ad86cac168192ea3524e31876effa6": {
-          "added": 1788752197936,
-          "file": {
-            "name": "/wgtunnel-nightly_5.7.2-nightlygit.5b9dc43.apk",
-            "sha256": "35017c702a39ba10a2e4fb2cc2fb207927ad86cac168192ea3524e31876effa6",
-            "size": 55569816
-          },
-          "manifest": {
-            "nativecode": [
-              "arm64-v8a",
-              "armeabi-v7a",
-              "x86",
-              "x86_64"
-            ],
-            "versionName": "5.7.2-nightly+git.5b9dc43",
-            "versionCode": 51355,
             "usesSdk": {
               "minSdkVersion": 26,
               "targetSdkVersion": 37
