@@ -1,0 +1,23 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`fe3e925`](https://github.com/wgtunnel/android/commit/fe3e925fe268f15431f7d8e96389ca7f1d95d02a) - **lang**: New Crowdin updates *(PR #1415 by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`022ade0`](https://github.com/wgtunnel/android/commit/022ade0ef7b8a0257a0391a181b491fe6a7659ee) - bump core for proxy tunnel dns fix *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`1dae7e5`](https://github.com/wgtunnel/android/commit/1dae7e5d4b53c19a5fbacec8c7bdad0d470d47a8) - bump material3, ksp, qrose *(commit by @zaneschepke)*
+- [`513510f`](https://github.com/wgtunnel/android/commit/513510f6190707029d23ddd2e89102b40711a11e) - remove outdated localization strings *(commit by @zaneschepke)*
+
