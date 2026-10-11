@@ -1,0 +1,23 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`dd21ebd`](https://github.com/wgtunnel/android/commit/dd21ebddff4dcc0135045a92c2d499d42ec5a0a1) - add link to desktop app and one-time snack message *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`51c52db`](https://github.com/wgtunnel/android/commit/51c52db54c70c4381d9105b98736758bbe50c608) - underlay network detection on airplane mode toggling without location permissions *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`e7a6964`](https://github.com/wgtunnel/android/commit/e7a69648883284d0786c73983bf8243f5b12dda0) - switch to update all query for tunnels to prevent full save *(commit by @zaneschepke)*
+- [`526a7dd`](https://github.com/wgtunnel/android/commit/526a7dda1afae68dd19583be33dd6f429fee173b) - **ui**: make split tunnel screen more intuitive *(commit by @zaneschepke)*
+
