@@ -1,0 +1,56 @@
+What's new:
+- Multihop tunnel in a tunnel support
+- Tunnel groups
+- Bugfixes for IPv6 local proxy
+- Bugfixes for auto tunnel (no location permissions, Android Auto, OEM specific quirks)
+- Split tunnel and DNS settings UX improvements
+- Various other improvements and fixes
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`3dd7e9c`](https://github.com/wgtunnel/android/commit/3dd7e9cfa5f3fa6013a297963866f86f9e26fbf9) - tunnel groups *(commit by @zaneschepke)*
+- [`cebac72`](https://github.com/wgtunnel/android/commit/cebac720443d766a0570afa9cf9faeffa6b14bb0) - tunnel in a tunnel multihop *(commit by @zaneschepke)*
+- [`fe3e925`](https://github.com/wgtunnel/android/commit/fe3e925fe268f15431f7d8e96389ca7f1d95d02a) - **lang**: New Crowdin updates *(PR #1415 by @zaneschepke)*
+- [`2588d67`](https://github.com/wgtunnel/android/commit/2588d67dc5af2b3529b6d9ed2ffb287178cf56c1) - **lang**: New Crowdin updates *(PR #1513 by @zaneschepke)*
+- [`dd21ebd`](https://github.com/wgtunnel/android/commit/dd21ebddff4dcc0135045a92c2d499d42ec5a0a1) - add link to desktop app and one-time snack message *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`dcd771a`](https://github.com/wgtunnel/android/commit/dcd771a7b5380429738a7f8c2a55ee64b76a3143) - ipv6 bind address for proxy settings *(commit by @zaneschepke)*
+- [`9c82ce7`](https://github.com/wgtunnel/android/commit/9c82ce7a818986e01d818aee897ba30fed7c512a) - bump core for ipv6 dns/proxy and parser fixes *(commit by @zaneschepke)*
+- [`6879ddc`](https://github.com/wgtunnel/android/commit/6879ddca8ec0e472a10d244cb623aded18bd6094) - auto tunnel network detection for problem OEMs *(commit by @zaneschepke)*
+- [`07f2249`](https://github.com/wgtunnel/android/commit/07f22496a7e04117bb9854efaf92e03cb40f46b2) - remove client associated check for Android Auto *(commit by @zaneschepke)*
+- [`e1fa228`](https://github.com/wgtunnel/android/commit/e1fa22884302f32abd1c3f8f4185b1623cc3a92c) - wi-fi detection screen should be scrollable *(commit by @zaneschepke)*
+- [`234359d`](https://github.com/wgtunnel/android/commit/234359dfb93edf1bbdf7d33b772658e852e5c842) - gate location flag on location permission granted *(commit by @zaneschepke)*
+- [`022ade0`](https://github.com/wgtunnel/android/commit/022ade0ef7b8a0257a0391a181b491fe6a7659ee) - bump core for proxy tunnel dns fix *(commit by @zaneschepke)*
+- [`af75112`](https://github.com/wgtunnel/android/commit/af7511222e609a9e5ae3045abe5d8d5d1e1c2515) - core bump for local proxy redirect and multihop mtu enforcement *(commit by @zaneschepke)*
+- [`5c5b99f`](https://github.com/wgtunnel/android/commit/5c5b99f24b643a5c7328f8fd7cbaa16a2d124ed3) - use valid MIME filters for Android TV imports *(PR #1515 by @sean0407)*
+  - :arrow_lower_right: *fixes issue #1514 opened by @smalldave*
+- [`4e7cb06`](https://github.com/wgtunnel/android/commit/4e7cb06412f31c2d5d151535706c8c7fb9affb53) - Android TV import/export wrong mime type *(commit by @zaneschepke)*
+- [`51c52db`](https://github.com/wgtunnel/android/commit/51c52db54c70c4381d9105b98736758bbe50c608) - underlay network detection on airplane mode toggling without location permissions *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`d3b8517`](https://github.com/wgtunnel/android/commit/d3b8517004108a134d1ddf34f8262774abff1e68) - **ui**: improve dns setting screen and monitor to use sheets *(commit by @zaneschepke)*
+- [`3082ec9`](https://github.com/wgtunnel/android/commit/3082ec9f5e87edf6f242bec9c1e295842bb06ed1) - new tunnels add to top, copy adds next to copied tunnel *(commit by @zaneschepke)*
+- [`a6505ee`](https://github.com/wgtunnel/android/commit/a6505eee25e172a0b7bee8d1357bf35e7d7f7e1d) - **ui**: tunnel groups to bottom sheets *(commit by @zaneschepke)*
+- [`bdacd22`](https://github.com/wgtunnel/android/commit/bdacd225e041e51303ca728b8e39f50d381f157b) - **ui**: entry and app mode descriptions *(commit by @zaneschepke)*
+- [`9073af1`](https://github.com/wgtunnel/android/commit/9073af1a100d211d85dc6176bc6678ceb6e9576e) - clean up old mime type *(commit by @zaneschepke)*
+- [`e7a6964`](https://github.com/wgtunnel/android/commit/e7a69648883284d0786c73983bf8243f5b12dda0) - switch to update all query for tunnels to prevent full save *(commit by @zaneschepke)*
+- [`526a7dd`](https://github.com/wgtunnel/android/commit/526a7dda1afae68dd19583be33dd6f429fee173b) - **ui**: make split tunnel screen more intuitive *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`7b74f3f`](https://github.com/wgtunnel/android/commit/7b74f3f29542be7a69db8dc36d8e7aeffebd4c73) - **deps**: bump gradle/actions from 6.3.0 to 6.4.0 *(PR #1502 by @dependabot[bot])*
+- [`1dae7e5`](https://github.com/wgtunnel/android/commit/1dae7e5d4b53c19a5fbacec8c7bdad0d470d47a8) - bump material3, ksp, qrose *(commit by @zaneschepke)*
+- [`513510f`](https://github.com/wgtunnel/android/commit/513510f6190707029d23ddd2e89102b40711a11e) - remove outdated localization strings *(commit by @zaneschepke)*
+- [`06134be`](https://github.com/wgtunnel/android/commit/06134bec9875f1629d66199d74b8b3b9a660838b) - update translation links *(commit by @zaneschepke)*
+- [`aaa20ff`](https://github.com/wgtunnel/android/commit/aaa20ff9cd4cdc396954dcbb4b32b368664b7eaf) - release 5.8.0 *(commit by @zaneschepke)*
+
