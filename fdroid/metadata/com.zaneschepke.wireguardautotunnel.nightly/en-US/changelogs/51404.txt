@@ -1,0 +1,27 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`2588d67`](https://github.com/wgtunnel/android/commit/2588d67dc5af2b3529b6d9ed2ffb287178cf56c1) - **lang**: New Crowdin updates *(PR #1513 by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`af75112`](https://github.com/wgtunnel/android/commit/af7511222e609a9e5ae3045abe5d8d5d1e1c2515) - core bump for local proxy redirect and multihop mtu enforcement *(commit by @zaneschepke)*
+- [`5c5b99f`](https://github.com/wgtunnel/android/commit/5c5b99f24b643a5c7328f8fd7cbaa16a2d124ed3) - use valid MIME filters for Android TV imports *(PR #1515 by @sean0407)*
+  - :arrow_lower_right: *fixes issue #1514 opened by @smalldave*
+- [`4e7cb06`](https://github.com/wgtunnel/android/commit/4e7cb06412f31c2d5d151535706c8c7fb9affb53) - Android TV import/export wrong mime type *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`a6505ee`](https://github.com/wgtunnel/android/commit/a6505eee25e172a0b7bee8d1357bf35e7d7f7e1d) - **ui**: tunnel groups to bottom sheets *(commit by @zaneschepke)*
+- [`bdacd22`](https://github.com/wgtunnel/android/commit/bdacd225e041e51303ca728b8e39f50d381f157b) - **ui**: entry and app mode descriptions *(commit by @zaneschepke)*
+- [`9073af1`](https://github.com/wgtunnel/android/commit/9073af1a100d211d85dc6176bc6678ceb6e9576e) - clean up old mime type *(commit by @zaneschepke)*
+
