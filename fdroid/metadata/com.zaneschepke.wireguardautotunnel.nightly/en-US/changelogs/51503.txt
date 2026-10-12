@@ -1,0 +1,20 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`221840c`](https://github.com/wgtunnel/android/commit/221840c7ee7b78fae10ebce55e59c39c00e64904) - bump core socks5 and lockdown dns resolution fixes *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`39c0fde`](https://github.com/wgtunnel/android/commit/39c0fdecd243c46fb837d7b7ff452b65fd5ee1db) - **lang**: cz short description too long for play *(commit by @zaneschepke)*
+- [`8485171`](https://github.com/wgtunnel/android/commit/8485171549e8f6bbecd0d521e4b8a635cfd1c196) - **ci**: continue Play listing when the version code is already uploaded *(commit by @zaneschepke)*
+
