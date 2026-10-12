@@ -1,0 +1,17 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :wrench: Chores
+- [`06134be`](https://github.com/wgtunnel/android/commit/06134bec9875f1629d66199d74b8b3b9a660838b) - update translation links *(commit by @zaneschepke)*
+- [`aaa20ff`](https://github.com/wgtunnel/android/commit/aaa20ff9cd4cdc396954dcbb4b32b368664b7eaf) - release 5.8.0 *(commit by @zaneschepke)*
+
