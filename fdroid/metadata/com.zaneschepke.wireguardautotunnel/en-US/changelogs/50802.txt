@@ -1,0 +1,41 @@
+What's new:
+- Dynamic AMOLED theme
+- Ping servers from main screen while no tunnel is active
+- Bugfixes for Android TV file imports
+- Bugfixes for split tunnel configuration changes
+- Bugfixes for backup/restore, with TV support
+- Various other minor improvements and fixes
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`3308c60`](https://github.com/wgtunnel/android/commit/3308c60276b16270d4deb8310d34ef288ad07551) - **lang**: update/complete Basque (eu) and Spanish (es) translations *(PR #1528 by @planetryan)*
+- [`499eaa4`](https://github.com/wgtunnel/android/commit/499eaa40ba5c22af7a923f71347857df5ef49b53) - add server ping to main screen *(commit by @zaneschepke)*
+- [`d0fbe71`](https://github.com/wgtunnel/android/commit/d0fbe71a630bb7b6c6045b270a0afe3c77c50175) - add AMOLED dynamic theme *(commit by @zaneschepke)*
+- [`37e25fe`](https://github.com/wgtunnel/android/commit/37e25fe56c623466c05967ae0d737320ec3eefd8) - **lang**: New Crowdin updates *(PR #1517 by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`f8c8850`](https://github.com/wgtunnel/android/commit/f8c8850e578d354d8fec300f74e53c20690f031d) - split tunneling configuration stale saves, UX improvements *(commit by @zaneschepke)*
+- [`e247010`](https://github.com/wgtunnel/android/commit/e24701025a0d59667541518245eb869f3de9abd0) - **tv**: file importing *(commit by @zaneschepke)*
+- [`14a0493`](https://github.com/wgtunnel/android/commit/14a04934f4c5314e6ce799101b912ea034d80176) - db backup crash, Android TV support, error handling *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`f7230b5`](https://github.com/wgtunnel/android/commit/f7230b5b7595fbfa0dc1121d088301d2adb2d6fb) - **ui**: add description for trusted networks *(commit by @zaneschepke)*
+- [`4cd5839`](https://github.com/wgtunnel/android/commit/4cd583961a237a547a125ea516dbb108a9e50fee) - **ui**: remote key rotation and docs link *(commit by @zaneschepke)*
+- [`93b2dcc`](https://github.com/wgtunnel/android/commit/93b2dcc1f66d54b2cde2575b46ced6da38992ee6) - **ui**: improve standalone download progress indicator *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`4292957`](https://github.com/wgtunnel/android/commit/4292957337389b33f05a146614c24bcc3533d7c1) - update screenshots *(commit by @zaneschepke)*
+- [`4d0ca4f`](https://github.com/wgtunnel/android/commit/4d0ca4fea129b9853b8a7f26c9a3ff42bac23a5b) - delete old support.md *(commit by @zaneschepke)*
+- [`2e75aaa`](https://github.com/wgtunnel/android/commit/2e75aaa71dc7dea1e734f7c51142ef8a7f22555d) - **deps**: bump gradle wrapper to 9.8.1 *(commit by @zaneschepke)*
+- [`db07ccd`](https://github.com/wgtunnel/android/commit/db07ccd45f49608f48b9ae86ff0a366c195da15b) - release 5.8.2 *(commit by @zaneschepke)*
+
