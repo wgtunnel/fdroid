@@ -1,0 +1,20 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`499eaa4`](https://github.com/wgtunnel/android/commit/499eaa40ba5c22af7a923f71347857df5ef49b53) - add server ping to main screen *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`f7230b5`](https://github.com/wgtunnel/android/commit/f7230b5b7595fbfa0dc1121d088301d2adb2d6fb) - **ui**: add description for trusted networks *(commit by @zaneschepke)*
+- [`4cd5839`](https://github.com/wgtunnel/android/commit/4cd583961a237a547a125ea516dbb108a9e50fee) - **ui**: remote key rotation and docs link *(commit by @zaneschepke)*
+
