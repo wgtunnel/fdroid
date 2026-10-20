@@ -1,0 +1,27 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`d0fbe71`](https://github.com/wgtunnel/android/commit/d0fbe71a630bb7b6c6045b270a0afe3c77c50175) - add AMOLED dynamic theme *(commit by @zaneschepke)*
+- [`37e25fe`](https://github.com/wgtunnel/android/commit/37e25fe56c623466c05967ae0d737320ec3eefd8) - **lang**: New Crowdin updates *(PR #1517 by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`14a0493`](https://github.com/wgtunnel/android/commit/14a04934f4c5314e6ce799101b912ea034d80176) - db backup crash, Android TV support, error handling *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`93b2dcc`](https://github.com/wgtunnel/android/commit/93b2dcc1f66d54b2cde2575b46ced6da38992ee6) - **ui**: improve standalone download progress indicator *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`2e75aaa`](https://github.com/wgtunnel/android/commit/2e75aaa71dc7dea1e734f7c51142ef8a7f22555d) - **deps**: bump gradle wrapper to 9.8.1 *(commit by @zaneschepke)*
+- [`db07ccd`](https://github.com/wgtunnel/android/commit/db07ccd45f49608f48b9ae86ff0a366c195da15b) - release 5.8.2 *(commit by @zaneschepke)*
+
