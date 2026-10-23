@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/wgtunnel/fdroid/main/fdroid/repo",
-    "timestamp": 1792467474291,
+    "timestamp": 1792726601035,
     "categories": {
       "Connectivity": {
         "name": {
@@ -1108,7 +1108,7 @@
           "Security"
         ],
         "issueTracker": "https://github.com/wgtunnel/wgtunnel/issues",
-        "lastUpdated": 1792467444019,
+        "lastUpdated": 1792726571993,
         "license": "MIT",
         "sourceCode": "https://github.com/wgtunnel/android",
         "webSite": "https://wgtunnel.com",
@@ -1202,6 +1202,106 @@
         "preferredSigner": "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80"
       },
       "versions": {
+        "73ccb7e41514c926836627c35476592dfcb83087b06541bf233ea415a8713f9d": {
+          "added": 1792726571993,
+          "file": {
+            "name": "/wgtunnel-nightly_5.8.3-nightlygit.dc22f87.apk",
+            "sha256": "73ccb7e41514c926836627c35476592dfcb83087b06541bf233ea415a8713f9d",
+            "size": 56042850
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "5.8.3-nightly+git.dc22f87",
+            "versionCode": 51516,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+              },
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.POST_PROMOTED_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE",
+                "maxSdkVersion": 28
+              },
+              {
+                "name": "android.permission.QUERY_ALL_PACKAGES"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.ACCESS_WIFI_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_COARSE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_FINE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_BACKGROUND_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_LOCAL_NETWORK"
+              },
+              {
+                "name": "android.permission.SCHEDULE_EXACT_ALARM"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED"
+              },
+              {
+                "name": "android.permission.CAMERA"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "com.zaneschepke.wireguardautotunnel.nightly.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              },
+              {
+                "name": "moe.shizuku.manager.permission.API_V23"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE",
+                "maxSdkVersion": 28
+              }
+            ]
+          }
+        },
         "5550cf28bdcb78faab6be38d74d56dfed699587fcbbd833fb5302f193ed7cb5a": {
           "added": 1792467444019,
           "file": {
@@ -1818,106 +1918,6 @@
             ],
             "versionName": "5.8.1-nightly+git.aaa20ff",
             "versionCode": 51501,
-            "usesSdk": {
-              "minSdkVersion": 26,
-              "targetSdkVersion": 37
-            },
-            "signer": {
-              "sha256": [
-                "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80"
-              ]
-            },
-            "usesPermission": [
-              {
-                "name": "android.permission.REQUEST_INSTALL_PACKAGES"
-              },
-              {
-                "name": "android.permission.INTERNET"
-              },
-              {
-                "name": "android.permission.POST_NOTIFICATIONS"
-              },
-              {
-                "name": "android.permission.POST_PROMOTED_NOTIFICATIONS"
-              },
-              {
-                "name": "android.permission.WRITE_EXTERNAL_STORAGE",
-                "maxSdkVersion": 28
-              },
-              {
-                "name": "android.permission.QUERY_ALL_PACKAGES"
-              },
-              {
-                "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
-              },
-              {
-                "name": "android.permission.FOREGROUND_SERVICE"
-              },
-              {
-                "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
-              },
-              {
-                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
-              },
-              {
-                "name": "android.permission.ACCESS_WIFI_STATE"
-              },
-              {
-                "name": "android.permission.ACCESS_COARSE_LOCATION"
-              },
-              {
-                "name": "android.permission.ACCESS_FINE_LOCATION"
-              },
-              {
-                "name": "android.permission.ACCESS_BACKGROUND_LOCATION"
-              },
-              {
-                "name": "android.permission.ACCESS_NETWORK_STATE"
-              },
-              {
-                "name": "android.permission.ACCESS_LOCAL_NETWORK"
-              },
-              {
-                "name": "android.permission.SCHEDULE_EXACT_ALARM"
-              },
-              {
-                "name": "android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED"
-              },
-              {
-                "name": "android.permission.CAMERA"
-              },
-              {
-                "name": "android.permission.WAKE_LOCK"
-              },
-              {
-                "name": "com.zaneschepke.wireguardautotunnel.nightly.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-              },
-              {
-                "name": "moe.shizuku.manager.permission.API_V23"
-              },
-              {
-                "name": "android.permission.READ_EXTERNAL_STORAGE",
-                "maxSdkVersion": 28
-              }
-            ]
-          }
-        },
-        "ed7689b41d96a2341ad1b704fb7e119bb0800dfa9a2fdeae4676a978025b9ec1": {
-          "added": 1791517274696,
-          "file": {
-            "name": "/wgtunnel-nightly_5.7.6-nightlygit.7b74f3f.apk",
-            "sha256": "ed7689b41d96a2341ad1b704fb7e119bb0800dfa9a2fdeae4676a978025b9ec1",
-            "size": 55920187
-          },
-          "manifest": {
-            "nativecode": [
-              "arm64-v8a",
-              "armeabi-v7a",
-              "x86",
-              "x86_64"
-            ],
-            "versionName": "5.7.6-nightly+git.7b74f3f",
-            "versionCode": 51400,
             "usesSdk": {
               "minSdkVersion": 26,
               "targetSdkVersion": 37
