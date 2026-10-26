@@ -1,0 +1,19 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`e313e11`](https://github.com/wgtunnel/android/commit/e313e11b1d07eab79105f46710d78bbb3b82f67d) - **lang**: New Crowdin updates *(PR #1535 by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`0e2528f`](https://github.com/wgtunnel/android/commit/0e2528f5969e8de56a66e7f1fbb8aeceaef69c9e) - single config export appends .zip *(commit by @zaneschepke)*
+
