@@ -1,0 +1,17 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`c91be02`](https://github.com/wgtunnel/android/commit/c91be02b6c79b6ee338a9f728e98e473626bc069) - link properties monitoring and IPv6 support discovery *(commit by @zaneschepke)*
+- [`6b2ae1a`](https://github.com/wgtunnel/android/commit/6b2ae1ac2d0c9c29f05c216549728e169d368448) - bump core for proxy/lockdown upstream crashes *(commit by @zaneschepke)*
+
