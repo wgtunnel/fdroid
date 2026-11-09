@@ -1,0 +1,21 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`9daa193`](https://github.com/wgtunnel/android/commit/9daa19397c2c1e96bdbc6aac7e0551017237f0b8) - clear ping results when tunnel is active *(commit by @zaneschepke)*
+  - :arrow_lower_right: *fixes issue #1545 opened by @Vitalik93*
+
+### :recycle: Refactors
+- [`e3dcadc`](https://github.com/wgtunnel/android/commit/e3dcadc6fd9c884ff6a61122bbbaa53ff329273f) - **tv**: focus tunnel toggle first *(commit by @zaneschepke)*
+  - :arrow_lower_right: *addresses issue #1566 opened by @webairstudio*
+
