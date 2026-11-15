@@ -1,0 +1,18 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`a37cd4b`](https://github.com/wgtunnel/android/commit/a37cd4b6edd96913d980a2586a9eee842a308ace) - improve pin lock ux, animations, screen transition *(commit by @zaneschepke)*
+- [`24dbe8d`](https://github.com/wgtunnel/android/commit/24dbe8d744a41520f5772e3c0908f61762c316ab) - **tv**: allow file manager selection for multi file managers *(commit by @zaneschepke)*
+  - :arrow_lower_right: *fixes issue #1578 opened by @frozen-cdn*
+
