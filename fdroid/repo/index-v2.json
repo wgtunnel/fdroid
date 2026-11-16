@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/wgtunnel/fdroid/main/fdroid/repo",
-    "timestamp": 1794770503571,
+    "timestamp": 1794809440174,
     "categories": {
       "Connectivity": {
         "name": {
@@ -1108,7 +1108,7 @@
           "Security"
         ],
         "issueTracker": "https://github.com/wgtunnel/wgtunnel/issues",
-        "lastUpdated": 1794770480329,
+        "lastUpdated": 1794809410990,
         "license": "MIT",
         "sourceCode": "https://github.com/wgtunnel/android",
         "webSite": "https://wgtunnel.com",
@@ -1202,12 +1202,12 @@
         "preferredSigner": "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80"
       },
       "versions": {
-        "1b470f80ecc3fd12a0692246064c8b91300cf2388515a8a2fb8ba434a28940fb": {
-          "added": 1794770480329,
+        "e0e6920f1266a903ddf61aa9dbbd6a396e9c66feb250a4463ea305a1f54caa2c": {
+          "added": 1794809410990,
           "file": {
-            "name": "/wgtunnel-nightly_5.8.3-nightlygit.24dbe8d.apk",
-            "sha256": "1b470f80ecc3fd12a0692246064c8b91300cf2388515a8a2fb8ba434a28940fb",
-            "size": 56076334
+            "name": "/wgtunnel-nightly_5.8.3-nightlygit.c2f1172.apk",
+            "sha256": "e0e6920f1266a903ddf61aa9dbbd6a396e9c66feb250a4463ea305a1f54caa2c",
+            "size": 56250834
           },
           "manifest": {
             "nativecode": [
@@ -1216,8 +1216,8 @@
               "x86",
               "x86_64"
             ],
-            "versionName": "5.8.3-nightly+git.24dbe8d",
-            "versionCode": 51542,
+            "versionName": "5.8.3-nightly+git.c2f1172",
+            "versionCode": 51544,
             "usesSdk": {
               "minSdkVersion": 26,
               "targetSdkVersion": 37
