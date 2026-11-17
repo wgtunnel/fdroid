@@ -1,0 +1,26 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`b51ddcc`](https://github.com/wgtunnel/android/commit/b51ddcc7389f329df2c9c1941519e6671fdddc79) - **tv**: improve main screen navigation *(commit by @zaneschepke)*
+  - :arrow_lower_right: *fixes issue #1566 opened by @webairstudio*
+- [`aab122d`](https://github.com/wgtunnel/android/commit/aab122da96239ad59ad3dd5611677f99e55a4e80) - lazy crash race *(commit by @zaneschepke)*
+- [`7c27897`](https://github.com/wgtunnel/android/commit/7c27897563d6f223d5a0adc2add469e664da22c7) - worker manager locked crash and invalid string format *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`afc42d2`](https://github.com/wgtunnel/android/commit/afc42d2211991b7869c28aea5287757720f0b1b0) - entry selection behavior to not pop *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`ce62a42`](https://github.com/wgtunnel/android/commit/ce62a42fbc969cdbceef4d097d474d92b098bff8) - **deps**: bump peter-evans/create-pull-request from 8.1.1 to 8.1.3 *(PR #1577 by @dependabot[bot])*
+- [`dc4782a`](https://github.com/wgtunnel/android/commit/dc4782a0b185ef5ce9aa9d1328eea6de9f624a4a) - **deps**: bump gradle/actions from 6.4.0 to 6.4.1 *(PR #1560 by @dependabot[bot])*
+
