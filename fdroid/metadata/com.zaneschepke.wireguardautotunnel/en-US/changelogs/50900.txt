@@ -1,0 +1,65 @@
+What's new:
+- Strict split tunneling to prevent split apps from accessing the tunnel
+- Improved lock screen and animation flow
+- Android TV navigation improvements
+- Several UI bug fixes
+- Crash fixes on certain devices
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`e313e11`](https://github.com/wgtunnel/android/commit/e313e11b1d07eab79105f46710d78bbb3b82f67d) - **lang**: New Crowdin updates *(PR #1535 by @zaneschepke)*
+- [`c2f1172`](https://github.com/wgtunnel/android/commit/c2f11723f859a81d2694147b8b6df78cd858d68e) - strict split tunneling *(commit by @zaneschepke)*
+  - :arrow_lower_right: *addresses issue #1509 opened by @artemnadein*
+
+### :bug: Bug Fixes
+- [`0e2528f`](https://github.com/wgtunnel/android/commit/0e2528f5969e8de56a66e7f1fbb8aeceaef69c9e) - single config export appends .zip *(commit by @zaneschepke)*
+- [`c91be02`](https://github.com/wgtunnel/android/commit/c91be02b6c79b6ee338a9f728e98e473626bc069) - link properties monitoring and IPv6 support discovery *(commit by @zaneschepke)*
+- [`6b2ae1a`](https://github.com/wgtunnel/android/commit/6b2ae1ac2d0c9c29f05c216549728e169d368448) - bump core for proxy/lockdown upstream crashes *(commit by @zaneschepke)*
+- [`7f412c4`](https://github.com/wgtunnel/android/commit/7f412c429961300ca9c2b28c1d3435573d9df5b5) - **nav**: label bottom navigation tabs for screen readers *(PR #1554 by @LandonMoran)*
+- [`203a800`](https://github.com/wgtunnel/android/commit/203a80094ccfa1b4455cd4f31978b5fdf9c61b7f) - local logging UI bugs *(commit by @zaneschepke)*
+  - :arrow_lower_right: *fixes issue #1553 opened by @Vitalik93*
+- [`9daa193`](https://github.com/wgtunnel/android/commit/9daa19397c2c1e96bdbc6aac7e0551017237f0b8) - clear ping results when tunnel is active *(commit by @zaneschepke)*
+  - :arrow_lower_right: *fixes issue #1545 opened by @Vitalik93*
+- [`00243ff`](https://github.com/wgtunnel/android/commit/00243fffe34e5cfc64c5d269218d2f8f9b2a4e35) - bump core for tink crash *(commit by @zaneschepke)*
+- [`ca6c033`](https://github.com/wgtunnel/android/commit/ca6c0334a327d97e7782f34222a93dfd426295e6) - pin lock applied to out of app actions *(commit by @zaneschepke)*
+  - :arrow_lower_right: *fixes issue #1573 opened by @rtromao*
+  - :arrow_lower_right: *fixes issue #1575 opened by @Vitalik93*
+- [`a37cd4b`](https://github.com/wgtunnel/android/commit/a37cd4b6edd96913d980a2586a9eee842a308ace) - improve pin lock ux, animations, screen transition *(commit by @zaneschepke)*
+- [`24dbe8d`](https://github.com/wgtunnel/android/commit/24dbe8d744a41520f5772e3c0908f61762c316ab) - **tv**: allow file manager selection for multi file managers *(commit by @zaneschepke)*
+  - :arrow_lower_right: *fixes issue #1578 opened by @frozen-cdn*
+- [`b51ddcc`](https://github.com/wgtunnel/android/commit/b51ddcc7389f329df2c9c1941519e6671fdddc79) - **tv**: improve main screen navigation *(commit by @zaneschepke)*
+  - :arrow_lower_right: *fixes issue #1566 opened by @webairstudio*
+- [`aab122d`](https://github.com/wgtunnel/android/commit/aab122da96239ad59ad3dd5611677f99e55a4e80) - lazy crash race *(commit by @zaneschepke)*
+- [`7c27897`](https://github.com/wgtunnel/android/commit/7c27897563d6f223d5a0adc2add469e664da22c7) - worker manager locked crash and invalid string format *(commit by @zaneschepke)*
+- [`2ab9bad`](https://github.com/wgtunnel/android/commit/2ab9badef6869e6cd65a5344c33f9e94e6df6b17) - bump core for multihop strict split tunneling fix *(commit by @zaneschepke)*
+- [`b4f1fa5`](https://github.com/wgtunnel/android/commit/b4f1fa51c7cea2251d661d5a2e3426c2661dab33) - deselecting a folder should deselect all configs *(commit by @zaneschepke)*
+- [`74fe265`](https://github.com/wgtunnel/android/commit/74fe2653036324df6cc66b95e37d32599cb57c4a) - tile and shortcut to toggle last used tunnel, persisted *(commit by @zaneschepke)*
+- [`b39ca52`](https://github.com/wgtunnel/android/commit/b39ca5278de7407040f1d8830e809b0ff460ecdd) - prevent dialogs and sheets from appearing over pin screen *(commit by @zaneschepke)*
+  - :arrow_lower_right: *fixes issue #1585 opened by @sudoup*
+
+### :recycle: Refactors
+- [`e3dcadc`](https://github.com/wgtunnel/android/commit/e3dcadc6fd9c884ff6a61122bbbaa53ff329273f) - **tv**: focus tunnel toggle first *(commit by @zaneschepke)*
+  - :arrow_lower_right: *addresses issue #1566 opened by @webairstudio*
+- [`dcb4221`](https://github.com/wgtunnel/android/commit/dcb422132b882050506d67ea83e2d29d86fe73c5) - system app filter to apps without icon *(commit by @zaneschepke)*
+- [`afc42d2`](https://github.com/wgtunnel/android/commit/afc42d2211991b7869c28aea5287757720f0b1b0) - entry selection behavior to not pop *(commit by @zaneschepke)*
+- [`f31d6e9`](https://github.com/wgtunnel/android/commit/f31d6e9ae747d567382eca7cc37fad66e531bb35) - auto strict split tunneling only enabled for ru if not private DNS *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`dc22f87`](https://github.com/wgtunnel/android/commit/dc22f878930a0af71e3582e6d17d789bcfc7a23c) - remove funding.yml now managed from org *(commit by @zaneschepke)*
+- [`d6f84df`](https://github.com/wgtunnel/android/commit/d6f84dff22fa1c9a2a87d5edd978f37e708d11d0) - **deps**: bump actions/setup-go from 5 to 7 *(PR #1549 by @dependabot[bot])*
+- [`ce62a42`](https://github.com/wgtunnel/android/commit/ce62a42fbc969cdbceef4d097d474d92b098bff8) - **deps**: bump peter-evans/create-pull-request from 8.1.1 to 8.1.3 *(PR #1577 by @dependabot[bot])*
+- [`dc4782a`](https://github.com/wgtunnel/android/commit/dc4782a0b185ef5ce9aa9d1328eea6de9f624a4a) - **deps**: bump gradle/actions from 6.4.0 to 6.4.1 *(PR #1560 by @dependabot[bot])*
+- [`8e7faa9`](https://github.com/wgtunnel/android/commit/8e7faa982b38dba7d3ec3941b3b129256988f6bb) - bump core, compose, material, sdk minor *(commit by @zaneschepke)*
+- [`cd9b146`](https://github.com/wgtunnel/android/commit/cd9b1467949f5a4d24be34cdcb5baa4160a14c70) - **deps**: bump com.google.devtools.ksp from 2.3.12 to 2.3.14 *(PR #1583 by @dependabot[bot])*
+- [`76da138`](https://github.com/wgtunnel/android/commit/76da138c8b6940b87940ed9ea7398b53189a4070) - release 5.9.0 *(commit by @zaneschepke)*
+
