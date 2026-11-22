@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1795237053522,
+    "timestamp": 1795318063973,
     "version": 30000,
     "name": "WG Tunnel Repository",
     "icon": "icon.png",
@@ -58,8 +58,8 @@
         "Connectivity",
         "Security"
       ],
-      "suggestedVersionName": "5.8.3-nightly+git.8e7faa9",
-      "suggestedVersionCode": "51551",
+      "suggestedVersionName": "5.8.3-nightly+git.b4f1fa5",
+      "suggestedVersionCode": "51552",
       "description": "Nightly development build of WG Tunnel.\n\n<b>Features</b>\n\n- Same as WG Tunnel, with additional features and fixes not yet available in the stable release\n- Separate app ID so it can be installed alongside the stable release\n",
       "issueTracker": "https://github.com/wgtunnel/wgtunnel/issues",
       "license": "MIT",
@@ -68,9 +68,9 @@
       "summary": "An advanced, open-source client for WireGuard and AmneziaWG on Android.",
       "webSite": "https://wgtunnel.com",
       "added": 1792467444019,
-      "icon": "com.zaneschepke.wireguardautotunnel.nightly.51551.png",
+      "icon": "com.zaneschepke.wireguardautotunnel.nightly.51552.png",
       "packageName": "com.zaneschepke.wireguardautotunnel.nightly",
-      "lastUpdated": 1795237036921,
+      "lastUpdated": 1795318035347,
       "localized": {
         "en-US": {
           "featureGraphic": "featureGraphic_vlYqv7_KFoXZ-D1eoRMHWaT6K7i1Ra7fLksYNnEIjfo=.png",
@@ -88,7 +88,7 @@
             "9.png"
           ],
           "tvBanner": "tvBanner_fXn7yHbY5IzQXns7Jk9ZnKSYAPCfU_CgY-pCGsuohKw=.png",
-          "whatsNew": "Nightly build for the latest development version of the app.\n\nSHA-256 fingerprints for the 4096-bit signing certificate:\n```sh\n5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80\n```\n\nTo verify fingerprint:\n```sh\napksigner verify --print-certs [path to APK file] | grep SHA-256\n```\n\n### Changelog\n### :wrench: Chores\n- [`8e7faa9`](https://github.com/wgtunnel/android/commit/8e7faa982b38dba7d3ec3941b3b129256988f6bb) - bump core, compose, material, sdk minor *(commit by @zaneschepke)*\n\n"
+          "whatsNew": "Nightly build for the latest development version of the app.\n\nSHA-256 fingerprints for the 4096-bit signing certificate:\n```sh\n5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80\n```\n\nTo verify fingerprint:\n```sh\napksigner verify --print-certs [path to APK file] | grep SHA-256\n```\n\n### Changelog\n### :bug: Bug Fixes\n- [`b4f1fa5`](https://github.com/wgtunnel/android/commit/b4f1fa51c7cea2251d661d5a2e3426c2661dab33) - deselecting a folder should deselect all configs *(commit by @zanesch"
         }
       }
     }
@@ -1194,9 +1194,9 @@
     ],
     "com.zaneschepke.wireguardautotunnel.nightly": [
       {
-        "added": 1795237036921,
-        "apkName": "wgtunnel-nightly_5.8.3-nightlygit.8e7faa9.apk",
-        "hash": "33e2f8f1b8ff22839e73944eadeb7d866a3c649a724d27a9608574b1c55f9e22",
+        "added": 1795318035347,
+        "apkName": "wgtunnel-nightly_5.8.3-nightlygit.b4f1fa5.apk",
+        "hash": "7a7a69a60040eb0713d02b18e9301d4999b0651c71b5ea7f1ce2db81776d018b",
         "hashType": "sha256",
         "minSdkVersion": 26,
         "nativecode": [
@@ -1208,7 +1208,7 @@
         "packageName": "com.zaneschepke.wireguardautotunnel.nightly",
         "sig": "21dad82894453bd1db3f09179d247e3c",
         "signer": "5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80",
-        "size": 56299902,
+        "size": 56316286,
         "targetSdkVersion": 37,
         "uses-permission": [
           [
@@ -1304,8 +1304,8 @@
             28
           ]
         ],
-        "versionCode": 51551,
-        "versionName": "5.8.3-nightly+git.8e7faa9"
+        "versionCode": 51552,
+        "versionName": "5.8.3-nightly+git.b4f1fa5"
       },
       {
         "added": 1794809410990,
