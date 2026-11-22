@@ -1,0 +1,26 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :bug: Bug Fixes
+- [`74fe265`](https://github.com/wgtunnel/android/commit/74fe2653036324df6cc66b95e37d32599cb57c4a) - tile and shortcut to toggle last used tunnel, persisted *(commit by @zaneschepke)*
+- [`b39ca52`](https://github.com/wgtunnel/android/commit/b39ca5278de7407040f1d8830e809b0ff460ecdd) - prevent dialogs and sheets from appearing over pin screen *(commit by @zaneschepke)*
+  - :arrow_lower_right: *fixes issue #1585 opened by @sudoup*
+- [`b08e341`](https://github.com/wgtunnel/android/commit/b08e341e9bba9491a834210daa1c8b32ae3ffa3e) - tunnel selection and core bump for proxy/lockdown fixes *(commit by @zaneschepke)*
+
+### :recycle: Refactors
+- [`f31d6e9`](https://github.com/wgtunnel/android/commit/f31d6e9ae747d567382eca7cc37fad66e531bb35) - auto strict split tunneling only enabled for ru if not private DNS *(commit by @zaneschepke)*
+
+### :wrench: Chores
+- [`cd9b146`](https://github.com/wgtunnel/android/commit/cd9b1467949f5a4d24be34cdcb5baa4160a14c70) - **deps**: bump com.google.devtools.ksp from 2.3.12 to 2.3.14 *(PR #1583 by @dependabot[bot])*
+- [`76da138`](https://github.com/wgtunnel/android/commit/76da138c8b6940b87940ed9ea7398b53189a4070) - release 5.9.0 *(commit by @zaneschepke)*
+
