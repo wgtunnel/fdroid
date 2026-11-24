@@ -1,0 +1,18 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :wrench: Chores
+- [`6e39d8a`](https://github.com/wgtunnel/android/commit/6e39d8a0412e1b266a157a735243e4cbcc03b75a) - bump gradle wrapper *(commit by @zaneschepke)*
+- [`539d3e8`](https://github.com/wgtunnel/android/commit/539d3e894253d6660cb53fad2de87e49ae0e8b25) - **deps**: bump actions/setup-go from 7.0.0 to 7.1.0 *(PR #1592 by @dependabot[bot])*
+- [`9118fc5`](https://github.com/wgtunnel/android/commit/9118fc5705312b4a79e28c9da0d98121c888c713) - **deps**: bump ruby/setup-ruby from 1.338.0 to 1.343.0 *(PR #1591 by @dependabot[bot])*
+
