@@ -1,0 +1,28 @@
+Nightly build for the latest development version of the app.
+
+SHA-256 fingerprints for the 4096-bit signing certificate:
+```sh
+5204d82e766e8aa14dcbb06dc70aebae2bdd812d4d6203cd521a8a685d7d3d80
+```
+
+To verify fingerprint:
+```sh
+apksigner verify --print-certs [path to APK file] | grep SHA-256
+```
+
+### Changelog
+### :sparkles: New Features
+- [`4d4072a`](https://github.com/wgtunnel/android/commit/4d4072a63891ac48ce55f111b98817777997cb83) - **auto-tunnel**: treat Wi-Fi without internet as mobile data *(commit by @zaneschepke)*
+  - :arrow_lower_right: *addresses issue #1504 opened by @JGJ52*
+- [`e75d26b`](https://github.com/wgtunnel/android/commit/e75d26baed89c982332cbacea6d6eefdc5392898) - **dns**: mention DoH authentication in the endpoint hint *(commit by @zaneschepke)*
+
+### :bug: Bug Fixes
+- [`c74452d`](https://github.com/wgtunnel/android/commit/c74452d610b79974b79eb3b6e18bff0d26c1bc2d) - **network**: seed Wi-Fi state on startup *(commit by @zaneschepke)*
+  - :arrow_lower_right: *fixes issue #1602 opened by @mariusmuja*
+- [`0647e2d`](https://github.com/wgtunnel/android/commit/0647e2d73ed65400af482182d604219318027998) - **startup**: make Always-on and restore on boot independent *(commit by @zaneschepke)*
+- [`589596a`](https://github.com/wgtunnel/android/commit/589596a749f5dac925551098339d8d80393d154d) - **recovery**: report network validation to core *(commit by @zaneschepke)*
+  - :arrow_lower_right: *fixes issue #1599 opened by @tbehrens97*
+
+### :wrench: Chores
+- [`fa1f331`](https://github.com/wgtunnel/android/commit/fa1f331b628c2ced4d5fd1164aaa85b9acdcaa15) - bump core, ktor, sonner *(commit by @zaneschepke)*
+
